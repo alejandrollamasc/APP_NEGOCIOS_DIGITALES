@@ -1,0 +1,32 @@
+{
+  "name": "app-design-negocios",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:live": "vite --config apps/live/vite.config.js",
+    "dev:admin": "vite --config apps/admin/vite.config.js",
+    "build:live": "vite build --config apps/live/vite.config.js",
+    "build:admin": "vite build --config apps/admin/vite.config.js",
+    "preview:live": "vite preview --config apps/live/vite.config.js",
+    "preview:admin": "vite preview --config apps/admin/vite.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrollamasc/APP_NEGOCIOS_DIGITALES.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandrollamasc/APP_NEGOCIOS_DIGITALES/issues"
+  },
+  "homepage": "https://github.com/alejandrollamasc/APP_NEGOCIOS_DIGITALES#readme",
+  "description": "Seguros Bolívar - App de compra de seguros + Admin/Simulador",
+  "dependencies": {
+    "@seguros-bolivar/ui-bundle": "^1.0.6"
+  },
+  "devDependencies": {
+    "vite": "^6.3.2"
+  }
+}
