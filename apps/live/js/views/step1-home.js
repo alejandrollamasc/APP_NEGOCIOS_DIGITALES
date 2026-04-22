@@ -11,9 +11,9 @@ export function renderStep1(container) {
       <div class="sb-top-bar">
         <div class="sb-top-bar__inner">
           <a href="#" class="sb-top-bar__tab sb-top-bar__tab--active">Personas</a>
-          <a href="#" class="sb-top-bar__tab">Empresas</a>
-          <a href="#" class="sb-top-bar__tab">ARL</a>
-          <a href="#" class="sb-top-bar__tab">Clientes Davivienda</a>
+          <a href="https://www.segurosbolivar.com/empresas" target="_blank" class="sb-top-bar__tab">Empresas</a>
+          <a href="https://www.segurosbolivar.com/arl" target="_blank" class="sb-top-bar__tab">ARL</a>
+          <a href="https://www.segurosbolivar.com/clientes-davivienda" target="_blank" class="sb-top-bar__tab">Clientes Davivienda</a>
         </div>
       </div>
 
@@ -21,16 +21,16 @@ export function renderStep1(container) {
       <nav class="sb-navbar">
         <div class="sb-navbar__inner">
           <!-- Logo -->
-          <a href="#" class="sb-navbar__logo" aria-label="Seguros Bolívar">
+          <a href="https://www.segurosbolivar.com" target="_blank" class="sb-navbar__logo" aria-label="Seguros Bolívar">
             <img src="/images/logo-seguros-bolivar.png" alt="Seguros Bolívar" class="sb-navbar__logo-img">
           </a>
 
           <!-- Nav links -->
           <div class="sb-navbar__links">
-            <a href="#" class="sb-navbar__link">Seguros <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
-            <a href="#" class="sb-navbar__link">Títulos de Capitalización <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
-            <a href="#" class="sb-navbar__link">Trámites <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
-            <a href="#" class="sb-navbar__link">Conózcanos <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
+            <a href="https://www.segurosbolivar.com" target="_blank" class="sb-navbar__link">Seguros <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
+            <a href="https://www.segurosbolivar.com" target="_blank" class="sb-navbar__link">Títulos de Capitalización <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
+            <a href="https://www.segurosbolivar.com" target="_blank" class="sb-navbar__link">Trámites <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
+            <a href="https://www.segurosbolivar.com" target="_blank" class="sb-navbar__link">Conózcanos <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
           </div>
 
           <!-- Right actions -->
@@ -39,11 +39,11 @@ export function renderStep1(container) {
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#333" stroke-width="1.5"/><path d="M11 11l3.5 3.5" stroke="#333" stroke-width="1.5" stroke-linecap="round"/></svg>
               Búsqueda
             </a>
-            <a href="#" class="sb-navbar__action sb-navbar__action--btn">
+            <a href="https://recaudos.segurosbolivar.com/login" target="_blank" class="sb-navbar__action sb-navbar__action--btn">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="2" stroke="#007a33" stroke-width="1.5"/><path d="M1 7h14" stroke="#007a33" stroke-width="1.5"/></svg>
               Pagos
             </a>
-            <a href="#" class="sb-navbar__action sb-navbar__action--btn sb-navbar__action--primary">
+            <a href="https://clientes.segurosbolivar.com/login" target="_blank" class="sb-navbar__action sb-navbar__action--btn sb-navbar__action--primary">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3.5" stroke="#007a33" stroke-width="1.5"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#007a33" stroke-width="1.5" stroke-linecap="round"/></svg>
               Acceso Clientes
             </a>
@@ -59,9 +59,9 @@ export function renderStep1(container) {
       <!-- ========== BREADCRUMB ========== -->
       <div class="sb-breadcrumb">
         <div class="sb-breadcrumb__inner">
-          <a href="#" class="sb-breadcrumb__link">Inicio</a>
+          <a href="https://www.segurosbolivar.com" target="_blank" class="sb-breadcrumb__link">Inicio</a>
           <span class="sb-breadcrumb__sep">&gt;</span>
-          <a href="#" class="sb-breadcrumb__link">Seguros En Línea</a>
+          <span class="sb-breadcrumb__current">Seguros En Línea</span>
           <span class="sb-breadcrumb__sep">&gt;</span>
           <span class="sb-breadcrumb__current">Seguro de Salud a su Medida</span>
         </div>
@@ -113,7 +113,7 @@ export function renderStep1(container) {
             <div class="sb-hero__checks">
               <label class="sb-hero__check">
                 <input type="checkbox" id="home-privacy" ${state.acceptPrivacy ? 'checked' : ''} required>
-                <span>Acepto la <a href="#" class="link-green">política de privacidad, los términos y condiciones del canal digital.</a></span>
+                <span>Acepto la <a href="https://d9b6rardqz97a.cloudfront.net/wp-content/uploads/2024/02/16112906/240213_transv_5335_15Feb24.pdf" target="_blank" class="link-green">política de privacidad, los términos y condiciones del canal digital.</a></span>
               </label>
               <label class="sb-hero__check">
                 <input type="checkbox" id="home-data" ${state.acceptData ? 'checked' : ''} required>

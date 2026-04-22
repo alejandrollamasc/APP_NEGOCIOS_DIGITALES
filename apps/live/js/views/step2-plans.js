@@ -2,6 +2,7 @@ import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { PLANS } from '../data/plans.js';
 import { formatCurrency } from '../utils.js';
+import { showRestartModal } from '../components/modals.js';
 
 export function renderStep2(container) {
   const state = store.get();
@@ -20,6 +21,7 @@ export function renderStep2(container) {
       
       <!-- Barra inferior estática -->
       <div class="plans-bottom-bar">
+        <button class="plans-restart-btn" id="btn-restart">Empezar de nuevo</button>
         <button class="plans-continue-btn" id="btn-continue-plan" disabled>Continuar</button>
       </div>
     </div>
@@ -71,6 +73,14 @@ export function renderStep2(container) {
     if (plan) {
       store.completeStep(2);
       navigate(3);
+    }
+  });
+
+  document.getElementById('btn-restart').addEventListener('click', async () => {
+    const confirmed = await showRestartModal();
+    if (confirmed) {
+      store.reset();
+      location.reload();
     }
   });
 }

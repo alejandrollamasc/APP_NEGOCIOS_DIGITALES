@@ -32,8 +32,9 @@ function initApp() {
       <main id="app-content" class="app-main app-main--home"></main>
     `;
   } else {
+    const showBack = currentStep > 2;
     app.innerHTML = `
-      ${renderHeader(true)}
+      ${renderHeader(showBack)}
       <div class="app-layout">
         <aside class="app-sidebar">
           ${renderStepper()}
@@ -43,25 +44,30 @@ function initApp() {
     `;
     initStepperEvents();
 
-    // Back button
+    // Back button - never go back to step 1 (home)
     const backBtn = document.getElementById('btn-back');
     if (backBtn) {
       backBtn.addEventListener('click', (e) => {
         e.preventDefault();
         const step = store.get('currentStep');
-        if (step > 1) navigate(step - 1);
+        if (step > 2) navigate(step - 1);
       });
     }
   }
 
   render();
 
-  // Re-render layout when step changes between 1 and 2+
+  // Re-render layout when step changes
   store.subscribe((state) => {
     const hasLayout = !!document.querySelector('.app-sidebar');
+    const backBtn = document.getElementById('btn-back');
     if (state.currentStep === 1 && hasLayout) {
       initApp();
     } else if (state.currentStep > 1 && !hasLayout) {
+      initApp();
+    } else if (state.currentStep === 2 && backBtn) {
+      initApp();
+    } else if (state.currentStep > 2 && !backBtn && hasLayout) {
       initApp();
     }
   });
