@@ -11,9 +11,16 @@ export function renderStep4(container) {
       <h1 class="step-title">👤 Datos del titular <span class="info-icon">ℹ️</span></h1>
 
       <div class="accordion-section">
-        <div class="accordion-header completed-section">
+        <div class="accordion-header completed-section" id="acc-holder-header">
           <span>✓ Datos básicos</span>
           <span class="accordion-arrow">&#8964;</span>
+        </div>
+        <div class="accordion-body" id="acc-holder-body">
+          <div class="holder-summary">
+            <p><strong>Nombre:</strong> ${store.get('holder').firstName} ${store.get('holder').secondName || ''} ${store.get('holder').firstLastName} ${store.get('holder').secondLastName || ''}</p>
+            <p><strong>Documento:</strong> ${store.get('holder').documentType} - ${store.get('holder').documentNumber}</p>
+            <p><strong>Celular:</strong> ${store.get('holder').phone}</p>
+          </div>
         </div>
       </div>
 
@@ -83,14 +90,29 @@ export function renderStep4(container) {
                 ${INCOME_SOURCES.map(i => `<option value="${i}" ${comp.incomeSource === i ? 'selected' : ''}>${i}</option>`).join('')}
               </select>
             </div>
-            <div class="form-actions">
+            <div class="form-actions" style="display:none">
               <button type="submit" class="sb-ui-button sb-ui-button--primary sb-ui-button--fill">Continuar</button>
             </div>
           </form>
         </div>
       </div>
+
+      <div class="bottom-bar">
+        <button class="bottom-bar__btn" id="btn-comp-continue">Continuar</button>
+      </div>
     </div>
   `;
+
+  // Bottom bar submit
+  document.getElementById('btn-comp-continue').addEventListener('click', () => {
+    document.getElementById('comp-form').requestSubmit();
+  });
+
+  // Holder accordion toggle
+  document.getElementById('acc-holder-header').addEventListener('click', () => {
+    document.getElementById('acc-holder-header').classList.toggle('active');
+    document.getElementById('acc-holder-body').classList.toggle('show');
+  });
 
   // Gender toggle
   document.querySelectorAll('.gender-btn').forEach(btn => {

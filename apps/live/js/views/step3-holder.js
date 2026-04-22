@@ -58,36 +58,33 @@ export function renderStep3(container) {
               <input type="tel" id="holder-phone" class="sb-ui-input" placeholder="3006315439" value="${holder.phone}" maxlength="10">
             </div>
 
-            <div class="sb-ui-alert sb-ui-alert--info identity-alert">
-              <span>🔒 Validaremos su identidad para continuar de forma segura.<br>Así garantizamos que su información esté protegida en todo momento.</span>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="sb-ui-button sb-ui-button--primary sb-ui-button--fill">Continuar</button>
+            <div class="identity-alert">
+              <span>🔒 Validaremos su identidad para continuar de forma segura. Así garantizamos que su información esté protegida en todo momento.</span>
             </div>
           </form>
         </div>
       </div>
 
-      <div class="accordion-section">
-        <div class="accordion-header" id="acc-comp-header">
-          <span class="accordion-title">Datos Complementarios</span>
-          <span class="accordion-arrow">&#8964;</span>
-        </div>
-        <div class="accordion-body" id="acc-comp-body"></div>
+      <div class="bottom-bar">
+        <button class="bottom-bar__btn" id="btn-holder-continue">Continuar</button>
       </div>
     </div>
   `;
 
   // Accordion toggle
   document.getElementById('acc-basic-header').addEventListener('click', () => {
-    toggleAccordion('acc-basic');
-  });
-  document.getElementById('acc-comp-header').addEventListener('click', () => {
-    toggleAccordion('acc-comp');
+    const header = document.getElementById('acc-basic-header');
+    const body = document.getElementById('acc-basic-body');
+    header.classList.toggle('active');
+    body.classList.toggle('show');
   });
 
-  // Form submit
+  // Form submit via bottom bar
+  document.getElementById('btn-holder-continue').addEventListener('click', () => {
+    const form = document.getElementById('holder-form');
+    form.requestSubmit();
+  });
+
   document.getElementById('holder-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const data = {
@@ -101,7 +98,6 @@ export function renderStep3(container) {
       phone: document.getElementById('holder-phone').value.trim()
     };
 
-    // Validation
     let valid = true;
     document.querySelectorAll('.field-error').forEach(el => el.remove());
     document.querySelectorAll('.sb-ui-input--error').forEach(el => el.classList.remove('sb-ui-input--error'));
@@ -118,13 +114,6 @@ export function renderStep3(container) {
     store.completeStep(3);
     navigate(4);
   });
-}
-
-function toggleAccordion(prefix) {
-  const header = document.getElementById(`${prefix}-header`);
-  const body = document.getElementById(`${prefix}-body`);
-  header.classList.toggle('active');
-  body.classList.toggle('show');
 }
 
 function markError(id, msg) {

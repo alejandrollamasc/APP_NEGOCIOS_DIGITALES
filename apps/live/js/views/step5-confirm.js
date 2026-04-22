@@ -69,9 +69,12 @@ export function renderStep5(container) {
         <p class="vigencia-note">La cobertura tiene vigencia de un año (ininterrumpida) hasta que usted decida voluntariamente cancelar el seguro.</p>
       </div>
 
-      <div class="form-actions confirm-actions">
-        <button type="button" class="sb-ui-button sb-ui-button--secondary" id="btn-edit">Editar información</button>
-        <button type="button" class="sb-ui-button sb-ui-button--primary sb-ui-button--fill" id="btn-confirm">Confirmar y pagar</button>
+      <div class="confirm-edit-row">
+        <a href="#" class="confirm-edit-link" id="btn-edit">✏️ Editar información</a>
+      </div>
+
+      <div class="bottom-bar">
+        <button class="bottom-bar__btn" id="btn-confirm">Confirmar y pagar</button>
       </div>
     </div>
   `;

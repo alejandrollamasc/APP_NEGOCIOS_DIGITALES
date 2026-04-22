@@ -27,10 +27,9 @@ function initApp() {
   const currentStep = store.get('currentStep');
 
   if (currentStep === 1) {
-    // Home page - no stepper
+    // Home page - full width, no stepper, no generic header
     app.innerHTML = `
-      ${renderHeader(false)}
-      <main id="app-content" class="app-main"></main>
+      <main id="app-content" class="app-main app-main--home"></main>
     `;
   } else {
     app.innerHTML = `
