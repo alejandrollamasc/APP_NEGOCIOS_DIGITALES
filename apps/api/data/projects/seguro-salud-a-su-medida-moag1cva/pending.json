@@ -1,0 +1,335 @@
+[
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(8)",
+    "property": "width",
+    "value": "365px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:47:06.210Z",
+    "id": "moagryhura6u"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(8)",
+    "property": "height",
+    "value": "94px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:47:06.220Z",
+    "id": "moagryi4hx70"
+  },
+  {
+    "action": "changeText",
+    "selector": "div:nth-of-type(8)",
+    "property": "textContent",
+    "value": "Vende tu seguro con nosotros",
+    "description": "Texto: div",
+    "timestamp": "2026-04-22T19:47:27.733Z",
+    "id": "moagsf3pt8hy"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(8)",
+    "property": "color",
+    "value": "#ffffff",
+    "description": "Color: div",
+    "timestamp": "2026-04-22T19:47:27.745Z",
+    "id": "moagsf417yxo"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(8)",
+    "property": "fontSize",
+    "value": "40",
+    "description": "Tamaño: div",
+    "timestamp": "2026-04-22T19:47:27.752Z",
+    "id": "moagsf48aig8"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(8)",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:47:32.283Z",
+    "id": "moagsim35dtm"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__bg",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: IMG",
+    "timestamp": "2026-04-22T19:47:58.309Z",
+    "id": "moagt2p1pnft"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__bg",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: IMG",
+    "timestamp": "2026-04-22T19:47:59.142Z",
+    "id": "moagt3c6k040"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:08.854Z",
+    "id": "moagtatydosq"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:15.327Z",
+    "id": "moagtftr40c0"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:15.487Z",
+    "id": "moagtfy7xnma"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__bg",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: IMG",
+    "timestamp": "2026-04-22T19:48:17.132Z",
+    "id": "moagth7wq0ns"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__bg",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: IMG",
+    "timestamp": "2026-04-22T19:48:17.288Z",
+    "id": "moagthc8j5l1"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__bg",
+    "property": "width",
+    "value": "1545px",
+    "description": "changeStyle: IMG",
+    "timestamp": "2026-04-22T19:48:23.208Z",
+    "id": "moagtlwojh7u"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: BODY",
+    "timestamp": "2026-04-22T19:48:23.387Z",
+    "id": "moagtm1ne7na"
+  },
+  {
+    "action": "changeText",
+    "selector": "#resize-box > div:nth-of-type(8)",
+    "property": "textContent",
+    "value": "",
+    "description": "changeText: DIV",
+    "timestamp": "2026-04-22T19:48:27.364Z",
+    "id": "moagtp44fdcr"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "top",
+    "value": "-438.5px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:44.495Z",
+    "id": "moagu2bzf02k"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "width",
+    "value": "634px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:48.410Z",
+    "id": "moagu5cqfu3i"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "width",
+    "value": "634px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:51.325Z",
+    "id": "moagu7lptyms"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "height",
+    "value": "141px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:51.334Z",
+    "id": "moagu7ly7foy"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "width",
+    "value": "634px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:53.349Z",
+    "id": "moagu95x9seq"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "height",
+    "value": "89px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:48:53.359Z",
+    "id": "moagu967usvu"
+  },
+  {
+    "action": "changeText",
+    "selector": "div:nth-of-type(9)",
+    "property": "textContent",
+    "value": "Seguro para toda la vidaNo te preocupes, nosotros respondemos.",
+    "description": "changeText: DIV",
+    "timestamp": "2026-04-22T19:49:06.857Z",
+    "id": "moagujl58xtj"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "width",
+    "value": "634px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:49:20.130Z",
+    "id": "moaguttu13of"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "height",
+    "value": "154px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:49:20.140Z",
+    "id": "moagutu4ecne"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9) > div",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:49:27.257Z",
+    "id": "moaguzbthfgc"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(10)",
+    "property": "top",
+    "value": "-541.5px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:49:58.440Z",
+    "id": "moagvne0dx7x"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(10)",
+    "property": "width",
+    "value": "624px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:50:03.912Z",
+    "id": "moagvrm0kizi"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "width",
+    "value": "634px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:50:10.221Z",
+    "id": "moagvwh8ng2z"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "height",
+    "value": "53px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:50:10.229Z",
+    "id": "moagvwhhbgbp"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(10)",
+    "property": "width",
+    "value": "624px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:50:24.592Z",
+    "id": "moagw7kgb6iq"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(10)",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:50:26.818Z",
+    "id": "moagw9a99cez"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(9)",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:50:28.956Z",
+    "id": "moagwaxo0vfn"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-top-bar__inner",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:53:06.354Z",
+    "id": "moagzodtns1w"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-top-bar__inner",
+    "property": "height",
+    "value": "39px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:53:06.363Z",
+    "id": "moagzoe39lyj"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(8)",
+    "property": "width",
+    "value": "464px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:58:06.747Z",
+    "id": "moah6463p4qq"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "div:nth-of-type(8)",
+    "property": "top",
+    "value": "-328px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:58:19.943Z",
+    "id": "moah6ecnjr2k"
+  }
+]

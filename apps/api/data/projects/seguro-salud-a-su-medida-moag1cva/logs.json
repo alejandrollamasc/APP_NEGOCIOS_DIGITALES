@@ -1,0 +1,14 @@
+[
+  {
+    "id": "moagr77jr2i8",
+    "versionId": "v1",
+    "timestamp": "2026-04-22T19:46:30.847Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": "#app-content > div > nav > div > div:nth-of-type(2) > a:nth-of-type(2)",
+    "property": "top",
+    "value": "-4px",
+    "description": "changeStyle: A"
+  }
+]

@@ -1,111 +1,77 @@
-const VERSIONS_KEY = 'sb_admin_versions';
-const LOGS_KEY = 'sb_admin_logs';
+const API = 'http://localhost:4001/api';
 
 class VersionStore {
   constructor() {
-    this.versions = this._loadVersions();
-    this.logs = this._loadLogs();
+    this.projectId = null;
     this.pendingChanges = [];
   }
 
-  _loadVersions() {
-    try {
-      return JSON.parse(localStorage.getItem(VERSIONS_KEY)) || [];
-    } catch {
-      return [];
-    }
+  setProject(id) {
+    this.projectId = id;
+    this.pendingChanges = [];
   }
 
-  _loadLogs() {
-    try {
-      return JSON.parse(localStorage.getItem(LOGS_KEY)) || [];
-    } catch {
-      return [];
-    }
+  get base() { return `${API}/projects/${this.projectId}`; }
+
+  // ===== PROJECTS =====
+  async listProjects() {
+    try { const r = await fetch(`${API}/projects`); return await r.json(); } catch { return []; }
   }
 
-  _saveVersions() {
-    localStorage.setItem(VERSIONS_KEY, JSON.stringify(this.versions));
+  async createProject(name, description, user, userName) {
+    const r = await fetch(`${API}/projects`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, description, user, userName })
+    });
+    return await r.json();
   }
 
-  _saveLogs() {
-    localStorage.setItem(LOGS_KEY, JSON.stringify(this.logs));
-  }
-
+  // ===== PENDING =====
   addPendingChange(change) {
-    this.pendingChanges.push({
-      ...change,
-      timestamp: new Date().toISOString(),
-      id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).substr(2)
-    });
-  }
-
-  getPendingChanges() {
-    return [...this.pendingChanges];
-  }
-
-  clearPending() {
-    this.pendingChanges = [];
-  }
-
-  applyChanges(user) {
-    if (this.pendingChanges.length === 0) return null;
-
-    const version = {
-      id: `v${this.versions.length + 1}`,
-      number: this.versions.length + 1,
-      timestamp: new Date().toISOString(),
-      user: user.email,
-      userName: user.name,
-      changes: [...this.pendingChanges],
-      changeCount: this.pendingChanges.length
-    };
-
-    this.versions.unshift(version);
-    this._saveVersions();
-
-    // Log each change
-    this.pendingChanges.forEach(change => {
-      this.logs.unshift({
-        id: change.id,
-        versionId: version.id,
-        timestamp: change.timestamp,
-        user: user.email,
-        userName: user.name,
-        action: change.action || 'modify',
-        selector: change.selector,
-        property: change.property,
-        oldValue: change.oldValue || '',
-        newValue: change.newValue || change.value,
-        description: change.description || `Modificó ${change.property} en ${change.selector}`
-      });
-    });
-    this._saveLogs();
-
-    this.pendingChanges = [];
-    return version;
-  }
-
-  getVersions() {
-    return [...this.versions];
-  }
-
-  getLogs() {
-    return [...this.logs];
-  }
-
-  getVersion(id) {
-    return this.versions.find(v => v.id === id);
-  }
-
-  revertToVersion(versionId) {
-    const idx = this.versions.findIndex(v => v.id === versionId);
-    if (idx >= 0) {
-      this.versions = this.versions.slice(idx);
-      this._saveVersions();
-      return true;
+    const item = { ...change, timestamp: new Date().toISOString(), id: Date.now().toString(36) + Math.random().toString(36).substr(2, 4) };
+    this.pendingChanges.push(item);
+    if (this.projectId) {
+      fetch(`${this.base}/pending`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(item) }).catch(() => {});
     }
-    return false;
+  }
+
+  getPendingChanges() { return [...this.pendingChanges]; }
+
+  // ===== VERSIONS =====
+  async applyChanges(user) {
+    if (this.pendingChanges.length === 0 || !this.projectId) return null;
+    try {
+      const r = await fetch(`${this.base}/versions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user: user.email, userName: user.name, changes: [...this.pendingChanges] })
+      });
+      const version = await r.json();
+      this.pendingChanges = [];
+      return version;
+    } catch (e) {
+      const v = { id: `v-local-${Date.now()}`, changeCount: this.pendingChanges.length, timestamp: new Date().toISOString() };
+      this.pendingChanges = [];
+      return v;
+    }
+  }
+
+  async getVersions() {
+    if (!this.projectId) return [];
+    try { const r = await fetch(`${this.base}/versions`); return await r.json(); } catch { return []; }
+  }
+
+  async getLogs() {
+    if (!this.projectId) return [];
+    try { const r = await fetch(`${this.base}/logs`); return await r.json(); } catch { return []; }
+  }
+
+  async storeImage(name, data) {
+    if (!this.projectId) return;
+    try {
+      await fetch(`${this.base}/images`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, data }) });
+    } catch (e) { console.error('Image store failed:', e); }
   }
 }
 

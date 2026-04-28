@@ -1,0 +1,74 @@
+[
+  {
+    "id": "moafhs8azjh9",
+    "versionId": "v3",
+    "timestamp": "2026-04-22T19:11:11.914Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": "#home-form > div:nth-of-type(1) > label",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: LABEL"
+  },
+  {
+    "id": "moafhqhy73o6",
+    "versionId": "v3",
+    "timestamp": "2026-04-22T19:11:09.670Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": "#home-name",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: INPUT"
+  },
+  {
+    "id": "moafgwzwdbfh",
+    "versionId": "v2",
+    "timestamp": "2026-04-22T19:10:31.436Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeText",
+    "selector": ".sb-hero__title",
+    "property": "textContent",
+    "value": "Salud a la medida de Llamas",
+    "description": "changeText: H1"
+  },
+  {
+    "id": "moafgwzu9k4o",
+    "versionId": "v2",
+    "timestamp": "2026-04-22T19:10:31.434Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeText",
+    "selector": ".sb-hero__title",
+    "property": "textContent",
+    "value": "Salud a la medida de Llamas",
+    "description": "changeText: H1"
+  },
+  {
+    "id": "moafgwzujyf5",
+    "versionId": "v2",
+    "timestamp": "2026-04-22T19:10:31.434Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": ".sb-hero__title",
+    "property": "width",
+    "value": "322px",
+    "description": "changeStyle: H1"
+  },
+  {
+    "id": "moafg7uxd2wi",
+    "versionId": "v1",
+    "timestamp": "2026-04-22T19:09:58.856Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": ".sb-hero__form",
+    "property": "top",
+    "value": "141.555px",
+    "description": "changeStyle: DIV"
+  }
+]

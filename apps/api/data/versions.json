@@ -1,0 +1,21 @@
+[
+  {
+    "id": "v1",
+    "number": 1,
+    "timestamp": "2026-04-22T18:58:27.226Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "changeStyle",
+        "selector": ".sb-hero__form",
+        "property": "top",
+        "value": "136.555px",
+        "description": "changeStyle: DIV",
+        "timestamp": "2026-04-22T18:58:22.716Z",
+        "id": "moaf1apossvz"
+      }
+    ],
+    "changeCount": 1
+  }
+]

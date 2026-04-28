@@ -1,210 +1,180 @@
-// Simulated LLM chat engine for design modifications
-const COMMAND_PATTERNS = [
-  {
-    patterns: [/cambiar?\s+(el\s+)?texto\s+(de[l]?\s+)?(.+?)\s+(a|por|con)\s+"(.+)"/i, /text[o]?\s+"(.+?)"\s*(?:a|por|->)\s*"(.+)"/i],
-    handler: parseTextChange
-  },
-  {
-    patterns: [/cambiar?\s+(el\s+)?color\s+(de[l]?\s+)?(.+?)\s+(a|por)\s+(.+)/i],
-    handler: parseColorChange
-  },
-  {
-    patterns: [/ocultar?\s+(.+)/i, /esconder?\s+(.+)/i, /hide\s+(.+)/i],
-    handler: parseHideElement
-  },
-  {
-    patterns: [/mostrar?\s+(.+)/i, /show\s+(.+)/i],
-    handler: parseShowElement
-  },
-  {
-    patterns: [/cambiar?\s+(el\s+)?fondo\s+(de[l]?\s+)?(.+?)\s+(a|por)\s+(.+)/i, /background\s+(.+?)\s+(a|to)\s+(.+)/i],
-    handler: parseBackgroundChange
-  },
-  {
-    patterns: [/cambiar?\s+(el\s+)?tamaño\s+(de[l]?\s+)?(.+?)\s+(a|por)\s+(.+)/i, /font.?size\s+(.+?)\s+(a|to)\s+(.+)/i],
-    handler: parseFontSizeChange
-  },
-  {
-    patterns: [/mover?\s+(.+?)\s+(arriba|abajo|izquierda|derecha)/i],
-    handler: parseMoveElement
-  },
-  {
-    patterns: [/cambiar?\s+(la\s+)?imagen\s+(de[l]?\s+)?(.+?)\s+(a|por)\s+"?(.+)"?/i],
-    handler: parseImageChange
-  }
-];
+// Enhanced chat engine with smarter NLP-like command parsing
 
 const ELEMENT_MAP = {
-  'título': '.step-title, .home-title, h1, h2',
-  'titulo': '.step-title, .home-title, h1, h2',
-  'botón': '.sb-ui-button',
-  'boton': '.sb-ui-button',
+  'título': 'h1, h2, .step-title, .sb-hero__title',
+  'titulo': 'h1, h2, .step-title, .sb-hero__title',
+  'subtítulo': 'h2, h3, p.sb-hero__subtitle',
+  'subtitulo': 'h2, h3, p.sb-hero__subtitle',
+  'botón': '.sb-ui-button, button',
+  'boton': '.sb-ui-button, button',
   'botón principal': '.sb-ui-button--primary',
-  'header': '.app-header',
-  'encabezado': '.app-header',
-  'banner': '.confirm-banner, .home-hero',
-  'tarjeta': '.sb-ui-card',
-  'card': '.sb-ui-card',
+  'botón continuar': '.bottom-bar__btn, .plans-continue-btn',
+  'header': '.app-header, .sb-navbar',
+  'encabezado': '.app-header, .sb-navbar',
+  'banner': '.sb-hero, .sb-warning',
+  'formulario': '.sb-hero__form, form',
+  'tarjeta': '.sb-ui-card, .plan-card',
+  'card': '.sb-ui-card, .plan-card',
   'plan': '.plan-card',
-  'precio': '.plan-price',
-  'alerta': '.sb-ui-alert',
-  'input': '.sb-ui-input',
-  'formulario': 'form',
+  'precio': '.plan-card__price, .plan-price',
+  'alerta': '.sb-ui-alert, .identity-alert',
+  'input': '.sb-ui-input, input',
+  'campo': '.sb-ui-input, input',
   'sidebar': '.app-sidebar',
   'stepper': '.stepper-nav',
-  'logo': '.header-logo'
+  'logo': '.sb-navbar__logo-img, .header-logo-img',
+  'imagen': 'img',
+  'texto': 'p, span, label',
+  'enlace': 'a',
+  'link': 'a',
+  'modal': '.sb-hero__form, .editor-popup',
+  'pie': '.plans-bottom-bar, .bottom-bar',
+  'barra inferior': '.plans-bottom-bar, .bottom-bar',
+  'overlay': '.sb-hero__overlay',
+  'badge': '.plan-badge, .sb-ui-badge',
+  'check': '.sb-hero__check, .check-label-home',
+  'checkbox': 'input[type=checkbox]',
+  'select': 'select',
+  'tabla': 'table',
+  'lista': 'ul, ol',
+  'menú': '.sb-navbar__links',
+  'navegación': '.sb-navbar, .page-nav',
+  'pestañas': '.sb-top-bar, .chat-tabs',
+  'tabs': '.sb-top-bar, .chat-tabs'
 };
 
-function resolveSelector(elementName) {
-  const lower = elementName.toLowerCase().trim();
+const COLOR_MAP = {
+  'rojo': '#d32f2f', 'red': '#d32f2f',
+  'azul': '#1976D2', 'blue': '#1976D2',
+  'verde': '#0a6741', 'green': '#0a6741',
+  'amarillo': '#E8C916', 'yellow': '#E8C916',
+  'naranja': '#f57c00', 'orange': '#f57c00',
+  'blanco': '#ffffff', 'white': '#ffffff',
+  'negro': '#000000', 'black': '#000000',
+  'gris': '#888888', 'gray': '#888888',
+  'morado': '#7B1FA2', 'purple': '#7B1FA2',
+  'rosa': '#E91E63', 'pink': '#E91E63',
+  'transparente': 'transparent', 'transparent': 'transparent'
+};
+
+function resolveSelector(name) {
+  const lower = name.toLowerCase().trim();
   return ELEMENT_MAP[lower] || `.${lower.replace(/\s+/g, '-')}`;
 }
 
-function parseTextChange(match) {
-  // Try different match groups
-  if (match.length >= 6) {
-    return {
-      action: 'changeText',
-      selector: resolveSelector(match[3]),
-      property: 'textContent',
-      value: match[5],
-      description: `Cambiar texto de "${match[3]}" a "${match[5]}"`
-    };
-  }
-  return null;
-}
-
-function parseColorChange(match) {
-  return {
-    action: 'changeStyle',
-    selector: resolveSelector(match[3]),
-    property: 'color',
-    value: match[5].trim(),
-    description: `Cambiar color de "${match[3]}" a ${match[5]}`
-  };
-}
-
-function parseHideElement(match) {
-  const target = match[1] || match[0];
-  return {
-    action: 'changeStyle',
-    selector: resolveSelector(target),
-    property: 'display',
-    value: 'none',
-    description: `Ocultar "${target}"`
-  };
-}
-
-function parseShowElement(match) {
-  const target = match[1] || match[0];
-  return {
-    action: 'changeStyle',
-    selector: resolveSelector(target),
-    property: 'display',
-    value: '',
-    description: `Mostrar "${target}"`
-  };
-}
-
-function parseBackgroundChange(match) {
-  return {
-    action: 'changeStyle',
-    selector: resolveSelector(match[3]),
-    property: 'backgroundColor',
-    value: match[5].trim(),
-    description: `Cambiar fondo de "${match[3]}" a ${match[5]}`
-  };
-}
-
-function parseFontSizeChange(match) {
-  return {
-    action: 'changeStyle',
-    selector: resolveSelector(match[3]),
-    property: 'fontSize',
-    value: match[5].trim(),
-    description: `Cambiar tamaño de "${match[3]}" a ${match[5]}`
-  };
-}
-
-function parseMoveElement(match) {
-  const direction = match[2].toLowerCase();
-  const marginMap = { arriba: 'marginTop', abajo: 'marginBottom', izquierda: 'marginLeft', derecha: 'marginRight' };
-  return {
-    action: 'changeStyle',
-    selector: resolveSelector(match[1]),
-    property: marginMap[direction] || 'marginTop',
-    value: '20px',
-    description: `Mover "${match[1]}" hacia ${direction}`
-  };
-}
-
-function parseImageChange(match) {
-  return {
-    action: 'changeImage',
-    selector: resolveSelector(match[3]),
-    property: 'src',
-    value: match[5].trim().replace(/"/g, ''),
-    description: `Cambiar imagen de "${match[3]}"`
-  };
+function resolveColor(name) {
+  const lower = name.toLowerCase().trim();
+  return COLOR_MAP[lower] || lower; // Return as-is if it's a hex/rgb value
 }
 
 export function processMessage(message) {
   const lower = message.toLowerCase().trim();
 
-  // Help command
+  // Help
   if (lower === 'ayuda' || lower === 'help' || lower === '?') {
-    return {
-      type: 'help',
-      response: getHelpText()
-    };
+    return { type: 'help', response: getHelpText() };
   }
 
-  // Try to match command patterns
-  for (const { patterns, handler } of COMMAND_PATTERNS) {
-    for (const pattern of patterns) {
-      const match = message.match(pattern);
-      if (match) {
-        const command = handler(match);
-        if (command) {
-          return {
-            type: 'command',
-            command,
-            response: `✅ Entendido. Voy a: **${command.description}**\n\nEl cambio se ha aplicado en la vista previa. Presiona "Aplicar cambios" para guardarlo.`
-          };
-        }
-      }
-    }
+  // Change text: "cambiar texto del título a "nuevo""
+  let match = message.match(/cambiar?\s+(?:el\s+)?texto\s+(?:del?\s+)?(.+?)\s+(?:a|por)\s+"(.+?)"/i);
+  if (match) {
+    return makeCommand('changeText', resolveSelector(match[1]), 'textContent', match[2], `Cambiar texto de "${match[1]}" a "${match[2]}"`);
   }
 
-  // Direct CSS selector support
+  // Change color: "cambiar color del título a rojo"
+  match = message.match(/cambiar?\s+(?:el\s+)?color\s+(?:del?\s+)?(.+?)\s+(?:a|por)\s+(.+)/i);
+  if (match) {
+    return makeCommand('changeStyle', resolveSelector(match[1]), 'color', resolveColor(match[2]), `Cambiar color de "${match[1]}" a ${match[2]}`);
+  }
+
+  // Change background: "cambiar fondo del header a azul"
+  match = message.match(/cambiar?\s+(?:el\s+)?fondo\s+(?:del?\s+)?(.+?)\s+(?:a|por)\s+(.+)/i);
+  if (match) {
+    return makeCommand('changeStyle', resolveSelector(match[1]), 'backgroundColor', resolveColor(match[2]), `Cambiar fondo de "${match[1]}" a ${match[2]}`);
+  }
+
+  // Change size: "cambiar tamaño del título a 32px"
+  match = message.match(/cambiar?\s+(?:el\s+)?tamaño\s+(?:del?\s+)?(.+?)\s+(?:a|por)\s+(.+)/i);
+  if (match) {
+    return makeCommand('changeStyle', resolveSelector(match[1]), 'fontSize', match[2].trim(), `Cambiar tamaño de "${match[1]}" a ${match[2]}`);
+  }
+
+  // Change width: "cambiar ancho del formulario a 400px"
+  match = message.match(/cambiar?\s+(?:el\s+)?ancho\s+(?:del?\s+)?(.+?)\s+(?:a|por)\s+(.+)/i);
+  if (match) {
+    return makeCommand('changeStyle', resolveSelector(match[1]), 'width', match[2].trim(), `Cambiar ancho de "${match[1]}" a ${match[2]}`);
+  }
+
+  // Hide: "ocultar el banner"
+  match = message.match(/(?:ocultar?|esconder?|hide)\s+(?:el\s+|la\s+|los\s+)?(.+)/i);
+  if (match) {
+    return makeCommand('changeStyle', resolveSelector(match[1]), 'display', 'none', `Ocultar "${match[1]}"`);
+  }
+
+  // Show: "mostrar el banner"
+  match = message.match(/(?:mostrar?|show|ver)\s+(?:el\s+|la\s+|los\s+)?(.+)/i);
+  if (match) {
+    return makeCommand('changeStyle', resolveSelector(match[1]), 'display', '', `Mostrar "${match[1]}"`);
+  }
+
+  // Move: "mover título arriba 20px"
+  match = message.match(/mover?\s+(?:el\s+|la\s+)?(.+?)\s+(arriba|abajo|izquierda|derecha)\s*(\d+)?/i);
+  if (match) {
+    const dir = match[2].toLowerCase();
+    const px = (match[3] || '20') + 'px';
+    const propMap = { arriba: 'marginTop', abajo: 'marginBottom', izquierda: 'marginLeft', derecha: 'marginRight' };
+    return makeCommand('changeStyle', resolveSelector(match[1]), propMap[dir], px, `Mover "${match[1]}" ${dir} ${px}`);
+  }
+
+  // Border radius: "redondear botón a 20px"
+  match = message.match(/(?:redondear?|border.?radius)\s+(?:del?\s+|el\s+)?(.+?)\s+(?:a|por)\s+(.+)/i);
+  if (match) {
+    return makeCommand('changeStyle', resolveSelector(match[1]), 'borderRadius', match[2].trim(), `Redondear "${match[1]}" a ${match[2]}`);
+  }
+
+  // Opacity: "opacidad del banner a 0.5"
+  match = message.match(/(?:opacidad|opacity)\s+(?:del?\s+|el\s+)?(.+?)\s+(?:a|por)\s+(.+)/i);
+  if (match) {
+    return makeCommand('changeStyle', resolveSelector(match[1]), 'opacity', match[2].trim(), `Opacidad de "${match[1]}" a ${match[2]}`);
+  }
+
+  // Direct CSS: "css: .selector | propiedad | valor"
   if (lower.startsWith('css:')) {
     const parts = message.substring(4).trim().split('|');
     if (parts.length >= 3) {
-      return {
-        type: 'command',
-        command: {
-          action: 'changeStyle',
-          selector: parts[0].trim(),
-          property: parts[1].trim(),
-          value: parts[2].trim(),
-          description: `CSS: ${parts[0].trim()} → ${parts[1].trim()}: ${parts[2].trim()}`
-        },
-        response: `✅ Aplicado cambio CSS directo.\nSelector: \`${parts[0].trim()}\`\nPropiedad: \`${parts[1].trim()}\`\nValor: \`${parts[2].trim()}\``
-      };
+      return makeCommand('changeStyle', parts[0].trim(), parts[1].trim(), parts[2].trim(), `CSS: ${parts[0].trim()} → ${parts[1].trim()}: ${parts[2].trim()}`);
     }
   }
 
-  // Element selection mode
-  if (lower.includes('seleccionar') || lower.includes('select') || lower.includes('elegir elemento')) {
-    return {
-      type: 'select-mode',
-      response: '🎯 **Modo selección activado.** Haz clic en cualquier elemento de la vista previa para seleccionarlo y editarlo.'
-    };
+  // Select mode
+  if (lower.includes('seleccionar') || lower.includes('select') || lower.includes('elegir')) {
+    return { type: 'select-mode', response: '🎯 **Modo selección activado.** Haz clic en un elemento para editarlo.' };
+  }
+
+  // Conversational responses
+  if (lower.includes('hola') || lower.includes('hey') || lower.includes('buenas')) {
+    return { type: 'chat', response: '👋 ¡Hola! Soy tu asistente de diseño. Puedo ayudarte a modificar textos, colores, tamaños, visibilidad y más. Escribe **ayuda** para ver todos los comandos.' };
+  }
+
+  if (lower.includes('gracias') || lower.includes('thanks')) {
+    return { type: 'chat', response: '😊 ¡De nada! Estoy aquí para ayudarte. ¿Necesitas algo más?' };
+  }
+
+  if (lower.includes('qué puedo') || lower.includes('que puedo') || lower.includes('qué haces') || lower.includes('que haces')) {
+    return { type: 'chat', response: 'Puedo ayudarte a:\n- **Cambiar textos**: "cambiar texto del título a \\"Nuevo\\"\"\n- **Cambiar colores**: "cambiar color del botón a rojo"\n- **Cambiar fondos**: "cambiar fondo del header a azul"\n- **Ocultar/mostrar**: "ocultar el banner"\n- **Cambiar tamaños**: "cambiar tamaño del título a 32px"\n- **Mover elementos**: "mover título arriba 20px"\n- Y mucho más. Escribe **ayuda** para la lista completa.' };
   }
 
   return {
     type: 'unknown',
-    response: `No entendí el comando. Intenta con frases como:\n- "Cambiar el texto del título a \\"Nuevo título\\""\n- "Cambiar el color del botón a rojo"\n- "Ocultar el banner"\n- Escribe **ayuda** para ver todos los comandos disponibles.`
+    response: `No entendí ese comando. Intenta con frases como:\n- "Cambiar texto del título a \\"Nuevo título\\""\n- "Cambiar color del botón a rojo"\n- "Ocultar el banner"\n\nEscribe **ayuda** para ver todos los comandos.`
+  };
+}
+
+function makeCommand(action, selector, property, value, description) {
+  return {
+    type: 'command',
+    command: { action, selector, property, value, description },
+    response: `✅ **${description}**\n\nCambio aplicado en la vista previa. Presiona "✓ Aplicar cambios" para guardarlo.`
   };
 }
 
@@ -212,32 +182,34 @@ function getHelpText() {
   return `## 🤖 Comandos disponibles
 
 **Texto:**
-- \`Cambiar el texto del título a "Nuevo título"\`
-- \`Cambiar texto de "viejo" a "nuevo"\`
+- \`Cambiar texto del título a "Nuevo título"\`
 
 **Colores:**
-- \`Cambiar el color del botón a #ff0000\`
-- \`Cambiar el fondo del header a azul\`
+- \`Cambiar color del botón a rojo\`
+- \`Cambiar fondo del header a azul\`
+
+**Tamaño:**
+- \`Cambiar tamaño del título a 32px\`
+- \`Cambiar ancho del formulario a 400px\`
 
 **Visibilidad:**
 - \`Ocultar el banner\`
 - \`Mostrar la alerta\`
 
-**Tamaño:**
-- \`Cambiar el tamaño del título a 32px\`
-
 **Posición:**
-- \`Mover el logo arriba\`
+- \`Mover título arriba 20px\`
 
-**Imágenes:**
-- \`Cambiar la imagen del banner a "url"\`
+**Estilo:**
+- \`Redondear botón a 20px\`
+- \`Opacidad del banner a 0.5\`
 
 **CSS directo:**
 - \`css: .selector | propiedad | valor\`
 
-**Selección visual:**
-- \`Seleccionar elemento\` - activa modo clic para editar
+**Selección:**
+- \`Seleccionar elemento\`
 
-**Otros:**
-- \`ayuda\` - muestra este mensaje`;
+**Colores disponibles:** rojo, azul, verde, amarillo, naranja, blanco, negro, gris, morado, rosa, transparente (o cualquier valor hex/rgb)
+
+**Elementos:** título, botón, header, banner, formulario, tarjeta, plan, precio, alerta, input, logo, imagen, enlace, modal, overlay, badge, menú, tabs`;
 }
