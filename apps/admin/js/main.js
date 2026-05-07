@@ -34,6 +34,11 @@ function init() {
 // ===== PROJECT SELECTOR =====
 async function renderProjectSelector(app) {
   const user = getUser();
+  const TEMPLATES = [
+    { id: 'salud', name: 'Seguro Salud', description: 'Experiencia de compra de seguro de salud complementaria', icon: '🏥' },
+    { id: 'hogar', name: 'Seguro Hogar', description: 'Experiencia de compra de seguro de hogar 100% en línea', icon: '🏠' }
+  ];
+
   app.innerHTML = `
     <div class="projects-page">
       <div class="projects-container">
@@ -45,8 +50,16 @@ async function renderProjectSelector(app) {
           </div>
           <button class="projects-logout" id="btn-proj-logout">Cerrar sesión</button>
         </div>
-        <div class="projects-actions">
+        <div class="projects-toolbar">
           <button class="btn-new-project" id="btn-new-project">+ Nuevo proyecto</button>
+          <div class="projects-sort">
+            <label class="sort-label">Ordenar por:</label>
+            <select class="sb-input sb-input--sm" id="sort-projects">
+              <option value="updated">Última modificación</option>
+              <option value="created">Fecha de creación</option>
+              <option value="name">Nombre</option>
+            </select>
+          </div>
         </div>
         <div class="projects-grid" id="projects-grid">
           <p class="empty-msg">Cargando proyectos...</p>
@@ -54,71 +67,194 @@ async function renderProjectSelector(app) {
       </div>
     </div>
 
-    <!-- New project modal -->
+    <!-- New project modal (Step 1: Name) -->
     <div class="new-project-modal" id="new-project-modal" style="display:none">
       <div class="new-project-card">
-        <h2 class="new-project-title">Crear nuevo proyecto</h2>
-        <form id="new-project-form">
-          <div class="form-group">
-            <label class="form-label">Nombre del proyecto</label>
-            <input type="text" class="sb-input" id="proj-name" placeholder="Ej: Seguro Salud v2" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Descripción (opcional)</label>
-            <input type="text" class="sb-input" id="proj-desc" placeholder="Breve descripción">
+        <div id="create-step-1">
+          <h2 class="new-project-title">Crear nuevo proyecto</h2>
+          <p class="new-project-subtitle">Paso 1 de 2 — Información básica</p>
+          <form id="new-project-form-step1">
+            <div class="form-group">
+              <label class="form-label">Nombre del proyecto</label>
+              <input type="text" class="sb-input" id="proj-name" placeholder="Ej: Seguro Hogar v1" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Descripción (opcional)</label>
+              <input type="text" class="sb-input" id="proj-desc" placeholder="Breve descripción del proyecto">
+            </div>
+            <div class="new-project-actions">
+              <button type="button" class="btn-cancel" id="btn-cancel-project">Cancelar</button>
+              <button type="submit" class="btn-create">Siguiente →</button>
+            </div>
+          </form>
+        </div>
+        <div id="create-step-2" style="display:none">
+          <h2 class="new-project-title">Seleccionar plantilla</h2>
+          <p class="new-project-subtitle">Paso 2 de 2 — Elige la experiencia base</p>
+          <div class="templates-grid" id="templates-grid">
+            ${TEMPLATES.map(t => `
+              <div class="template-card ${t.id === 'salud' ? 'selected' : ''}" data-template="${t.id}">
+                <span class="template-icon">${t.icon}</span>
+                <h3 class="template-name">${t.name}</h3>
+                <p class="template-desc">${t.description}</p>
+              </div>
+            `).join('')}
+            <div class="template-card template-card--soon">
+              <span class="template-icon">🚗</span>
+              <h3 class="template-name">Seguro Autos</h3>
+              <p class="template-desc">Próximamente</p>
+            </div>
           </div>
           <div class="new-project-actions">
-            <button type="button" class="btn-cancel" id="btn-cancel-project">Cancelar</button>
-            <button type="submit" class="btn-create">Crear proyecto</button>
+            <button type="button" class="btn-cancel" id="btn-back-step1">← Atrás</button>
+            <a href="#" target="_blank" class="btn-preview-template" id="btn-preview-template">👁 Previsualizar</a>
+            <button type="button" class="btn-create" id="btn-create-final">Crear proyecto</button>
           </div>
-        </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete confirmation modal -->
+    <div class="delete-modal" id="delete-modal" style="display:none">
+      <div class="delete-modal-card">
+        <div class="delete-modal-icon">⚠️</div>
+        <h2 class="delete-modal-title">¿Eliminar este proyecto?</h2>
+        <p class="delete-modal-text">Esta acción no se puede deshacer. Se eliminarán todas las versiones, cambios e imágenes del proyecto.</p>
+        <div class="delete-modal-actions">
+          <button class="btn-cancel" id="btn-cancel-delete">Cancelar</button>
+          <button class="btn-delete-confirm" id="btn-confirm-delete">Sí, eliminar</button>
+        </div>
       </div>
     </div>
   `;
 
+  let selectedTemplate = 'salud';
+  let deleteTargetId = null;
+
+  // Logout
   document.getElementById('btn-proj-logout').addEventListener('click', () => { logout(); init(); });
 
+  // New project flow
   document.getElementById('btn-new-project').addEventListener('click', () => {
     document.getElementById('new-project-modal').style.display = 'flex';
+    document.getElementById('create-step-1').style.display = 'block';
+    document.getElementById('create-step-2').style.display = 'none';
   });
   document.getElementById('btn-cancel-project').addEventListener('click', () => {
     document.getElementById('new-project-modal').style.display = 'none';
   });
 
-  document.getElementById('new-project-form').addEventListener('submit', async (e) => {
+  // Step 1 → Step 2
+  document.getElementById('new-project-form-step1').addEventListener('submit', (e) => {
     e.preventDefault();
+    if (!document.getElementById('proj-name').value.trim()) return;
+    document.getElementById('create-step-1').style.display = 'none';
+    document.getElementById('create-step-2').style.display = 'block';
+  });
+
+  // Step 2 → Back to Step 1
+  document.getElementById('btn-back-step1').addEventListener('click', () => {
+    document.getElementById('create-step-2').style.display = 'none';
+    document.getElementById('create-step-1').style.display = 'block';
+  });
+
+  // Template selection
+  document.querySelectorAll('.template-card:not(.template-card--soon)').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.template-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedTemplate = card.dataset.template;
+      // Update preview link based on template
+      const previewBtn = document.getElementById('btn-preview-template');
+      const port = selectedTemplate === 'hogar' ? 3002 : 3000;
+      previewBtn.href = `http://localhost:${port}`;
+    });
+  });
+
+  // Create final
+  document.getElementById('btn-create-final').addEventListener('click', async () => {
     const name = document.getElementById('proj-name').value.trim();
     const desc = document.getElementById('proj-desc').value.trim();
     if (!name) return;
-    const project = await versionStore.createProject(name, desc, user.email, user.name);
-    versionStore.setProject(project.id);
+    const btn = document.getElementById('btn-create-final');
+    btn.disabled = true;
+    btn.textContent = 'Creando...';
+    const project = await versionStore.createProject(name, desc + ` [plantilla: ${selectedTemplate}]`, user.email, user.name);
+    versionStore.setProject(project.id, selectedTemplate);
     init();
   });
 
-  // Load projects
-  const projects = await versionStore.listProjects();
-  const grid = document.getElementById('projects-grid');
-  if (projects.length === 0) {
-    grid.innerHTML = '<p class="empty-msg">No hay proyectos aún. Crea uno nuevo para empezar.</p>';
-  } else {
-    grid.innerHTML = projects.map(p => `
+  // Sort
+  document.getElementById('sort-projects').addEventListener('change', () => renderProjects());
+
+  // Delete modal
+  document.getElementById('btn-cancel-delete').addEventListener('click', () => {
+    document.getElementById('delete-modal').style.display = 'none';
+    deleteTargetId = null;
+  });
+  document.getElementById('btn-confirm-delete').addEventListener('click', async () => {
+    if (!deleteTargetId) return;
+    await versionStore.deleteProject(deleteTargetId);
+    document.getElementById('delete-modal').style.display = 'none';
+    deleteTargetId = null;
+    renderProjects();
+  });
+
+  // Load and render projects
+  async function renderProjects() {
+    const projects = await versionStore.listProjects();
+    const grid = document.getElementById('projects-grid');
+    const sortBy = document.getElementById('sort-projects').value;
+
+    const sorted = [...projects].sort((a, b) => {
+      if (sortBy === 'updated') return new Date(b.updatedAt || 0) - new Date(a.updatedAt || 0);
+      if (sortBy === 'created') return new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
+      return (a.name || '').localeCompare(b.name || '');
+    });
+
+    if (sorted.length === 0) {
+      grid.innerHTML = '<p class="empty-msg">No hay proyectos aún. Crea uno nuevo para empezar.</p>';
+      return;
+    }
+
+    grid.innerHTML = sorted.map(p => `
       <div class="project-card" data-id="${p.id}">
-        <div class="project-card__icon">📁</div>
+        <div class="project-card__top-row">
+          <div class="project-card__icon">📁</div>
+          <button class="project-card__delete" data-id="${p.id}" title="Eliminar">🗑</button>
+        </div>
         <div class="project-card__info">
           <h3 class="project-card__name">${p.name}</h3>
           <p class="project-card__meta">${p.description || 'Sin descripción'}</p>
-          <p class="project-card__meta">${p.versionCount} versión(es) · ${p.createdAt ? new Date(p.createdAt).toLocaleDateString('es-CO') : ''}</p>
+          <p class="project-card__meta">${p.versionCount} versión(es)</p>
+          <p class="project-card__date">Modificado: ${p.updatedAt ? new Date(p.updatedAt).toLocaleString('es-CO') : 'N/A'}</p>
+          <p class="project-card__url">🔗 localhost:${(p.description || '').includes('[plantilla: hogar]') ? '3002' : '3000'}?project=${p.id}</p>
         </div>
       </div>
     `).join('');
 
+    // Open project
     grid.querySelectorAll('.project-card').forEach(card => {
-      card.addEventListener('click', () => {
-        versionStore.setProject(card.dataset.id);
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.project-card__delete')) return;
+        const proj = sorted.find(p => p.id === card.dataset.id);
+        const tpl = (proj?.description || '').includes('[plantilla: hogar]') ? 'hogar' : 'salud';
+        versionStore.setProject(card.dataset.id, tpl);
         init();
       });
     });
+
+    // Delete buttons
+    grid.querySelectorAll('.project-card__delete').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        deleteTargetId = btn.dataset.id;
+        document.getElementById('delete-modal').style.display = 'flex';
+      });
+    });
   }
+
+  await renderProjects();
 }
 
 // ===== LOGIN =====
@@ -167,6 +303,7 @@ function renderLogin(app) {
 // ===== DASHBOARD =====
 function renderDashboard(app) {
   const user = getUser();
+  const liveUrl = versionStore.getLiveUrl();
   app.innerHTML = `
     <div class="admin-shell">
       <!-- Top toolbar -->
@@ -219,7 +356,9 @@ function renderDashboard(app) {
       <div class="admin-main">
         <!-- Preview area -->
         <div class="preview-area">
-          <iframe id="live-iframe" src="http://localhost:3000" class="preview-iframe" title="Vista previa"></iframe>
+          <div class="preview-iframe-wrap">
+            <iframe id="live-iframe" src="${liveUrl}" class="preview-iframe" title="Vista previa"></iframe>
+          </div>
           <!-- Page navigation bar -->
           <div class="page-nav">
             ${PAGES.map(p => `
@@ -298,7 +437,7 @@ function renderDashboard(app) {
         </div>
       </div>
       <div class="preview-modal__body">
-        <iframe id="preview-iframe" class="preview-modal__iframe" src="http://localhost:3000" title="Preview"></iframe>
+        <iframe id="preview-iframe" class="preview-modal__iframe" src="" title="Preview"></iframe>
       </div>
     </div>
   `;
@@ -316,7 +455,7 @@ function bindEvents(user) {
     init();
   });
   document.getElementById('btn-refresh')?.addEventListener('click', () => {
-    document.getElementById('live-iframe').src = 'http://localhost:3000';
+    document.getElementById('live-iframe').src = versionStore.getLiveUrl();
   });
 
   // Chat tabs
@@ -400,20 +539,20 @@ function bindEvents(user) {
     document.getElementById('editor-popup').style.display = 'none';
   });
 
-  // Listen for iframe messages
+  // Listen for iframe messages — register BEFORE iframe loads
   window.addEventListener('message', handleIframeMessage);
 
   // When iframe loads, apply saved changes and enable edit mode
-  document.getElementById('live-iframe').addEventListener('load', () => {
+  const iframe = document.getElementById('live-iframe');
+  iframe.addEventListener('load', () => {
     applySavedChanges();
-    // Auto-enable edit mode
+    // Auto-enable edit mode after a delay
     setTimeout(() => {
-      const iframe = document.getElementById('live-iframe');
       iframe.contentWindow.postMessage({ type: 'ENABLE_EDIT_MODE' }, '*');
       selectMode = true;
       const btn = document.getElementById('btn-select-mode');
       if (btn) btn.classList.add('active');
-    }, 1200);
+    }, 1500);
   });
 
   updatePendingCount();
@@ -423,28 +562,34 @@ function bindEvents(user) {
 async function applySavedChanges() {
   if (!versionStore.projectId) return;
   const versions = await versionStore.getVersions();
-  if (versions.length === 0) return;
 
   const iframe = document.getElementById('live-iframe');
-  // Apply all changes from oldest to newest
+  // Collect all changes from oldest to newest
   const allChanges = [];
-  [...versions].reverse().forEach(v => {
-    (v.changes || []).forEach(c => allChanges.push(c));
-  });
+  if (versions.length > 0) {
+    [...versions].reverse().forEach(v => {
+      (v.changes || []).forEach(c => allChanges.push(c));
+    });
+  }
 
-  // Wait a bit for iframe content to render
+  // Also apply any pending changes that haven't been saved yet
+  versionStore.getPendingChanges().forEach(c => allChanges.push(c));
+
+  if (allChanges.length === 0) return;
+
+  // Wait for iframe content to render
   setTimeout(() => {
     allChanges.forEach(c => {
-      iframe.contentWindow.postMessage({
-        type: 'ADMIN_OVERRIDE',
-        selector: c.selector,
-        property: c.property,
-        value: c.value
-      }, '*');
+      try {
+        iframe.contentWindow.postMessage({
+          type: 'ADMIN_OVERRIDE',
+          selector: c.selector,
+          property: c.property,
+          value: c.value
+        }, '*');
+      } catch (e) { /* ignore */ }
     });
-    if (allChanges.length > 0) {
-      addChatMessage(`📂 Proyecto cargado — ${allChanges.length} cambio(s) aplicados desde ${versions.length} versión(es).`, 'bot');
-    }
+    addChatMessage(`📂 Proyecto cargado — ${allChanges.length} cambio(s) aplicados.`, 'bot');
   }, 1000);
 }
 
@@ -452,8 +597,35 @@ async function applySavedChanges() {
 function openPreview() {
   const modal = document.getElementById('preview-modal');
   const iframe = document.getElementById('preview-iframe');
-  iframe.src = 'http://localhost:3000';
+  iframe.src = versionStore.getLiveUrl();
   modal.style.display = 'flex';
+
+  // Apply saved changes to preview iframe after it loads
+  iframe.addEventListener('load', async function onLoad() {
+    iframe.removeEventListener('load', onLoad);
+    if (!versionStore.projectId) return;
+    const versions = await versionStore.getVersions();
+    if (versions.length === 0) return;
+
+    const allChanges = [];
+    [...versions].reverse().forEach(v => {
+      (v.changes || []).forEach(c => allChanges.push(c));
+    });
+
+    // Also add pending changes
+    versionStore.getPendingChanges().forEach(c => allChanges.push(c));
+
+    setTimeout(() => {
+      allChanges.forEach(c => {
+        iframe.contentWindow.postMessage({
+          type: 'ADMIN_OVERRIDE',
+          selector: c.selector,
+          property: c.property,
+          value: c.value
+        }, '*');
+      });
+    }, 1000);
+  });
 }
 
 function closePreview() {
@@ -860,9 +1032,39 @@ async function applyChanges(user) {
     addChatMessage('ℹ️ No hay cambios pendientes.', 'bot');
     return;
   }
-  const version = await versionStore.applyChanges(user);
-  updatePendingCount();
-  addChatMessage(`📦 **${version.id}** guardada en proyecto **${versionStore.projectId}** — ${version.changeCount} cambio(s).\n📂 Ruta: apps/api/data/projects/${versionStore.projectId}/`, 'bot');
+
+  // Show loading on button
+  const btn = document.getElementById('btn-apply-changes');
+  const originalText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="btn-spinner"></span> Guardando...';
+  btn.classList.add('saving');
+
+  try {
+    const version = await versionStore.applyChanges(user);
+    updatePendingCount();
+
+    // Success animation
+    btn.innerHTML = '✓ Guardado';
+    btn.classList.remove('saving');
+    btn.classList.add('saved');
+
+    addChatMessage(`📦 **${version.id}** guardada en proyecto **${versionStore.projectId}**\n📂 Ruta: apps/api/data/projects/${versionStore.projectId}/\n🔗 URL: ${versionStore.getLiveUrl()}`, 'bot');
+
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      btn.classList.remove('saved');
+    }, 2000);
+  } catch (e) {
+    btn.innerHTML = '✕ Error';
+    btn.classList.remove('saving');
+    addChatMessage('❌ Error al guardar. Intenta de nuevo.', 'bot');
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }, 2000);
+  }
 }
 
 function updatePendingCount() {

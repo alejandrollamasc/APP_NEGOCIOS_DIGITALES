@@ -5,11 +5,14 @@
   "type": "module",
   "scripts": {
     "dev:live": "vite --config apps/live/vite.config.js",
+    "dev:hogar": "vite --config apps/hogar/vite.config.js",
     "dev:admin": "vite --config apps/admin/vite.config.js",
     "dev:api": "node apps/api/server.js",
     "build:live": "vite build --config apps/live/vite.config.js",
+    "build:hogar": "vite build --config apps/hogar/vite.config.js",
     "build:admin": "vite build --config apps/admin/vite.config.js",
     "preview:live": "vite preview --config apps/live/vite.config.js",
+    "preview:hogar": "vite preview --config apps/hogar/vite.config.js",
     "preview:admin": "vite preview --config apps/admin/vite.config.js"
   },
   "repository": {

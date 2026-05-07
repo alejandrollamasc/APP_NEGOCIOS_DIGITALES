@@ -4,14 +4,29 @@ class VersionStore {
   constructor() {
     this.projectId = null;
     this.pendingChanges = [];
+    this.template = null;
   }
 
-  setProject(id) {
+  setProject(id, template) {
     this.projectId = id;
     this.pendingChanges = [];
+    if (template) {
+      this.template = template;
+      localStorage.setItem('sb_project_template', template);
+    } else if (id) {
+      this.template = localStorage.getItem('sb_project_template') || 'salud';
+    } else {
+      this.template = null;
+      localStorage.removeItem('sb_project_template');
+    }
   }
 
   get base() { return `${API}/projects/${this.projectId}`; }
+
+  getLiveUrl() {
+    const port = this.template === 'hogar' ? 3002 : 3000;
+    return `http://localhost:${port}?project=${this.projectId}`;
+  }
 
   // ===== PROJECTS =====
   async listProjects() {
@@ -25,6 +40,12 @@ class VersionStore {
       body: JSON.stringify({ name, description, user, userName })
     });
     return await r.json();
+  }
+
+  async deleteProject(id) {
+    try {
+      await fetch(`${API}/projects/${id}`, { method: 'DELETE' });
+    } catch (e) { console.error('Delete failed:', e); }
   }
 
   // ===== PENDING =====
@@ -72,6 +93,11 @@ class VersionStore {
     try {
       await fetch(`${this.base}/images`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, data }) });
     } catch (e) { console.error('Image store failed:', e); }
+  }
+
+  async getProjectMeta() {
+    if (!this.projectId) return null;
+    try { const r = await fetch(`${this.base}`); return await r.json(); } catch { return null; }
   }
 }
 
