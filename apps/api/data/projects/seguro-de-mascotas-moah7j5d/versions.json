@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "id": "v1",
+    "number": 1,
+    "timestamp": "2026-04-29T12:58:17.805Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "changeStyle",
+        "selector": ".sb-hero__title",
+        "property": "display",
+        "value": "none",
+        "description": "changeStyle: H1",
+        "timestamp": "2026-04-29T12:57:52.807Z",
+        "id": "mok28nmv6vuv"
+      },
+      {
+        "action": "changeText",
+        "selector": ".sb-hero__subtitle",
+        "property": "textContent",
+        "value": "Planes que se ajustan a la medida! ",
+        "description": "changeText: P",
+        "timestamp": "2026-04-29T12:58:15.960Z",
+        "id": "mok295i0yv0a"
+      },
+      {
+        "action": "changeText",
+        "selector": ".sb-hero__subtitle",
+        "property": "textContent",
+        "value": "Planes que se ajustan a la medida! ",
+        "description": "changeText: P",
+        "timestamp": "2026-04-29T12:58:15.961Z",
+        "id": "mok295i1ys6f"
+      }
+    ],
+    "changeCount": 3
+  }
+]

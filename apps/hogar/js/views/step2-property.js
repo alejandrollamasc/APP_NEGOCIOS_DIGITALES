@@ -159,4 +159,8 @@ export function renderStep2Property(container) {
       </div>
     </div>
   `;
+
+  document.getElementById('btn-continue-step2')?.addEventListener('click', () => {
+    window.location.href = window.location.pathname + '?step=3';
+  });
 }

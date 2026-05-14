@@ -366,4 +366,36 @@ function getUniqueSelector(el) {
   return path.join(' > ');
 }
 
-document.addEventListener('DOMContentLoaded', initApp);
+document.addEventListener('DOMContentLoaded', () => {
+  initApp();
+  // Auto-load project overrides if ?project= param exists
+  loadProjectOverrides();
+});
+
+async function loadProjectOverrides() {
+  const params = new URLSearchParams(window.location.search);
+  const projectId = params.get('project');
+  if (!projectId) return;
+
+  try {
+    const res = await fetch(`http://localhost:4001/api/projects/${projectId}/overrides`);
+    if (!res.ok) return;
+    const changes = await res.json();
+    if (!Array.isArray(changes) || changes.length === 0) return;
+
+    // Wait for the page to render, then apply
+    setTimeout(() => {
+      changes.forEach(c => {
+        try {
+          const el = document.querySelector(c.selector);
+          if (el) {
+            if (c.property === 'textContent') el.textContent = c.value;
+            else if (c.property === 'innerHTML') el.innerHTML = c.value;
+            else if (c.property === 'src') el.src = c.value;
+            else el.style[c.property] = c.value;
+          }
+        } catch (e) { /* ignore */ }
+      });
+    }, 500);
+  } catch (e) { /* API not available */ }
+}

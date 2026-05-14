@@ -1,5 +1,51 @@
 [
   {
+    "id": "v2",
+    "number": 2,
+    "timestamp": "2026-04-30T17:47:34.172Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "changeStyle",
+        "selector": ".sb-hero__form",
+        "property": "top",
+        "value": "141.316px",
+        "description": "changeStyle: DIV",
+        "timestamp": "2026-04-30T17:46:08.980Z",
+        "id": "molrz84459vh"
+      },
+      {
+        "action": "changeStyle",
+        "selector": "#home-name",
+        "property": "display",
+        "value": "none",
+        "description": "changeStyle: INPUT",
+        "timestamp": "2026-04-30T17:46:34.347Z",
+        "id": "molrzroroax1"
+      },
+      {
+        "action": "changeStyle",
+        "selector": "#home-form > div:nth-of-type(1) > label",
+        "property": "display",
+        "value": "none",
+        "description": "changeStyle: LABEL",
+        "timestamp": "2026-04-30T17:46:35.890Z",
+        "id": "molrzsvmo4l6"
+      },
+      {
+        "action": "changeStyle",
+        "selector": ".sb-hero__form",
+        "property": "top",
+        "value": "147.062px",
+        "description": "changeStyle: DIV",
+        "timestamp": "2026-04-30T17:46:42.960Z",
+        "id": "molrzyc07gqe"
+      }
+    ],
+    "changeCount": 4
+  },
+  {
     "id": "v1",
     "number": 1,
     "timestamp": "2026-04-22T19:46:34.862Z",

@@ -1,0 +1,3464 @@
+[
+  {
+    "id": "v9",
+    "number": 9,
+    "timestamp": "2026-05-14T21:31:08.222Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "move",
+        "selector": ".step5-hero__confetti.step5-hero__confetti--right",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"942.281px\",\"top\":\"27.0078px\"}",
+        "description": "Elemento movido",
+        "page": "step6",
+        "timestamp": "2026-05-14T21:31:01.114Z",
+        "id": "mp606c1mufm2"
+      },
+      {
+        "action": "move",
+        "selector": ".step5-hero__confetti.step5-hero__confetti--left",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"0px\",\"top\":\"19.0078px\"}",
+        "description": "Elemento movido",
+        "page": "step6",
+        "timestamp": "2026-05-14T21:31:02.622Z",
+        "id": "mp606d7ign8j"
+      },
+      {
+        "action": "move",
+        "selector": ".step5-hero__confetti.step5-hero__confetti--left",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"994px\",\"top\":\"50.0078px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step6",
+        "timestamp": "2026-05-14T21:31:04.897Z",
+        "id": "mp606eyp12ob"
+      },
+      {
+        "action": "delete",
+        "selector": ".step5-hero__confetti.step5-hero__confetti--left",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step6",
+        "timestamp": "2026-05-14T21:31:05.504Z",
+        "id": "mp606ffkt90m"
+      }
+    ],
+    "changeCount": 4
+  },
+  {
+    "id": "v8",
+    "number": 8,
+    "timestamp": "2026-05-14T21:30:35.103Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "move",
+        "selector": ".hogar-hero__badge",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"1200.75px\",\"top\":\"58.0547px\"}",
+        "description": "Elemento movido",
+        "page": "home",
+        "timestamp": "2026-05-14T21:29:32.903Z",
+        "id": "mp604fzbnbj1"
+      },
+      {
+        "action": "delete",
+        "selector": ".hogar-hero__img",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "home",
+        "timestamp": "2026-05-14T21:29:40.757Z",
+        "id": "mp604m1hy58k"
+      },
+      {
+        "action": "delete",
+        "selector": ".hogar-stepper",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "home",
+        "timestamp": "2026-05-14T21:29:47.099Z",
+        "id": "mp604qxng4vt"
+      },
+      {
+        "action": "delete",
+        "selector": ".hogar-hero",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "home",
+        "timestamp": "2026-05-14T21:30:28.422Z",
+        "id": "mp605mti54b7"
+      }
+    ],
+    "changeCount": 4
+  },
+  {
+    "id": "v7",
+    "number": 7,
+    "timestamp": "2026-05-14T20:55:46.171Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "insertImage",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: fixed; display: block; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.8; pointer-events: none; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Imagen: Group 4581.png",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:31:30.607Z",
+        "id": "mp5y1t0vf0wn"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__title",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"44.9844px\",\"top\":\"19.9844px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:31:37.167Z",
+        "id": "mp5y1y33h100"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"41.9883px\",\"top\":\"270.582px\",\"width\":\"1059px\",\"height\":\"162px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:31:41.065Z",
+        "id": "mp5y213d8teb"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 880.996px; top: 0px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:31:44.847Z",
+        "id": "mp5y240fim14"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 949.996px; top: 0px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:31:47.672Z",
+        "id": "mp5y266wnuhk"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"39.9727px\",\"top\":\"266.566px\",\"width\":\"1059px\",\"height\":\"162px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:31:51.662Z",
+        "id": "mp5y299qoxun"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"41.9609px\",\"top\":\"198.562px\",\"width\":\"1059px\",\"height\":\"162px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:32:12.352Z",
+        "id": "mp5y2p8gxbri"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"395px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"150.961px\",\"top\":\"126.336px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:32:21.862Z",
+        "id": "mp5y2wkmd4iw"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"218.375px\",\"top\":\"25.875px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"172px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:33:05.734Z",
+        "id": "mp5y3ufaqa70"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "property": "textContent",
+        "value": "Opción recomendada",
+        "description": "Texto: span",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:33:14.413Z",
+        "id": "mp5y414du087"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "property": "fontFamily",
+        "value": "'Bolivar', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:33:14.413Z",
+        "id": "mp5y414diyfk"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"218.375px\",\"top\":\"25.875px\",\"width\":\"172px\",\"font-family\":\"Bolivar, sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"text-align\":\"left\"}",
+        "description": "Efecto",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:33:17.228Z",
+        "id": "mp5y43akg0pd"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"218.375px\",\"top\":\"25.875px\",\"width\":\"172px\",\"font-family\":\"Bolivar, sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"text-align\":\"center\"}",
+        "description": "Efecto",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:33:18.641Z",
+        "id": "mp5y44dtp8ef"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "property": "fontFamily",
+        "value": "'Bolivar', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:33:19.419Z",
+        "id": "mp5y44zfrgjn"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"213.348px\",\"top\":\"29.8594px\",\"width\":\"172px\",\"font-family\":\"Bolivar, sans-serif\",\"text-align\":\"center\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:34:59.563Z",
+        "id": "mp5y6a97npho"
+      },
+      {
+        "action": "insertImage",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Icono_Vigilancia.png\" alt=\"Icono_Vigilancia.png\" class=\"admin-inserted\" style=\"position: relative; display: block; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Imagen: Icono_Vigilancia.png",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:35:23.717Z",
+        "id": "mp5y6sw5ccw6"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Icono_Vigilancia.png\" alt=\"Icono_Vigilancia.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 844.996px; top: 79.9922px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:35:27.306Z",
+        "id": "mp5y6vnu6cl7"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > img",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:35:31.292Z",
+        "id": "mp5y6yqkdbbg"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"480px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"150.961px\",\"top\":\"126.336px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:10.338Z",
+        "id": "mp5y7sv6gdkr"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"457px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"150.961px\",\"top\":\"126.336px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:21.779Z",
+        "id": "mp5y81oz2qsu"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"493px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"150.961px\",\"top\":\"126.336px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:29.513Z",
+        "id": "mp5y87ntvc5u"
+      },
+      {
+        "action": "insertShape",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: relative; margin: 12px auto; width: 120px; height: 120px; background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 50%; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"></div>",
+        "description": "Figura: circle",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:30.643Z",
+        "id": "mp5y88j7cxqr"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: 120px; height: 120px; background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 50%; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 507.984px; top: 340.277px;\"></div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:32.691Z",
+        "id": "mp5y8a43o5m9"
+      },
+      {
+        "action": "resize",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: 54px; height: 49px; background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 50%; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 507.984px; top: 340.277px;\"></div>",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:38.082Z",
+        "id": "mp5y8e9u8qkz"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: 54px; height: 49px; background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 50%; cursor: move; z-index: 99999; left: 560.969px; top: 409.266px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"></div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:39.962Z",
+        "id": "mp5y8fq2002m"
+      },
+      {
+        "action": "resize",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: 54px; height: 52px; background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 50%; cursor: move; z-index: 99999; left: 560.969px; top: 409.266px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"></div>",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:40.680Z",
+        "id": "mp5y8ga0bmxo"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: 54px; height: 49px; background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 50%; cursor: move; z-index: 99999; left: 562.957px; top: 401.25px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"></div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:36:44.076Z",
+        "id": "mp5y8iwccuyf"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: 54px; height: 49px; background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 50%; cursor: move; z-index: 99999; left: 544.949px; top: 411.242px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"></div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:00.696Z",
+        "id": "mp5y8vq0npjw"
+      },
+      {
+        "action": "insertText",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: relative; margin: 12px auto; width: fit-content; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 16px; font-weight: 400; color: rgb(27, 27, 27); background: transparent; padding: 8px 12px; cursor: move; z-index: 99999; line-height: 140%; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">Nuevo texto</div>",
+        "description": "Texto insertado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:02.226Z",
+        "id": "mp5y8wwi5dz7"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: fit-content; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 16px; font-weight: 400; color: rgb(27, 27, 27); background: transparent; padding: 8px 12px; cursor: move; z-index: 99999; line-height: 140%; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 523.316px; top: 381.277px;\">Nuevo texto</div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:04.566Z",
+        "id": "mp5y8ypirnpo"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: fit-content; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 16px; font-weight: 400; color: rgb(27, 27, 27); background: transparent; padding: 8px 12px; cursor: move; z-index: 99999; line-height: 140%; left: 524.301px; top: 378.262px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">Nuevo texto</div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:06.258Z",
+        "id": "mp5y900iui49"
+      },
+      {
+        "action": "effect",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: fit-content; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 16px; font-weight: 700; color: rgb(27, 27, 27); background: transparent; padding: 8px 12px; cursor: move; z-index: 99999; line-height: 140%; left: 524.301px; top: 378.262px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">Nuevo texto</div>",
+        "description": "Efecto",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:12.052Z",
+        "id": "mp5y94hg80e8"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(7)",
+        "property": "textContent",
+        "value": "Ver coberturas",
+        "description": "Texto: div",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:13.171Z",
+        "id": "mp5y95cjkqdp"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(7)",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:13.172Z",
+        "id": "mp5y95cks7bi"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: fit-content; font-family: &quot;Roboto Condensed&quot;, sans-serif !important; font-size: 16px; font-weight: 700; color: rgb(27, 27, 27); background: transparent; padding: 8px 12px; cursor: move; z-index: 99999; line-height: 140%; left: 509.297px; top: 379.254px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">Ver coberturas</div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:15.050Z",
+        "id": "mp5y96sqhygd"
+      },
+      {
+        "action": "duplicate",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline-offset: 2px; outline: rgb(10, 103, 65) solid 2px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Duplicado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:35.186Z",
+        "id": "mp5y9mc25k3y"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; position: absolute; z-index: 99999; left: 250.422px; top: 72.9805px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:40.177Z",
+        "id": "mp5y9q6p8lbd"
+      },
+      {
+        "action": "effect",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; position: absolute; z-index: 99999; left: 250.422px; top: 72.9805px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:41.901Z",
+        "id": "mp5y9ril11un"
+      },
+      {
+        "action": "effect",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; position: absolute; z-index: 99999; left: 250.422px; top: 72.9805px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:42.178Z",
+        "id": "mp5y9rqavxs2"
+      },
+      {
+        "action": "effect",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; position: absolute; z-index: 99999; left: 250.422px; top: 72.9805px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:42.338Z",
+        "id": "mp5y9ruqhmy9"
+      },
+      {
+        "action": "effect",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; position: absolute; z-index: 99999; left: 250.422px; top: 72.9805px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:42.484Z",
+        "id": "mp5y9rysyc0q"
+      },
+      {
+        "action": "effect",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; position: absolute; z-index: 99999; left: 250.422px; top: 72.9805px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:42.640Z",
+        "id": "mp5y9s34lepb"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"571.453px\",\"top\":\"435.641px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:45.666Z",
+        "id": "mp5y9uf6p4w1"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(3) > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"571.453px\",\"top\":\"435.641px\"}",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:47.838Z",
+        "id": "mp5y9w3icg9v"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(3) > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"571.453px\",\"top\":\"435.641px\"}",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:48.214Z",
+        "id": "mp5y9wdyo458"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(3) > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"571.453px\",\"top\":\"435.641px\"}",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:48.390Z",
+        "id": "mp5y9wiujtwd"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(3) > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"571.453px\",\"top\":\"435.641px\"}",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:48.566Z",
+        "id": "mp5y9wnqyp54"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(3) > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"571.453px\",\"top\":\"435.641px\"}",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:48.704Z",
+        "id": "mp5y9wrkwu0d"
+      },
+      {
+        "action": "duplicate",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline-offset: 2px; outline: rgb(10, 103, 65) solid 2px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Duplicado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:55.925Z",
+        "id": "mp5ya2c66b14"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; position: absolute; z-index: 99999; left: 39.4805px; top: 38.6602px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:37:59.261Z",
+        "id": "mp5ya4wtgz2f"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > path:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"389.457px\",\"top\":\"433.645px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:02.690Z",
+        "id": "mp5ya7k2m441"
+      },
+      {
+        "action": "duplicate",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline-offset: 2px; outline: rgb(10, 103, 65) solid 2px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Duplicado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:14.155Z",
+        "id": "mp5yagejefhh"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; position: absolute; z-index: 99999; left: 141.48px; top: 52.6602px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:16.051Z",
+        "id": "mp5yahv7hbg4"
+      },
+      {
+        "action": "effect",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" style=\"position: absolute; z-index: 99999; left: 141.48px; top: 52.6602px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\" class=\"admin-inserted\"><path d=\"M13 4L7 10l6 6\" stroke=\"#016D38\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"\"></path></svg>",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:22.682Z",
+        "id": "mp5yamzeflhq"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > path:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"566.449px\",\"top\":\"440.648px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:32.187Z",
+        "id": "mp5yaubf9uff"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"507px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"150.961px\",\"top\":\"126.336px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:39.255Z",
+        "id": "mp5yazrrrqkv"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: 54px; height: 49px; background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 50%; cursor: move; z-index: 99999; left: 544.941px; top: 426.223px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"></div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:42.346Z",
+        "id": "mp5yb25mnhwq"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; width: fit-content; font-family: &quot;Roboto Condensed&quot;, sans-serif !important; font-size: 16px; font-weight: 700; color: rgb(27, 27, 27); background: transparent; padding: 8px 12px; cursor: move; z-index: 99999; line-height: 140%; left: 509.297px; top: 383.23px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">Ver coberturas</div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:43.856Z",
+        "id": "mp5yb3bk12ux"
+      },
+      {
+        "action": "insertModal",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: relative; margin: 24px auto; width: 500px; max-width: 90%; background: rgb(255, 255, 255); border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 32px; padding: 32px; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"><h3 style=\"font-family:Roboto Condensed,sans-serif;font-size:20px;color:#016D38;margin-bottom:16px;\">Modal Stepper</h3><p style=\"font-size:14px;color:#666;\">Contenido del modal.</p></div>",
+        "description": "Modal insertado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:38:56.189Z",
+        "id": "mp5ybcu5hzux"
+      },
+      {
+        "action": "resize",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: relative; margin: 24px auto; width: 268px; max-width: 90%; background: rgb(255, 255, 255); border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 32px; padding: 32px; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"><h3 style=\"font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 20px; color: rgb(1, 109, 56); margin-bottom: 16px;\">Modal Stepper</h3><p style=\"font-size: 14px; color: rgb(102, 102, 102); outline: rgba(10, 103, 65, 0.4) dashed 1px;\">Contenido del modal.</p></div>",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:39:00.074Z",
+        "id": "mp5ybfu26lwe"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > h3",
+        "property": "__multiStyle",
+        "value": "{\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"font-size\":\"20px\",\"color\":\"rgb(1, 109, 56)\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"469.992px\",\"top\":\"297.262px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:39:01.469Z",
+        "id": "mp5ybgwtrrq9"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: absolute; margin: 24px auto; width: 268px; max-width: 90%; background: rgb(255, 255, 255); border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 32px; padding: 32px; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 740px; top: 368.27px;\"><p style=\"font-size: 14px; color: rgb(102, 102, 102); outline: rgba(10, 103, 65, 0.4) dashed 1px;\">Contenido del modal.</p></div>",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:39:03.664Z",
+        "id": "mp5ybilshiep"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(3) > h3",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:39:05.430Z",
+        "id": "mp5ybjyu7y7n"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(8) > p",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:39:08.836Z",
+        "id": "mp5ybmlg5d63"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(8)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:39:09.597Z",
+        "id": "mp5ybn6l2pho"
+      },
+      {
+        "action": "insertImage",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: relative; display: block; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Imagen: Vector.png",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:14.416Z",
+        "id": "mp5ypw5s0m9e"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 437.082px; top: 4.66406px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:16.260Z",
+        "id": "mp5ypxl0vld4"
+      },
+      {
+        "action": "resize",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 437.082px; top: 4.66406px; width: 362px;\">",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:17.991Z",
+        "id": "mp5ypyx3kw4n"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 424.07px; top: 8.64062px; width: 362px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:19.503Z",
+        "id": "mp5yq033milq"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 390.062px; top: 0px; width: 362px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:21.331Z",
+        "id": "mp5yq1hvqe1c"
+      },
+      {
+        "action": "resize",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 390.062px; top: 0px; width: 409px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:22.908Z",
+        "id": "mp5yq2povwm0"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 14.0586px; top: 1.99219px; width: 409px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:25.292Z",
+        "id": "mp5yq4jwxlj6"
+      },
+      {
+        "action": "resize",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 54px; cursor: move; z-index: 99999; left: 14.0586px; top: 1.99219px; width: 961px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:30.325Z",
+        "id": "mp5yq8fp4gpi"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Vector.png\" alt=\"Vector.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 54px; cursor: move; z-index: 99999; left: 479.043px; top: 362.984px; width: 961px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:50:33.992Z",
+        "id": "mp5yqb9kjw2w"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"507px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"144.957px\",\"top\":\"126.328px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:51:08.457Z",
+        "id": "mp5yr1uxme8l"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__total-label",
+        "property": "__multiStyle",
+        "value": "{\"width\":\"61px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"774.977px\",\"top\":\"45.9102px\",\"font-size\":\"28px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:51:48.735Z",
+        "id": "mp5yrwxr44jk"
+      }
+    ],
+    "changeCount": 76
+  },
+  {
+    "id": "v6",
+    "number": 6,
+    "timestamp": "2026-05-14T20:30:58.167Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"839px\",\"top\":\"180px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:08:24.875Z",
+        "id": "mp5x83sbdy13"
+      },
+      {
+        "action": "delete",
+        "selector": ".step1-title",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:10:07.525Z",
+        "id": "mp5xaazp20hx"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > h2",
+        "property": "textContent",
+        "value": "Tenemos un plan perfecto para ti. ",
+        "description": "Texto: h2",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:11:29.186Z",
+        "id": "mp5xc2028cbg"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > h2",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:11:29.186Z",
+        "id": "mp5xc202oad0"
+      },
+      {
+        "action": "delete",
+        "selector": ".step3-payment-toggle__label",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:11:52.078Z",
+        "id": "mp5xcjny9cm7"
+      },
+      {
+        "action": "delete",
+        "selector": ".step3-payment-toggle__btn.step3-payment-toggle__btn--active",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:11:52.865Z",
+        "id": "mp5xck9toovv"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div > button:nth-of-type(2)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:11:53.467Z",
+        "id": "mp5xckqjhk8t"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > span",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"234.396px\",\"top\":\"32.8958px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:12:08.519Z",
+        "id": "mp5xcwcntsjx"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > span",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"240.396px\",\"top\":\"26.8958px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:12:13.319Z",
+        "id": "mp5xd01zxj6y"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:12:15.609Z",
+        "id": "mp5xd1tl6gxn"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"839px\",\"top\":\"180px\"}",
+        "description": "Elemento movido",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.029Z",
+        "id": "mp5xd7jpowsm"
+      },
+      {
+        "action": "delete",
+        "selector": ".step1-title",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.029Z",
+        "id": "mp5xd7jpkhi9"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > h2",
+        "property": "textContent",
+        "value": "Tenemos un plan perfecto para ti. ",
+        "description": "Texto: h2",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.029Z",
+        "id": "mp5xd7jpvpu0"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > h2",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.030Z",
+        "id": "mp5xd7jqnkhx"
+      },
+      {
+        "action": "delete",
+        "selector": ".step3-payment-toggle__label",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.030Z",
+        "id": "mp5xd7jqfsm6"
+      },
+      {
+        "action": "delete",
+        "selector": ".step3-payment-toggle__btn.step3-payment-toggle__btn--active",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.030Z",
+        "id": "mp5xd7jqotx5"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div > button:nth-of-type(2)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.030Z",
+        "id": "mp5xd7jqi7vn"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > span",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"234.396px\",\"top\":\"32.8958px\"}",
+        "description": "Elemento movido",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.031Z",
+        "id": "mp5xd7jrwsw7"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > span",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"240.396px\",\"top\":\"26.8958px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.031Z",
+        "id": "mp5xd7jril2z"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "page-mp5xd7jp",
+        "timestamp": "2026-05-14T20:12:23.031Z",
+        "id": "mp5xd7jr9zk9"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"825px\",\"top\":\"119px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:12:52.669Z",
+        "id": "mp5xduf1vvip"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"858px\",\"top\":\"115px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:12:55.258Z",
+        "id": "mp5xdwey2a22"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"858px\",\"top\":\"115px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"415px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:13:17.039Z",
+        "id": "mp5xed7zdem2"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"858px\",\"top\":\"115px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"415px\",\"height\":\"416px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:13:26.995Z",
+        "id": "mp5xekwjf68v"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"904px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:13:51.609Z",
+        "id": "mp5xf3w9i9oc"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-plan-details",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"32px\",\"top\":\"323.396px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:13:58.391Z",
+        "id": "mp5xf94n3qvk"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1053px\",\"position\":\"relative\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:02.521Z",
+        "id": "mp5xfcbdp9je"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-plan-details",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"0px\",\"top\":\"323.396px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:06.617Z",
+        "id": "mp5xffh5m8bu"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-plan-details",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"3px\",\"top\":\"492.396px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:14.361Z",
+        "id": "mp5xflg9boqw"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"147px\",\"top\":\"220.604px\",\"width\":\"415px\",\"height\":\"416px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:18.287Z",
+        "id": "mp5xfohbz430"
+      },
+      {
+        "action": "delete",
+        "selector": "#sidebar-coverages > span",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:22.402Z",
+        "id": "mp5xfrnmsa47"
+      },
+      {
+        "action": "delete",
+        "selector": "#sidebar-coverages > div:nth-of-type(1)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:23.169Z",
+        "id": "mp5xfs8y93dz"
+      },
+      {
+        "action": "delete",
+        "selector": "#sidebar-coverages > div:nth-of-type(2)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:23.850Z",
+        "id": "mp5xfsrud3ex"
+      },
+      {
+        "action": "delete",
+        "selector": "#sidebar-assistance > span",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:25.039Z",
+        "id": "mp5xftovpi1w"
+      },
+      {
+        "action": "delete",
+        "selector": "#sidebar-assistance > div",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:25.936Z",
+        "id": "mp5xfudsuwiu"
+      },
+      {
+        "action": "delete",
+        "selector": "#sidebar-plan > div",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:26.855Z",
+        "id": "mp5xfv3bc1a1"
+      },
+      {
+        "action": "delete",
+        "selector": "#sidebar-plan > span",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:28.395Z",
+        "id": "mp5xfwa3uidp"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"147px\",\"top\":\"220.604px\",\"width\":\"625px\",\"height\":\"416px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:33.639Z",
+        "id": "mp5xg0brmdrc"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"147px\",\"top\":\"220.604px\",\"width\":\"625px\",\"height\":\"261px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:37.036Z",
+        "id": "mp5xg2y46pqf"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"50px\",\"top\":\"195.583px\",\"width\":\"625px\",\"height\":\"261px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:39.369Z",
+        "id": "mp5xg4qx10aw"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"50px\",\"top\":\"195.583px\",\"width\":\"717px\",\"height\":\"261px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:41.568Z",
+        "id": "mp5xg6g08hy1"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__iva",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"31px\",\"top\":\"199.938px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:45.662Z",
+        "id": "mp5xg9lqoijk"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__total",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"132px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:14:55.282Z",
+        "id": "mp5xgh0yjtyw"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__total",
+        "property": "__multiStyle",
+        "value": "{\"width\":\"132px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"563px\",\"top\":\"65.9375px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:04.318Z",
+        "id": "mp5xgnzyc13d"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(5) > span",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"205.396px\",\"top\":\"28.875px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:12.057Z",
+        "id": "mp5xgtyxoce6"
+      },
+      {
+        "action": "delete",
+        "selector": ".step3-sidebar__iva",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:14.462Z",
+        "id": "mp5xgvtq51xh"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__divider",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"20px\",\"top\":\"105.938px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:19.907Z",
+        "id": "mp5xh00zzooe"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__divider",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"20px\",\"top\":\"105.938px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"613px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:25.281Z",
+        "id": "mp5xh469bdga"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"32px\",\"top\":\"197.583px\",\"width\":\"717px\",\"height\":\"261px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:29.735Z",
+        "id": "mp5xh7lzq4ff"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"43px\",\"top\":\"196.583px\",\"width\":\"717px\",\"height\":\"261px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:31.346Z",
+        "id": "mp5xh8uqszql"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__desc",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"411px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:46.516Z",
+        "id": "mp5xhkk41qj6"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__divider",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"20px\",\"top\":\"105.938px\",\"width\":\"680px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:54.294Z",
+        "id": "mp5xhqk6ylvr"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"43px\",\"top\":\"196.583px\",\"width\":\"717px\",\"height\":\"131px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:15:59.609Z",
+        "id": "mp5xhuntnxhw"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"43px\",\"top\":\"196.583px\",\"width\":\"717px\",\"height\":\"150px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:16:13.552Z",
+        "id": "mp5xi5f4nqm8"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div > div:nth-of-type(2) > a",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"294.604px\",\"top\":\"395.833px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:17:02.930Z",
+        "id": "mp5xj7iqrg9a"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(1) > div > div:nth-of-type(2) > a",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"294.604px\",\"top\":\"395.833px\"}",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:17:06.233Z",
+        "id": "mp5xja2huvnn"
+      },
+      {
+        "action": "effect",
+        "selector": "#app-content > div > div:nth-of-type(1) > div > div:nth-of-type(2) > a",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"294.604px\",\"top\":\"395.833px\"}",
+        "description": "Capa: 99999",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:17:06.713Z",
+        "id": "mp5xjafurlhb"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(5) > a",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"265.604px\",\"top\":\"118.25px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:17:10.468Z",
+        "id": "mp5xjdc4m2um"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(5) > a",
+        "property": "color",
+        "value": "#ffffff",
+        "description": "Color",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:17:41.763Z",
+        "id": "mp5xk1hfthy3"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(5) > a",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:17:41.763Z",
+        "id": "mp5xk1hfehdx"
+      },
+      {
+        "action": "insertImage",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: relative; display: block; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Imagen: icono_plomería.png",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:18:20.523Z",
+        "id": "mp5xkve37nlf"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 392px; top: 394.125px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:18:26.943Z",
+        "id": "mp5xl0cfiwr9"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 262.992px; top: 390.125px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:18:30.176Z",
+        "id": "mp5xl2u88na2"
+      },
+      {
+        "action": "resize",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 25px; cursor: move; z-index: 99999; left: 262.992px; top: 390.125px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; width: 25px;\">",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:18:31.804Z",
+        "id": "mp5xl43gc3hi"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 25px; cursor: move; z-index: 99999; left: 236.008px; top: 112.547px; width: 25px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:18:37.180Z",
+        "id": "mp5xl88s58w5"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 25px; cursor: move; z-index: 99999; left: 224.996px; top: 112.531px; width: 25px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:18:47.079Z",
+        "id": "mp5xlfvrgc1g"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 25px; cursor: move; z-index: 99999; left: 226.98px; top: 99.5117px; width: 25px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:18:50.811Z",
+        "id": "mp5xlirf2831"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1053px\",\"position\":\"absolute\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"z-index\":\"99999\",\"left\":\"205.984px\",\"top\":\"119.367px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:19:50.310Z",
+        "id": "mp5xmso6wo9v"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1053px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"205.984px\",\"top\":\"119.367px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"792px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:20:05.073Z",
+        "id": "mp5xn429fjnd"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1053px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"205.969px\",\"top\":\"122.367px\",\"width\":\"792px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:20:07.565Z",
+        "id": "mp5xn5zhfgme"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"1062px\",\"top\":\"540.891px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:20:16.025Z",
+        "id": "mp5xncihxr1w"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"0px\",\"top\":\"495.391px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:20:22.180Z",
+        "id": "mp5xnh9gaggd"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1053px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"180.969px\",\"top\":\"160.367px\",\"width\":\"792px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:20:27.938Z",
+        "id": "mp5xnlpfbvrf"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:20:30.722Z",
+        "id": "mp5xnnuqzs4k"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:20:47.754Z",
+        "id": "mp5xo0zujxnk"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"43px\",\"top\":\"196.583px\",\"width\":\"717px\",\"height\":\"162px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:21:38.173Z",
+        "id": "mp5xp3wdh997"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"relative\",\"z-index\":\"99999\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:21:52.839Z",
+        "id": "mp5xpf7rsnad"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(5) > div",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"0px\",\"top\":\"12.3438px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:22:03.314Z",
+        "id": "mp5xpnaqtif4"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(5) > div",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"2px\",\"top\":\"7.32812px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:22:07.140Z",
+        "id": "mp5xpq90398n"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(6) > div",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"0px\",\"top\":\"0px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:22:09.883Z",
+        "id": "mp5xpsd7i8og"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(6) > div > div:nth-of-type(2) > div",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"0px\",\"top\":\"12.0938px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:22:14.616Z",
+        "id": "mp5xpw0otdyq"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"left\":\"0px\",\"top\":\"0px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:22:41.814Z",
+        "id": "mp5xqh060ipl"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(6) > div",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:22:51.169Z",
+        "id": "mp5xqo817fja"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1053px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"268.711px\",\"top\":\"156.359px\",\"width\":\"792px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:23:04.880Z",
+        "id": "mp5xqysw10uh"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1053px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"370.461px\",\"top\":\"310.352px\",\"width\":\"792px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:23:06.291Z",
+        "id": "mp5xqzw3tyll"
+      },
+      {
+        "action": "delete",
+        "selector": ".step3-layout",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:23:46.978Z",
+        "id": "mp5xrvaasn73"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:23:49.340Z",
+        "id": "mp5xrx3wg03k"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1053px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"351.961px\",\"top\":\"158.359px\",\"width\":\"792px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:23:56.712Z",
+        "id": "mp5xs2so5lbj"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div:nth-of-type(6) > div",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:01.105Z",
+        "id": "mp5xs66pzr6x"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-offset\":\"2px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:05.711Z",
+        "id": "mp5xs9qniunz"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:07.580Z",
+        "id": "mp5xsb6kqfcx"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"left\":\"55.9922px\",\"top\":\"15.5938px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:10.001Z",
+        "id": "mp5xsd1tiuky"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1161px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"351.961px\",\"top\":\"158.359px\",\"width\":\"792px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:16.061Z",
+        "id": "mp5xshq5ctar"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"0px\",\"top\":\"1069.05px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:19.392Z",
+        "id": "mp5xskaox2jx"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1161px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"351.961px\",\"top\":\"158.359px\",\"width\":\"1009px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:26.871Z",
+        "id": "mp5xsq2fomrg"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1161px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"207.961px\",\"top\":\"182.344px\",\"width\":\"1009px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:32.742Z",
+        "id": "mp5xsuli3ahm"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1161px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"213.961px\",\"top\":\"187.344px\",\"width\":\"1009px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:34.117Z",
+        "id": "mp5xsvnpdq7u"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1161px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"213.961px\",\"top\":\"187.344px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:36.732Z",
+        "id": "mp5xsxocn4hf"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"1161px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"150.961px\",\"top\":\"126.336px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:40.597Z",
+        "id": "mp5xt0npu2mq"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:43.307Z",
+        "id": "mp5xt2qzm44i"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:47.062Z",
+        "id": "mp5xt5naz1ap"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:49.568Z",
+        "id": "mp5xt7kwjpd1"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"1242px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:52.776Z",
+        "id": "mp5xta20yivo"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"width\":\"1242px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"left\":\"0px\",\"top\":\"1070.02px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:24:54.550Z",
+        "id": "mp5xtbfaj5u2"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"width\":\"1265px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"left\":\"0px\",\"top\":\"1070.02px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:00.269Z",
+        "id": "mp5xtfu55v5x"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"width\":\"1265px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"left\":\"0px\",\"top\":\"1070.02px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:05.151Z",
+        "id": "mp5xtjlrjh47"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"width\":\"1265px\",\"left\":\"0px\",\"top\":\"1046.52px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:06.593Z",
+        "id": "mp5xtkptazd1"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"width\":\"1265px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:07.808Z",
+        "id": "mp5xtlnkb164"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"width\":\"1392px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:13.846Z",
+        "id": "mp5xtqba5tby"
+      },
+      {
+        "selector": "#btn-continue",
+        "property": "fontSize",
+        "value": "20px",
+        "description": "Tamaño fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:21.446Z",
+        "id": "mp5xtw6e5ee7"
+      },
+      {
+        "selector": "#btn-continue",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:21.447Z",
+        "id": "mp5xtw6fbuka"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__card",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"43px\",\"top\":\"196.583px\",\"width\":\"1059px\",\"height\":\"162px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:28.723Z",
+        "id": "mp5xu1sj9x7b"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__total",
+        "property": "__multiStyle",
+        "value": "{\"width\":\"132px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"885.992px\",\"top\":\"60.9297px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:33.324Z",
+        "id": "mp5xu5ccq8y9"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__divider",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"20px\",\"top\":\"105.938px\",\"width\":\"1011px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:38.262Z",
+        "id": "mp5xu95i7c2r"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > a",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"360.594px\",\"top\":\"121.242px\",\"color\":\"rgb(255, 255, 255)\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:48.866Z",
+        "id": "mp5xuhc2klo0"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 25px; cursor: move; z-index: 99999; left: 20.9688px; top: 120.492px; width: 25px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:51.898Z",
+        "id": "mp5xujoacltr"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/icono_plomer%C3%ADa.png\" alt=\"icono_plomería.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 25px; cursor: move; z-index: 99999; left: 21.9531px; top: 108.492px; width: 25px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:54.325Z",
+        "id": "mp5xuljpidtt"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > a",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"60.5859px\",\"top\":\"124.242px\",\"color\":\"rgb(255, 255, 255)\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:25:57.207Z",
+        "id": "mp5xunrr8t2f"
+      },
+      {
+        "selector": ".step3-sidebar__total-label",
+        "property": "fontSize",
+        "value": "28px",
+        "description": "Tamaño fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:10.306Z",
+        "id": "mp5xuxvmp8p9"
+      },
+      {
+        "selector": ".step3-sidebar__total-label",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:10.307Z",
+        "id": "mp5xuxvnfvaq"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__total-label",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"font-size\":\"28px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"width\":\"112px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:12.106Z",
+        "id": "mp5xuz9mu49l"
+      },
+      {
+        "action": "move",
+        "selector": ".step3-sidebar__total-label",
+        "property": "__multiStyle",
+        "value": "{\"font-size\":\"28px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"width\":\"112px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"770.984px\",\"top\":\"52.9141px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:14.195Z",
+        "id": "mp5xv0vnz10v"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-sidebar__total-label",
+        "property": "__multiStyle",
+        "value": "{\"font-size\":\"28px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"width\":\"61px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"770.984px\",\"top\":\"52.9141px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:16.034Z",
+        "id": "mp5xv2aq4swr"
+      },
+      {
+        "action": "resize",
+        "selector": "#sidebar-total",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:17.252Z",
+        "id": "mp5xv38kb2gm"
+      },
+      {
+        "selector": "#sidebar-total",
+        "property": "fontSize",
+        "value": "30px",
+        "description": "Tamaño fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:20.942Z",
+        "id": "mp5xv6320epb"
+      },
+      {
+        "selector": "#sidebar-total",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:20.944Z",
+        "id": "mp5xv634ad34"
+      },
+      {
+        "action": "move",
+        "selector": "#sidebar-total",
+        "property": "__multiStyle",
+        "value": "{\"font-size\":\"30px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"852.984px\",\"top\":\"52.9141px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:25.429Z",
+        "id": "mp5xv9jpaf33"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"218.375px\",\"top\":\"25.875px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:26:33.393Z",
+        "id": "mp5xvfox2g8y"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:25.299Z",
+        "id": "mp5xwjqrsgaj"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:32.528Z",
+        "id": "mp5xwpbk6lk2"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:32.989Z",
+        "id": "mp5xwpodbch7"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:33.160Z",
+        "id": "mp5xwpt4g6ad"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:34.203Z",
+        "id": "mp5xwqm3wf17"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:34.359Z",
+        "id": "mp5xwqqfhwn7"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:35.407Z",
+        "id": "mp5xwrjjo25c"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:36.082Z",
+        "id": "mp5xws2atdrx"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:37.119Z",
+        "id": "mp5xwsv3g3dm"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:37.823Z",
+        "id": "mp5xwten3f56"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > svg > circle",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:37.973Z",
+        "id": "mp5xwtitkmdp"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > svg > rect",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:38.681Z",
+        "id": "mp5xwu2he9al"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > svg > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:39.695Z",
+        "id": "mp5xwuun2x9y"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > svg > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:40.004Z",
+        "id": "mp5xwv38jovg"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > svg > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:40.280Z",
+        "id": "mp5xwvaw2fio"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > svg > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:40.452Z",
+        "id": "mp5xwvfofric"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > svg > path",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step6",
+        "timestamp": "2026-05-14T20:27:41.753Z",
+        "id": "mp5xwwftzbfz"
+      },
+      {
+        "action": "resize",
+        "selector": "#sidebar-total",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"852.984px\",\"top\":\"52.9141px\",\"font-size\":\"30px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"202px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:27:59.807Z",
+        "id": "mp5xxadbg05p"
+      },
+      {
+        "selector": "#sidebar-total",
+        "property": "textContent",
+        "value": "$165.000",
+        "description": "Texto: span",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:28:13.492Z",
+        "id": "mp5xxkxg8hv1"
+      },
+      {
+        "selector": "#sidebar-total",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:28:13.493Z",
+        "id": "mp5xxkxh0f88"
+      },
+      {
+        "action": "resize",
+        "selector": "#sidebar-total",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"852.984px\",\"top\":\"52.9141px\",\"font-size\":\"30px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"width\":\"123px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:28:16.145Z",
+        "id": "mp5xxmz544z9"
+      },
+      {
+        "action": "move",
+        "selector": "#sidebar-total",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"861.969px\",\"top\":\"47.9102px\",\"width\":\"123px\",\"font-size\":\"30px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:23.669Z",
+        "id": "mp5xz32tk16s"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-page",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"688px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:36.201Z",
+        "id": "mp5xzcqxin1a"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-page",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"688px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:37.163Z",
+        "id": "mp5xzdhntive"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-plan-details",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"3px\",\"top\":\"492.396px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"620px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:40.313Z",
+        "id": "mp5xzfx5p3lh"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-plan-details",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"3px\",\"top\":\"492.396px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"658px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:41.297Z",
+        "id": "mp5xzgoh5qei"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-plan-details",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"3px\",\"top\":\"492.396px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"710px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:43.513Z",
+        "id": "mp5xzie1dqys"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-plan-details",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"3px\",\"top\":\"492.396px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"771px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:44.469Z",
+        "id": "mp5xzj4lbf7d"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"width\":\"1392px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"left\":\"0px\",\"top\":\"717.652px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:47.153Z",
+        "id": "mp5xzl756sh6"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"width\":\"1392px\",\"left\":\"0px\",\"top\":\"677.137px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:49.064Z",
+        "id": "mp5xzmo8zxxq"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-bottom",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"width\":\"1392px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:50.132Z",
+        "id": "mp5xznhww1y0"
+      },
+      {
+        "action": "resize",
+        "selector": ".step3-plan-details",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"3px\",\"top\":\"492.396px\",\"height\":\"471px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:56.662Z",
+        "id": "mp5xzsjam8ap"
+      },
+      {
+        "action": "delete",
+        "selector": ".step3-plan-details",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:29:59.987Z",
+        "id": "mp5xzv3nve2r"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"425px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"150.961px\",\"top\":\"126.336px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:30:12.462Z",
+        "id": "mp5y04q6u8pm"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"height\":\"496px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"150.961px\",\"top\":\"126.336px\",\"width\":\"1138px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step3",
+        "timestamp": "2026-05-14T20:30:26.638Z",
+        "id": "mp5y0fnywi9p"
+      }
+    ],
+    "changeCount": 163
+  },
+  {
+    "id": "v5",
+    "number": 5,
+    "timestamp": "2026-05-14T20:04:55.052Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"621.5px\",\"top\":\"187.396px\",\"width\":\"348px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:04:51.233Z",
+        "id": "mp5x3ixt36yu"
+      }
+    ],
+    "changeCount": 1
+  },
+  {
+    "id": "v4",
+    "number": 4,
+    "timestamp": "2026-05-14T20:04:43.812Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "insertImage",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: fixed; display: block; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.8; pointer-events: none; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Imagen: Group 4581.png",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:03:52.972Z",
+        "id": "mp5x29zgxxv4"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 0px; top: 0px;\">",
+        "description": "Elemento movido",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:03:59.370Z",
+        "id": "mp5x2ex6dmcr"
+      },
+      {
+        "action": "resize",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: 92px; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 0px; top: 0px;\">",
+        "description": "Tamaño ajustado",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:04:03.845Z",
+        "id": "mp5x2idhjgp0"
+      },
+      {
+        "action": "insertImage",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: relative; display: block; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Imagen: Group 4581.png",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:04:13.573Z",
+        "id": "mp5x2pvpp8j1"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 886px; top: 420px;\">",
+        "description": "Elemento movido",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:04:18.280Z",
+        "id": "mp5x2tigvmts"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 855px; top: 222.604px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:04:20.683Z",
+        "id": "mp5x2vd7k61k"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-card__body",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"661px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:04:24.582Z",
+        "id": "mp5x2ydiw686"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 903.5px; top: 384px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:04:26.635Z",
+        "id": "mp5x2zyjejqt"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 874.5px; top: 380px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:04:28.413Z",
+        "id": "mp5x31bximzy"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 871.5px; top: 354px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step1",
+        "timestamp": "2026-05-14T20:04:30.227Z",
+        "id": "mp5x32qc976r"
+      }
+    ],
+    "changeCount": 10
+  },
+  {
+    "id": "v3",
+    "number": 3,
+    "timestamp": "2026-05-14T20:03:37.297Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > span",
+        "property": "__multiStyle",
+        "value": "{\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"width\":\"333px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"98.5px\",\"top\":\"354.958px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:02:27.046Z",
+        "id": "mp5x0fomm94u"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > span:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"625.5px\",\"top\":\"355.083px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:02:30.162Z",
+        "id": "mp5x0i3697yx"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3) > span:nth-of-type(2)",
+        "property": "__multiStyle",
+        "value": "{\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"625.5px\",\"top\":\"355.083px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"324px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:02:33.550Z",
+        "id": "mp5x0kpan7eo"
+      },
+      {
+        "action": "insertImage",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: relative; display: block; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Imagen: Group 4581.png",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:02:56.747Z",
+        "id": "mp5x12ln6oq2"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 0px; top: 0px;\">",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:02:59.598Z",
+        "id": "mp5x14su2otn"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 0px; top: 0px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:03:03.151Z",
+        "id": "mp5x17jj1xoy"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 0px; top: 0px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:03:04.170Z",
+        "id": "mp5x18buad3u"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 0px; top: 0px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:03:06.045Z",
+        "id": "mp5x19rxtkkj"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 0px; top: 0px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:03:10.642Z",
+        "id": "mp5x1dbmjxl4"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 0px; top: 0px; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:03:13.156Z",
+        "id": "mp5x1f9g7rab"
+      },
+      {
+        "action": "insertImage",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: relative; display: block; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\">",
+        "description": "Imagen: Group 4581.png",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:03:26.650Z",
+        "id": "mp5x1poam272"
+      },
+      {
+        "action": "move",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<img src=\"http://localhost:3002/Iconos/Group%204581.png\" alt=\"Group 4581.png\" class=\"admin-inserted\" style=\"position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px; left: 852.5px; top: 0px;\">",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:03:31.713Z",
+        "id": "mp5x1tkxd6kp"
+      }
+    ],
+    "changeCount": 12
+  },
+  {
+    "id": "v2",
+    "number": 2,
+    "timestamp": "2026-05-14T20:01:58.263Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "action": "delete",
+        "selector": ".step1-title",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:52:31.505Z",
+        "id": "mp5wno5tqaif"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > h2",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:53:10.482Z",
+        "id": "mp5woi8isr4w"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > p",
+        "property": "textContent",
+        "value": "Cada detalle es importante",
+        "description": "Texto: p",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:53:56.732Z",
+        "id": "mp5wphx8uhe6"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > p",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:53:56.732Z",
+        "id": "mp5wphx8nkyx"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > p",
+        "property": "textContent",
+        "value": "Cada detalle es importante.",
+        "description": "Texto: p",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:07.580Z",
+        "id": "mp5wpqakatxc"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > p",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:07.581Z",
+        "id": "mp5wpqal9n6g"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:12.123Z",
+        "id": "mp5wptsrvopg"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:13.633Z",
+        "id": "mp5wpuyp6zmm"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:19.036Z",
+        "id": "mp5wpz4s4tdt"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:20.026Z",
+        "id": "mp5wpzwaad2m"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:24.636Z",
+        "id": "mp5wq3gcvaia"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"94.5px\",\"top\":\"192.396px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:40.871Z",
+        "id": "mp5wqfzbxwa4"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"94.5px\",\"top\":\"192.396px\",\"width\":\"348px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:43.826Z",
+        "id": "mp5wqi9ew0vg"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"333px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:47.206Z",
+        "id": "mp5wqkva001i"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"493px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:50.846Z",
+        "id": "mp5wqnoedgw5"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"86.5px\",\"top\":\"188.396px\",\"width\":\"348px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:54:59.106Z",
+        "id": "mp5wqu1ugqvf"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > h2",
+        "property": "textContent",
+        "value": "Información de tu hogar y tus pertenencias",
+        "description": "Texto: h2",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:55:31.523Z",
+        "id": "mp5wrj2bfsvd"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > h2",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:55:31.524Z",
+        "id": "mp5wrj2cwdis"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"612.5px\",\"top\":\"187.396px\",\"width\":\"348px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:55:44.594Z",
+        "id": "mp5wrt5ekcwo"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"126px\",\"top\":\"192.396px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:55:55.321Z",
+        "id": "mp5ws1fdetbu"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4)",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"126px\",\"top\":\"192.396px\",\"width\":\"335px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:56:00.523Z",
+        "id": "mp5ws5fv9jdn"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"156px\",\"top\":\"188.396px\",\"width\":\"335px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:56:40.088Z",
+        "id": "mp5wszyw05tq"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(5)",
+        "property": "__multiStyle",
+        "value": "{\"max-width\":\"327px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"155.5px\",\"top\":\"284.167px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:58:07.671Z",
+        "id": "mp5wuvjr645z"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(6)",
+        "property": "__multiStyle",
+        "value": "{\"max-width\":\"327px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"622.5px\",\"top\":\"283.292px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:58:17.611Z",
+        "id": "mp5wv37vrg5x"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3) > select",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"335px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:58:23.125Z",
+        "id": "mp5wv7h10j5p"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4) > input",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"327px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:58:28.141Z",
+        "id": "mp5wvbcdj9yu"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(5) > span",
+        "property": "textContent",
+        "value": "Aseguramos hasta $40.000.000, pero solo cubrimos hasta $10.000.000 por evento. Incluir los electrodomésticos, computadores, entre otros.No cubrimos celulares, tablets ni Smartwatch.",
+        "description": "Texto: span",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:03.908Z",
+        "id": "mp5ww2xwghi0"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(5) > span",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:03.909Z",
+        "id": "mp5ww2xxmawu"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(5) > span",
+        "property": "__multiStyle",
+        "value": "{\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"333px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:07.615Z",
+        "id": "mp5ww5svcrk9"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"493px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"z-index\":\"99999\",\"left\":\"69px\",\"top\":\"327.792px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:08.443Z",
+        "id": "mp5ww6fvlonu"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(6) > span",
+        "property": "textContent",
+        "value": "Aseguramos hasta $40.000.000, pero solo cubrimos hasta $10.000.000 por evento. Incluir muebles del hogar como: armarios, sillas, mesas, entre otros.No cubrimos: joyas, obras de arte, relojes.",
+        "description": "Texto: span",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:22.615Z",
+        "id": "mp5wwhdj0p7l"
+      },
+      {
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(6) > span",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:22.616Z",
+        "id": "mp5wwhdknu28"
+      },
+      {
+        "action": "move",
+        "selector": ".step1-page",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"relative\",\"z-index\":\"99999\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:24.785Z",
+        "id": "mp5wwj1t4dfu"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:41.943Z",
+        "id": "mp5wwwafz4kj"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(4)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:49.019Z",
+        "id": "mp5wx1qzs1j9"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(5)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:50.860Z",
+        "id": "mp5wx36452e0"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(1)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:51.500Z",
+        "id": "mp5wx3nw6t8f"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(6)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:52.347Z",
+        "id": "mp5wx4bf9tjr"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(7)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:55.077Z",
+        "id": "mp5wx6f96wmq"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"493px\",\"z-index\":\"99999\",\"left\":\"196.5px\",\"top\":\"194.781px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T19:59:58.469Z",
+        "id": "mp5wx91hipir"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-page",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"794px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:00:17.979Z",
+        "id": "mp5wxo3flual"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(7)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"493px\",\"z-index\":\"99999\",\"left\":\"86.5px\",\"top\":\"109.771px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:00:23.114Z",
+        "id": "mp5wxs22zxr9"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(7)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"493px\",\"z-index\":\"99999\",\"left\":\"86.5px\",\"top\":\"109.771px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"988px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:00:25.640Z",
+        "id": "mp5wxu086b9r"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(7)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"493px\",\"z-index\":\"99999\",\"left\":\"86.5px\",\"top\":\"109.771px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"width\":\"1060px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:00:30.216Z",
+        "id": "mp5wxxjcjpsd"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"493px\",\"z-index\":\"99999\",\"left\":\"185.5px\",\"top\":\"165.771px\",\"width\":\"1060px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:00:37.732Z",
+        "id": "mp5wy3c46fm6"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"493px\",\"z-index\":\"99999\",\"left\":\"185.5px\",\"top\":\"165.771px\",\"width\":\"1021px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:00:43.839Z",
+        "id": "mp5wy81r9zzp"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(4)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"99px\",\"top\":\"193.396px\",\"width\":\"335px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:00:48.515Z",
+        "id": "mp5wybnnhdoh"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3) > div:nth-of-type(5)",
+        "property": "__multiStyle",
+        "value": "{\"max-width\":\"327px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"98.5px\",\"top\":\"283.167px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:00:51.260Z",
+        "id": "mp5wydrw9oe2"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"448px\",\"z-index\":\"99999\",\"left\":\"185.5px\",\"top\":\"165.771px\",\"width\":\"1021px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:01:19.139Z",
+        "id": "mp5wyzab5qj5"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-page",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"height\":\"738px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:01:26.175Z",
+        "id": "mp5wz4prr0t9"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"436px\",\"z-index\":\"99999\",\"left\":\"185.5px\",\"top\":\"165.771px\",\"width\":\"1021px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:01:34.180Z",
+        "id": "mp5wzaw493gs"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"435px\",\"z-index\":\"99999\",\"left\":\"185.5px\",\"top\":\"165.771px\",\"width\":\"1021px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:01:37.483Z",
+        "id": "mp5wzdfvjiu4"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(3)",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"absolute\",\"height\":\"435px\",\"z-index\":\"99999\",\"left\":\"197.5px\",\"top\":\"158.771px\",\"width\":\"1021px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Elemento movido",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:01:43.723Z",
+        "id": "mp5wzi97kh8z"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-page",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"z-index\":\"99999\",\"height\":\"718px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:01:52.005Z",
+        "id": "mp5wzon97ode"
+      },
+      {
+        "selector": "#btn-continue-step2",
+        "property": "fontSize",
+        "value": "20px",
+        "description": "Tamaño fuente",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:01:56.191Z",
+        "id": "mp5wzrvjdlcy"
+      },
+      {
+        "selector": "#btn-continue-step2",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step2",
+        "timestamp": "2026-05-14T20:01:56.191Z",
+        "id": "mp5wzrvjzgvq"
+      }
+    ],
+    "changeCount": 56
+  },
+  {
+    "id": "v1",
+    "number": 1,
+    "timestamp": "2026-05-14T19:52:14.134Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "changes": [
+      {
+        "selector": ".step1-card__title",
+        "property": "textContent",
+        "value": "Asegure su hogar en minutos y 100% en línea",
+        "description": "Texto: h2",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:17.495Z",
+        "id": "mp5wm31zsyk8"
+      },
+      {
+        "selector": ".step1-card__title",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:17.496Z",
+        "id": "mp5wm320gbei"
+      },
+      {
+        "selector": ".step1-card__desc",
+        "property": "textContent",
+        "value": "Conocer sus datos personales nos permite ajustar el seguro ideal para tu hogar. ",
+        "description": "Texto: p",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:23.020Z",
+        "id": "mp5wm7bgz7k1"
+      },
+      {
+        "selector": ".step1-card__desc",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:23.020Z",
+        "id": "mp5wm7bg2pn7"
+      },
+      {
+        "action": "delete",
+        "selector": ".step1-card__col-right",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:26.605Z",
+        "id": "mp5wma313gwm"
+      },
+      {
+        "action": "delete",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3)",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:29.898Z",
+        "id": "mp5wmcmiss49"
+      },
+      {
+        "action": "insertFormField",
+        "selector": "body",
+        "property": "__appendHTML",
+        "value": "<div class=\"admin-inserted\" style=\"position: relative; margin: 12px auto; cursor: move; z-index: 99999; width: 311px; max-width: 90%; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;\"><div style=\"display:flex;flex-direction:column;gap:8px;\"><label style=\"font-family:'Roboto Condensed',sans-serif;font-size:14px;color:#1B1B1B;\">Campo de texto</label><input type=\"text\" style=\"width:100%;height:40px;padding:8px 16px;font-family:'Roboto Condensed',sans-serif;font-size:14px;color:#333;background:#FFF;border:1px solid #999;border-radius:5px;\" placeholder=\"Ingrese aquí\"></div></div>",
+        "description": "Campo: Campo de texto",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:31.965Z",
+        "id": "mp5wme7xo07z"
+      },
+      {
+        "action": "move",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(5)",
+        "property": "__multiStyle",
+        "value": "{\"flex-direction\":\"column\",\"row-gap\":\"8px\",\"column-gap\":\"8px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"25.3542px\",\"top\":\"180.583px\"}",
+        "description": "Elemento movido",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:36.030Z",
+        "id": "mp5wmhcu4a0d"
+      },
+      {
+        "action": "resize",
+        "selector": "#app-content > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(5) > input",
+        "property": "__multiStyle",
+        "value": "{\"width\":\"325px\",\"height\":\"40px\",\"padding-top\":\"8px\",\"padding-right\":\"16px\",\"padding-bottom\":\"8px\",\"padding-left\":\"16px\",\"font-family\":\"\\\"Roboto Condensed\\\", sans-serif\",\"font-size\":\"14px\",\"color\":\"rgb(51, 51, 51)\",\"background-image\":\"initial\",\"background-position-x\":\"initial\",\"background-position-y\":\"initial\",\"background-size\":\"initial\",\"background-repeat\":\"initial\",\"background-attachment\":\"initial\",\"background-origin\":\"initial\",\"background-clip\":\"initial\",\"background-color\":\"rgb(255, 255, 255)\",\"border-top-width\":\"1px\",\"border-right-width\":\"1px\",\"border-bottom-width\":\"1px\",\"border-left-width\":\"1px\",\"border-top-style\":\"solid\",\"border-right-style\":\"solid\",\"border-bottom-style\":\"solid\",\"border-left-style\":\"solid\",\"border-top-color\":\"rgb(153, 153, 153)\",\"border-right-color\":\"rgb(153, 153, 153)\",\"border-bottom-color\":\"rgb(153, 153, 153)\",\"border-left-color\":\"rgb(153, 153, 153)\",\"border-image-source\":\"initial\",\"border-image-slice\":\"initial\",\"border-image-width\":\"initial\",\"border-image-outset\":\"initial\",\"border-image-repeat\":\"initial\",\"border-top-left-radius\":\"5px\",\"border-top-right-radius\":\"5px\",\"border-bottom-right-radius\":\"5px\",\"border-bottom-left-radius\":\"5px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:38.659Z",
+        "id": "mp5wmjdv6v6n"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-card__col-left",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"276px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:42.371Z",
+        "id": "mp5wmm8zl50s"
+      },
+      {
+        "action": "delete",
+        "selector": ".step1-title",
+        "property": "display",
+        "value": "none",
+        "description": "Eliminado",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:49.438Z",
+        "id": "mp5wmrpa9fc8"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-card",
+        "property": "__multiStyle",
+        "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"height\":\"466px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:51:56.114Z",
+        "id": "mp5wmwuqa2vv"
+      },
+      {
+        "action": "resize",
+        "selector": ".step1-card__col-left",
+        "property": "__multiStyle",
+        "value": "{\"position\":\"relative\",\"height\":\"263px\",\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\"}",
+        "description": "Tamaño ajustado",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:52:00.363Z",
+        "id": "mp5wn04r26sq"
+      },
+      {
+        "selector": "#btn-continue",
+        "property": "fontSize",
+        "value": "20px",
+        "description": "Tamaño fuente",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:52:09.870Z",
+        "id": "mp5wn7guqbgb"
+      },
+      {
+        "selector": "#btn-continue",
+        "property": "fontFamily",
+        "value": "'Roboto Condensed', sans-serif",
+        "description": "Fuente",
+        "page": "step1",
+        "timestamp": "2026-05-14T19:52:09.870Z",
+        "id": "mp5wn7guekii"
+      }
+    ],
+    "changeCount": 15
+  }
+]

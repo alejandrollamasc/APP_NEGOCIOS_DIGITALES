@@ -1,11 +1,13 @@
 import { createServer } from 'http';
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, cpSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECTS_DIR = join(__dirname, 'data', 'projects');
 const PORT = 4001;
+const BASE_PROJECT_PORT = 5000;
+const projectPorts = {}; // projectId -> port
 
 if (!existsSync(PROJECTS_DIR)) mkdirSync(PROJECTS_DIR, { recursive: true });
 
@@ -86,15 +88,27 @@ const server = createServer(async (req, res) => {
     const body = await parseBody(req);
     const id = (body.name || 'proyecto').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '') + '-' + Date.now().toString(36);
     const dir = ensureProject(id);
+    const template = (body.description || '').includes('[plantilla: hogar]') ? 'hogar' : 'salud';
     const meta = {
       name: body.name || 'Sin nombre',
       description: body.description || '',
+      template: template,
+      baseVersion: new Date().toISOString(),
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       createdBy: body.user || 'unknown',
       createdByName: body.userName || 'Unknown'
     };
     writeJSON(join(dir, 'meta.json'), meta);
+
+    // Create export directory for this project (Rule 4)
+    const exportDir = join(dir, 'export');
+    if (!existsSync(exportDir)) mkdirSync(exportDir, { recursive: true });
+    ['css', 'js', 'assets'].forEach(sub => {
+      const subDir = join(exportDir, sub);
+      if (!existsSync(subDir)) mkdirSync(subDir, { recursive: true });
+    });
+
     return json(res, { id, ...meta }, 201);
   }
 
@@ -111,6 +125,13 @@ const server = createServer(async (req, res) => {
     if (!resource && req.method === 'GET') {
       const meta = readJSON(join(dir, 'meta.json'));
       return json(res, { id: projectId, ...meta });
+    }
+
+    // DELETE /api/projects/:id
+    if (!resource && req.method === 'DELETE') {
+      const { rmSync } = await import('fs');
+      try { rmSync(dir, { recursive: true, force: true }); } catch (e) { console.error('Delete error:', e); }
+      return json(res, { ok: true, deleted: projectId });
     }
 
     // PUT /api/projects/:id (update meta)
@@ -203,6 +224,168 @@ const server = createServer(async (req, res) => {
     }
     if (resource === 'images' && req.method === 'GET') {
       return json(res, readJSON(join(dir, 'images.json')));
+    }
+    // GET /api/projects/:id/overrides — get all changes as a single array for the live app
+    if (resource === 'overrides' && req.method === 'GET') {
+      const versions = readJSON(join(dir, 'versions.json'));
+      const allChanges = [];
+      [...(Array.isArray(versions) ? versions : [])].reverse().forEach(v => {
+        (v.changes || []).forEach(c => allChanges.push({ selector: c.selector, property: c.property, value: c.value }));
+      });
+      return json(res, allChanges);
+    }
+
+    // GET /api/projects/:id/port — get or assign a unique port for this project
+    if (resource === 'port' && req.method === 'GET') {
+      if (!projectPorts[projectId]) {
+        const usedPorts = Object.values(projectPorts);
+        let port = BASE_PROJECT_PORT;
+        while (usedPorts.includes(port)) port++;
+        projectPorts[projectId] = port;
+      }
+      return json(res, { port: projectPorts[projectId], url: `http://localhost:3000?project=${projectId}` });
+    }
+
+    // POST /api/projects/:id/restore-page — remove all changes for a specific page
+    if (resource === 'restore-page' && req.method === 'POST') {
+      const body = await parseBody(req);
+      const page = body.page;
+      if (!page) return json(res, { error: 'page required' }, 400);
+
+      // Remove changes for this page from all versions
+      const versions = readJSON(join(dir, 'versions.json'));
+      versions.forEach(v => {
+        if (v.changes) {
+          v.changes = v.changes.filter(c => (c.page || 'home') !== page);
+          v.changeCount = v.changes.length;
+        }
+      });
+      writeJSON(join(dir, 'versions.json'), versions);
+
+      // Clear pending for this page
+      const pending = readJSON(join(dir, 'pending.json'));
+      const filtered = pending.filter(c => (c.page || 'home') !== page);
+      writeJSON(join(dir, 'pending.json'), filtered);
+
+      // Log the restore
+      const logs = readJSON(join(dir, 'logs.json'));
+      logs.unshift({ id: Date.now().toString(36), timestamp: new Date().toISOString(), userName: 'Admin', description: `Página "${page}" restaurada a versión original` });
+      writeJSON(join(dir, 'logs.json'), logs);
+
+      return json(res, { ok: true, page, message: `Page "${page}" restored` });
+    }
+
+    // POST /api/projects/:id/snapshots — save a page snapshot
+    if (resource === 'snapshots' && req.method === 'POST') {
+      const body = await parseBody(req);
+      const page = body.page;
+      const html = body.html;
+      if (!page || !html) return json(res, { error: 'page and html required' }, 400);
+      const snapshotsFile = join(dir, 'snapshots.json');
+      const snapshots = readJSON(snapshotsFile) || {};
+      snapshots[page] = { html, updatedAt: new Date().toISOString() };
+      writeJSON(snapshotsFile, snapshots);
+      return json(res, { ok: true, page });
+    }
+
+    // GET /api/projects/:id/snapshots — get all snapshots
+    if (resource === 'snapshots' && req.method === 'GET') {
+      const snapshotsFile = join(dir, 'snapshots.json');
+      if (existsSync(snapshotsFile)) return json(res, readJSON(snapshotsFile));
+      return json(res, {});
+    }
+
+    // GET /api/projects/:id/snapshots/:page — get a specific page snapshot
+    if (resource === 'snapshots' && parts[4] && req.method === 'GET') {
+      const snapshotsFile = join(dir, 'snapshots.json');
+      const snapshots = existsSync(snapshotsFile) ? readJSON(snapshotsFile) : {};
+      const page = parts[4];
+      if (snapshots[page]) return json(res, snapshots[page]);
+      return json(res, { error: 'not found' }, 404);
+    }
+
+    // DELETE /api/projects/:id/snapshots/:page — delete a page snapshot
+    if (resource === 'snapshots' && parts[4] && req.method === 'DELETE') {
+      const snapshotsFile = join(dir, 'snapshots.json');
+      const snapshots = existsSync(snapshotsFile) ? readJSON(snapshotsFile) : {};
+      delete snapshots[parts[4]];
+      writeJSON(snapshotsFile, snapshots);
+      return json(res, { ok: true });
+    }
+
+    // POST /api/projects/:id/export — generate export files for developers
+    if (resource === 'export' && req.method === 'POST') {
+      const meta = readJSON(join(dir, 'meta.json'));
+      const versions = readJSON(join(dir, 'versions.json'));
+      const template = meta.template || ((meta.description || '').includes('[plantilla: hogar]') ? 'hogar' : 'salud');
+
+      // Collect all changes
+      const allChanges = [];
+      [...(Array.isArray(versions) ? versions : [])].reverse().forEach(v => {
+        (v.changes || []).forEach(c => allChanges.push(c));
+      });
+
+      // Group changes by page
+      const changesByPage = {};
+      allChanges.forEach(c => {
+        const page = c.page || 'home';
+        if (!changesByPage[page]) changesByPage[page] = [];
+        changesByPage[page].push(c);
+      });
+
+      // Generate export manifest
+      const exportDir = join(dir, 'export');
+      if (!existsSync(exportDir)) mkdirSync(exportDir, { recursive: true });
+
+      const manifest = {
+        projectId,
+        projectName: meta.name,
+        template,
+        baseVersion: meta.baseVersion || meta.createdAt,
+        exportedAt: new Date().toISOString(),
+        totalChanges: allChanges.length,
+        pages: Object.keys(changesByPage).map(page => ({
+          id: page,
+          changes: changesByPage[page].length,
+          items: changesByPage[page]
+        }))
+      };
+
+      writeJSON(join(exportDir, 'manifest.json'), manifest);
+      writeJSON(join(exportDir, 'changes.json'), allChanges);
+
+      // Generate a summary HTML with instructions for devs
+      const summaryHtml = `<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Export - ${meta.name}</title>
+<style>body{font-family:system-ui;max-width:800px;margin:40px auto;padding:0 20px;color:#333}h1{color:#016D38}code{background:#f5f5f5;padding:2px 6px;border-radius:4px;font-size:13px}.change{border:1px solid #eee;padding:12px;margin:8px 0;border-radius:8px}.page-title{color:#016D38;font-weight:700;margin-top:24px}</style>
+</head>
+<body>
+<h1>📦 ${meta.name}</h1>
+<p>Template: <strong>${template}</strong> | Exportado: ${new Date().toLocaleString('es-CO')}</p>
+<p>Total de cambios: <strong>${allChanges.length}</strong></p>
+<hr>
+${Object.entries(changesByPage).map(([page, changes]) => `
+<h2 class="page-title">📄 ${page}</h2>
+${changes.map(c => `<div class="change"><code>${c.property}</code> → <code>${c.selector}</code><br><small>${c.description || ''}</small></div>`).join('')}
+`).join('')}
+<hr>
+<p><em>Archivo generado automáticamente. Los cambios deben aplicarse sobre la experiencia base "${template}" versión ${meta.baseVersion || 'original'}.</em></p>
+</body></html>`;
+
+      writeFileSync(join(exportDir, 'index.html'), summaryHtml, 'utf-8');
+
+      return json(res, { ok: true, exportDir: `projects/${projectId}/export/`, manifest });
+    }
+
+    // GET /api/projects/:id/export — get export manifest
+    if (resource === 'export' && req.method === 'GET') {
+      const exportDir = join(dir, 'export');
+      const manifestFile = join(exportDir, 'manifest.json');
+      if (existsSync(manifestFile)) {
+        return json(res, readJSON(manifestFile));
+      }
+      return json(res, { error: 'No export yet. POST to generate.' }, 404);
     }
   }
 
