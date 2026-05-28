@@ -169,11 +169,31 @@ async function renderProjectSelector(app) {
     const sortBy = document.getElementById('sort-projects').value;
     const sorted = [...projects].sort((a, b) => { if (sortBy === 'updated') return new Date(b.updatedAt || 0) - new Date(a.updatedAt || 0); if (sortBy === 'created') return new Date(b.createdAt || 0) - new Date(a.createdAt || 0); return (a.name || '').localeCompare(b.name || ''); });
     if (sorted.length === 0) { grid.innerHTML = '<p class="empty-msg">No hay proyectos. Crea uno nuevo.</p>'; return; }
-    grid.innerHTML = sorted.map(p => `<div class="project-card" data-id="${p.id}"><div class="project-card__top-row"><div class="project-card__icon">📁</div><button class="project-card__delete" data-id="${p.id}" title="Eliminar">🗑</button></div><div class="project-card__info"><h3 class="project-card__name">${p.name}</h3><p class="project-card__meta">${p.description || ''}</p><p class="project-card__meta">${p.versionCount || 0} versión(es)</p><p class="project-card__date">Modificado: ${p.updatedAt ? new Date(p.updatedAt).toLocaleString('es-CO') : 'N/A'}</p></div></div>`).join('');
-    grid.querySelectorAll('.project-card').forEach(card => { card.addEventListener('click', (e) => { if (e.target.closest('.project-card__delete')) return; const proj = sorted.find(p => p.id === card.dataset.id); const tpl = (proj?.description || '').includes('[plantilla: hogar]') ? 'hogar' : 'salud'; versionStore.setProject(card.dataset.id, tpl); init(); }); });
+    grid.innerHTML = sorted.map(p => `<div class="project-card" data-id="${p.id}"><div class="project-card__top-row"><div class="project-card__icon">📁</div><div style="display:flex;gap:4px;"><button class="project-card__duplicate" data-id="${p.id}" title="Duplicar proyecto">📋</button><button class="project-card__delete" data-id="${p.id}" title="Eliminar">🗑</button></div></div><div class="project-card__info"><h3 class="project-card__name">${p.name}</h3><p class="project-card__meta">${p.description || ''}</p><p class="project-card__meta">${p.versionCount || 0} versión(es)</p><p class="project-card__date">Modificado: ${p.updatedAt ? new Date(p.updatedAt).toLocaleString('es-CO') : 'N/A'}</p></div></div>`).join('');
+    grid.querySelectorAll('.project-card').forEach(card => { card.addEventListener('click', (e) => { if (e.target.closest('.project-card__delete') || e.target.closest('.project-card__duplicate')) return; const proj = sorted.find(p => p.id === card.dataset.id); const tpl = (proj?.description || '').includes('[plantilla: hogar]') ? 'hogar' : 'salud'; versionStore.setProject(card.dataset.id, tpl); init(); }); });
     grid.querySelectorAll('.project-card__delete').forEach(btn => { btn.addEventListener('click', (e) => { e.stopPropagation(); deleteTargetId = btn.dataset.id; document.getElementById('delete-modal').style.display = 'flex'; }); });
+    grid.querySelectorAll('.project-card__duplicate').forEach(btn => { btn.addEventListener('click', (e) => { e.stopPropagation(); duplicateProject(btn.dataset.id); }); });
   }
   await renderProjects();
+
+  async function duplicateProject(sourceId) {
+    const name = prompt('Nombre para la copia del proyecto:');
+    if (!name || !name.trim()) return;
+
+    try {
+      const r = await fetch(`http://localhost:4001/api/projects/${sourceId}/duplicate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name.trim(), user: user.email, userName: user.name })
+      });
+      if (r.ok) {
+        alert('✅ Proyecto duplicado exitosamente.');
+        renderProjects();
+      } else {
+        alert('❌ Error al duplicar el proyecto.');
+      }
+    } catch { alert('❌ Error de conexión.'); }
+  }
 }
 
 // ===== DASHBOARD =====
@@ -207,6 +227,10 @@ async function renderDashboard(app) {
         </div>
         <div class="toolbar__right">
           <button class="toolbar__btn-preview" id="btn-preview" title="Vista previa"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg> Preview</button>
+          <div class="toolbar__device-toggle" id="device-toggle">
+            <button class="toolbar__device-btn active" data-device="desktop" title="Desktop">🖥</button>
+            <button class="toolbar__device-btn" data-device="mobile" title="Mobile">📱</button>
+          </div>
           <button class="toolbar__btn-grid ${true ? 'active' : ''}" id="btn-grid" title="Grid de guía">⊞</button>
           <span class="toolbar__user">👤 ${user.name}</span>
           <button class="toolbar__btn-apply" id="btn-apply-changes">💾 Guardar progreso</button>
@@ -305,7 +329,7 @@ async function renderDashboard(app) {
         <div class="preview-area">
           <div class="preview-iframe-wrap" id="iframe-wrap">
             <div class="grid-overlay" id="grid-overlay"></div>
-            <iframe id="live-iframe" src="${liveUrl}" class="preview-iframe" title="Vista previa"></iframe>
+            <iframe id="live-iframe" src="" class="preview-iframe" title="Vista previa"></iframe>
           </div>
           <div class="page-nav" id="page-nav">
             ${PAGES.map(p => `<button class="page-nav__btn ${p.id === currentPage ? 'active' : ''}" data-page="${p.id}">${p.label}</button>`).join('')}
@@ -318,7 +342,7 @@ async function renderDashboard(app) {
     <div class="saving-modal" id="saving-modal" style="display:none"><div class="saving-modal__content"><div class="page-loading__spinner"></div><p class="saving-modal__text">Guardando proyecto...</p><p class="saving-modal__sub">No cierre la ventana</p></div></div>
     <input type="file" id="image-upload" accept="image/*" style="display:none">
     <input type="file" id="image-repo-upload" accept="image/*" style="display:none" multiple>
-    <div class="preview-modal" id="preview-modal" style="display:none"><div class="preview-modal__header"><span class="preview-modal__title">👁 Vista previa</span><div class="preview-modal__actions"><button class="preview-modal__device" id="btn-preview-home" title="Ir al inicio">🏠 Inicio</button><div class="toolbar__sep" style="height:20px;background:#555;"></div><button class="preview-modal__device active" data-width="100%">🖥 Desktop</button><button class="preview-modal__device" data-width="768px">📱 Tablet</button><button class="preview-modal__device" data-width="375px">📱 Mobile</button><button class="preview-modal__close" id="btn-close-preview">✕ Cerrar</button></div></div><div class="preview-modal__body"><div class="preview-loading" id="preview-loading"><div class="preview-loading__content"><div class="page-loading__spinner"></div><p class="page-loading__text">Preparando experiencia...</p></div></div><iframe id="preview-iframe" class="preview-modal__iframe" src="" title="Preview"></iframe></div></div>
+    <div class="preview-modal" id="preview-modal" style="display:none"><div class="preview-modal__header"><span class="preview-modal__title">👁 Vista previa</span><div class="preview-modal__actions"><button class="preview-modal__device" id="btn-preview-home" title="Ir al inicio">🏠 Inicio</button><div class="toolbar__sep" style="height:20px;background:#555;"></div><button class="preview-modal__device" id="btn-preview-split" title="Antes y después">⬜⬜ Comparar</button><div class="toolbar__sep" style="height:20px;background:#555;"></div><button class="preview-modal__device active" data-width="100%">🖥 Desktop</button><button class="preview-modal__device" data-width="768px">📱 Tablet</button><button class="preview-modal__device" data-width="375px">📱 Mobile</button><button class="preview-modal__close" id="btn-close-preview">✕ Cerrar</button></div></div><div class="preview-modal__body"><div class="preview-loading" id="preview-loading"><div class="preview-loading__content"><div class="page-loading__spinner"></div><p class="page-loading__text">Preparando experiencia...</p></div></div><div class="preview-split" id="preview-split" style="display:none;"><div class="preview-split__pane"><div class="preview-split__label">✏️ Editado</div><iframe id="preview-iframe-edited" class="preview-modal__iframe" src="" title="Editado"></iframe></div><div class="preview-split__divider"></div><div class="preview-split__pane"><div class="preview-split__label">📄 Original</div><iframe id="preview-iframe-original" class="preview-modal__iframe" src="" title="Original"></iframe></div></div><iframe id="preview-iframe" class="preview-modal__iframe" src="" title="Preview"></iframe></div><div class="preview-page-nav" id="preview-page-nav"></div></div>
     ${showGuide ? renderGuideOverlay() : ''}
   `;
   bindDashboardEvents(user);
@@ -364,7 +388,7 @@ function bindGuideEvents() {
 }
 
 // ===== DASHBOARD EVENTS =====
-function bindDashboardEvents(user) {
+async function bindDashboardEvents(user) {
   bindGuideEvents();
   document.getElementById('btn-logout').addEventListener('click', async () => {
     showSavingModal();
@@ -382,6 +406,51 @@ function bindDashboardEvents(user) {
   });
   document.getElementById('btn-toggle-panel').addEventListener('click', () => { panelOpen = !panelOpen; document.getElementById('left-panel').classList.toggle('open', panelOpen); });
   document.getElementById('btn-grid').addEventListener('click', (e) => { e.currentTarget.classList.toggle('active'); document.getElementById('grid-overlay').classList.toggle('visible'); });
+
+  // Device mode toggle (Desktop/Mobile)
+  document.querySelectorAll('.toolbar__device-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const newDevice = btn.dataset.device;
+      if (newDevice === deviceMode) return;
+      // Save current snapshot before switching
+      await saveCurrentPageToAPI();
+      // Switch mode
+      deviceMode = newDevice;
+      document.querySelectorAll('.toolbar__device-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // Resize iframe
+      const wrap = document.getElementById('iframe-wrap');
+      const iframe = document.getElementById('live-iframe');
+      if (deviceMode === 'mobile') {
+        wrap.style.display = 'flex';
+        wrap.style.alignItems = 'flex-start';
+        wrap.style.justifyContent = 'center';
+        wrap.style.paddingTop = '20px';
+        iframe.style.position = 'relative';
+        iframe.style.width = '375px';
+        iframe.style.height = 'calc(100% - 40px)';
+        iframe.style.maxWidth = '375px';
+        iframe.style.boxShadow = '0 4px 24px rgba(0,0,0,0.12)';
+        iframe.style.borderRadius = '24px';
+        iframe.style.border = '2px solid #e0e0e0';
+      } else {
+        wrap.style.display = '';
+        wrap.style.alignItems = '';
+        wrap.style.justifyContent = '';
+        wrap.style.paddingTop = '';
+        iframe.style.position = 'absolute';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.maxWidth = '';
+        iframe.style.boxShadow = '';
+        iframe.style.borderRadius = '';
+        iframe.style.border = 'none';
+      }
+      // Load the appropriate snapshot for this device
+      applySavedChanges();
+    });
+  });
+
   document.getElementById('btn-select-mode').addEventListener('click', toggleSelectMode);
 
   // Left panel tabs
@@ -398,7 +467,11 @@ function bindDashboardEvents(user) {
   });
 
   // Page navigation - rendered dynamically
-  loadPagesOrder();
+  await loadPagesOrder();
+  // Always set currentPage to the first page in the saved order when opening a project
+  if (PAGES.length > 0) {
+    currentPage = PAGES[0].id;
+  }
   renderPageNav();
   renderAddPagesList();
 
@@ -477,6 +550,12 @@ function bindDashboardEvents(user) {
   // Keyboard shortcuts
   document.addEventListener('keydown', handleKeyboard);
 
+  // Iframe messages
+  window.addEventListener('message', handleIframeMessage);
+
+  // Iframe load
+  const iframe = document.getElementById('live-iframe');
+
   // Save snapshot before page unload (browser close/refresh) — fire and forget
   window.addEventListener('beforeunload', () => {
     if (versionStore.projectId) {
@@ -488,13 +567,25 @@ function bindDashboardEvents(user) {
     }
   });
 
-  // Iframe messages
-  window.addEventListener('message', handleIframeMessage);
-
-  // Iframe load
-  const iframe = document.getElementById('live-iframe');
   scaleIframeToFit();
   window.addEventListener('resize', scaleIframeToFit);
+
+  // Navigate iframe to the correct initial page (first page in saved order)
+  const initialPage = PAGES.find(p => p.id === currentPage);
+  const initialBaseId = initialPage?.basePageId || currentPage;
+  const initialStepMap = { home: 1, step1: 2, step2: 3, step3: 4, step4: 5, step5: 6, step6: 7 };
+  const initialStep = initialStepMap[initialBaseId] || 1;
+  // Set iframe src to the correct page
+  const baseUrl = versionStore.getLiveUrl();
+  if (initialStep > 1) {
+    iframe.src = baseUrl + `&step=${initialStep - 1}`;
+  } else {
+    iframe.src = baseUrl;
+  }
+
+  // Show loading overlay on initial load
+  showLoadingOverlay();
+
   iframe.addEventListener('load', () => {
     scaleIframeToFit();
     applySavedChanges();
@@ -509,15 +600,31 @@ function bindDashboardEvents(user) {
 }
 
 // ===== KEYBOARD SHORTCUTS =====
+let clipboard = null; // Stores copied element HTML
+let deviceMode = 'desktop'; // 'desktop' or 'mobile'
+
 function handleKeyboard(e) {
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
   if (e.ctrlKey && e.key === 'z') { e.preventDefault(); performUndo(); }
   if (e.ctrlKey && e.key === 'y') { e.preventDefault(); performRedo(); }
-  if (e.key === 'Delete' || e.key === 'Backspace') { sendIframeAction('DELETE_SELECTED'); }
+  if (e.ctrlKey && e.key === 'c') { e.preventDefault(); copySelected(); }
+  if (e.ctrlKey && e.key === 'v') { e.preventDefault(); pasteClipboard(); }
   if (e.ctrlKey && e.key === 'd') { e.preventDefault(); sendIframeAction('DUPLICATE_SELECTED'); }
-  if (e.key === 'v' || e.key === 'V') { toggleSelectMode(); }
-  if (e.key === 't' || e.key === 'T') { sendIframeAction('INSERT_TEXT', { text: 'Nuevo texto', fontFamily: "'Roboto Condensed', sans-serif", fontSize: '16px', fontWeight: '400', color: '#1B1B1B', backgroundColor: 'transparent' }); }
-  if (e.key === 'r' || e.key === 'R') { insertShape('rect'); }
+  if (e.key === 'Delete' || e.key === 'Backspace') { sendIframeAction('DELETE_SELECTED'); }
+  if (!e.ctrlKey && (e.key === 't' || e.key === 'T')) { sendIframeAction('INSERT_TEXT', { text: 'Nuevo texto', fontFamily: "'Roboto Condensed', sans-serif", fontSize: '16px', fontWeight: '400', color: '#1B1B1B', backgroundColor: 'transparent' }); }
+  if (!e.ctrlKey && (e.key === 'r' || e.key === 'R')) { insertShape('rect'); }
+}
+
+function copySelected() {
+  // Ask iframe for the selected element's HTML
+  sendIframeAction('COPY_SELECTED');
+}
+
+function pasteClipboard() {
+  if (!clipboard) { return; }
+  // Insert the copied HTML into the current page
+  const iframe = document.getElementById('live-iframe');
+  iframe.contentWindow.postMessage({ type: 'PASTE_ELEMENT', html: clipboard }, '*');
 }
 
 // ===== UNDO/REDO =====
@@ -574,6 +681,7 @@ function renderPageNav() {
     <div class="page-nav__item ${p.id === currentPage ? 'active' : ''}" data-page="${p.id}" draggable="true" data-index="${i}">
       <button class="page-nav__btn ${p.id === currentPage ? 'active' : ''}" data-page="${p.id}">${p.label}</button>
       <div class="page-nav__actions">
+        <button class="page-nav__action" data-action="rename" data-page="${p.id}" title="Renombrar">✎</button>
         <button class="page-nav__action" data-action="restore" data-page="${p.id}" title="Restaurar versión original">↺</button>
         <button class="page-nav__action" data-action="duplicate" data-page="${p.id}" title="Duplicar">⧉</button>
         ${PAGES.length > 1 ? `<button class="page-nav__action page-nav__action--delete" data-action="delete" data-page="${p.id}" title="Eliminar">✕</button>` : ''}
@@ -595,6 +703,7 @@ function renderPageNav() {
       e.stopPropagation();
       const action = btn.dataset.action;
       const pageId = btn.dataset.page;
+      if (action === 'rename') renamePage(pageId);
       if (action === 'duplicate') duplicatePage(pageId);
       if (action === 'delete') deletePage(pageId);
       if (action === 'restore') restorePage(pageId);
@@ -629,21 +738,74 @@ function renderPageNav() {
   });
 }
 
+function renamePage(pageId) {
+  const page = PAGES.find(p => p.id === pageId);
+  if (!page) return;
+  const newName = prompt(`Renombrar "${page.label}":`, page.label);
+  if (!newName || !newName.trim() || newName.trim() === page.label) return;
+  page.label = newName.trim();
+  savePagesOrder();
+  renderPageNav();
+}
+
 function duplicatePage(sourcePageId) {
   const source = PAGES.find(p => p.id === sourcePageId);
   if (!source) return;
   const newId = `page-${Date.now().toString(36)}`;
   const newLabel = `${source.label} (copia)`;
   const sourceIdx = PAGES.findIndex(p => p.id === sourcePageId);
-  PAGES.splice(sourceIdx + 1, 0, { id: newId, label: newLabel, path: source.path });
+  PAGES.splice(sourceIdx + 1, 0, { id: newId, label: newLabel, path: source.path, basePageId: source.basePageId || sourcePageId });
   savePagesOrder();
 
-  // Copy all changes from source page to new page
-  const pending = versionStore.getPendingChanges();
-  const sourceChanges = pending.filter(c => c.page === sourcePageId);
-  sourceChanges.forEach(c => {
-    versionStore.addPendingChange({ ...c, page: newId, id: undefined });
+  // Copy the snapshot from source page to the new page (exact replica) — both desktop and mobile
+  ['desktop', 'mobile'].forEach(device => {
+    const sourceSnap = localStorage.getItem(`sb_snap_${versionStore.projectId}_${sourcePageId}_${device}`);
+    if (sourceSnap) {
+      localStorage.setItem(`sb_snap_${versionStore.projectId}_${newId}_${device}`, sourceSnap);
+      const pageKey = device === 'mobile' ? `${newId}_mobile` : newId;
+      fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ page: pageKey, html: sourceSnap })
+      }).catch(() => {});
+    }
   });
+
+  // Fallback: try old-style key (no device suffix)
+  const sourceSnap = localStorage.getItem(`sb_snap_${versionStore.projectId}_${sourcePageId}`);
+  if (sourceSnap && !localStorage.getItem(`sb_snap_${versionStore.projectId}_${newId}_desktop`)) {
+    localStorage.setItem(`sb_snap_${versionStore.projectId}_${newId}_desktop`, sourceSnap);
+    fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ page: newId, html: sourceSnap })
+    }).catch(() => {});
+  }
+
+  // If nothing in localStorage, try from API
+  if (!localStorage.getItem(`sb_snap_${versionStore.projectId}_${newId}_desktop`)) {
+    fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`)
+      .then(r => r.json())
+      .then(snaps => {
+        if (snaps[sourcePageId] && snaps[sourcePageId].html) {
+          localStorage.setItem(`sb_snap_${versionStore.projectId}_${newId}_desktop`, snaps[sourcePageId].html);
+          fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ page: newId, html: snaps[sourcePageId].html })
+          }).catch(() => {});
+        }
+        const mobileKey = `${sourcePageId}_mobile`;
+        if (snaps[mobileKey] && snaps[mobileKey].html) {
+          localStorage.setItem(`sb_snap_${versionStore.projectId}_${newId}_mobile`, snaps[mobileKey].html);
+          fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ page: `${newId}_mobile`, html: snaps[mobileKey].html })
+          }).catch(() => {});
+        }
+      }).catch(() => {});
+  }
 
   renderPageNav();
   navigateToPage(newId);
@@ -672,9 +834,12 @@ function restorePage(pageId) {
 
   showLoadingOverlay();
 
-  // Remove snapshot for this page (localStorage + API)
+  // Remove snapshot for this page (localStorage + API) — both desktop and mobile
   localStorage.removeItem(`sb_snap_${versionStore.projectId}_${pageId}`);
+  localStorage.removeItem(`sb_snap_${versionStore.projectId}_${pageId}_desktop`);
+  localStorage.removeItem(`sb_snap_${versionStore.projectId}_${pageId}_mobile`);
   fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots/${pageId}`, { method: 'DELETE' }).catch(() => {});
+  fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots/${pageId}_mobile`, { method: 'DELETE' }).catch(() => {});
 
   // Remove all pending changes for this page
   versionStore.pendingChanges = versionStore.pendingChanges.filter(c => (c.page || 'home') !== pageId);
@@ -712,10 +877,16 @@ function restorePage(pageId) {
 function savePagesOrder() {
   if (versionStore.projectId) {
     localStorage.setItem(`sb_pages_${versionStore.projectId}`, JSON.stringify(PAGES));
+    // Also persist to API (disk) for reliability
+    fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ page: '__pages_order', html: JSON.stringify(PAGES) })
+    }).catch(() => {});
   }
 }
 
-function loadPagesOrder() {
+async function loadPagesOrder() {
   // Always start with the default pages for the current template
   const defaults = versionStore.template === 'hogar' ? DEFAULT_PAGES_HOGAR : DEFAULT_PAGES_SALUD;
   PAGES.length = 0;
@@ -723,6 +894,8 @@ function loadPagesOrder() {
 
   // Only override with saved custom order if it exists for this project
   if (!versionStore.projectId) return;
+
+  // Try localStorage first
   const saved = localStorage.getItem(`sb_pages_${versionStore.projectId}`);
   if (saved) {
     try {
@@ -730,9 +903,27 @@ function loadPagesOrder() {
       if (Array.isArray(pages) && pages.length > 0) {
         PAGES.length = 0;
         pages.forEach(p => PAGES.push(p));
+        return;
       }
     } catch { /* ignore */ }
   }
+
+  // Fallback: try from API (disk)
+  try {
+    const r = await fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`);
+    if (r.ok) {
+      const snapshots = await r.json();
+      if (snapshots.__pages_order && snapshots.__pages_order.html) {
+        const pages = JSON.parse(snapshots.__pages_order.html);
+        if (Array.isArray(pages) && pages.length > 0) {
+          PAGES.length = 0;
+          pages.forEach(p => PAGES.push(p));
+          // Cache in localStorage
+          localStorage.setItem(`sb_pages_${versionStore.projectId}`, JSON.stringify(PAGES));
+        }
+      }
+    }
+  } catch { /* ignore */ }
 }
 
 // ===== IFRAME COMMUNICATION =====
@@ -768,14 +959,17 @@ function handleIframeMessage(event) {
     const projectId = event.data.projectId;
     const page = event.data.page;
     const html = event.data.html;
-    // Save to localStorage as fast cache
-    try { localStorage.setItem(`sb_snap_${projectId}_${page}`, html); } catch {}
-    // Save to API (persists on disk)
+    // Save with device suffix for device-specific snapshots
+    const pageKey = deviceMode === 'mobile' ? `${page}_mobile` : page;
+    try { localStorage.setItem(`sb_snap_${projectId}_${page}_${deviceMode}`, html); } catch {}
     fetch(`http://localhost:4001/api/projects/${projectId}/snapshots`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ page, html })
+      body: JSON.stringify({ page: pageKey, html })
     }).catch(() => {});
+  }
+  if (event.data.type === 'COPIED_ELEMENT') {
+    clipboard = event.data.html;
   }
 }
 
@@ -1033,9 +1227,11 @@ async function applySavedChanges() {
   if (!versionStore.projectId) return;
   const iframe = document.getElementById('live-iframe');
 
-  // Check localStorage cache first
-  const snapshotKey = `sb_snap_${versionStore.projectId}_${currentPage}`;
-  let snapshot = localStorage.getItem(snapshotKey);
+  // Check for device-specific snapshot first, then fallback to desktop, then generic (old-style)
+  const deviceKey = `sb_snap_${versionStore.projectId}_${currentPage}_${deviceMode}`;
+  const desktopKey = `sb_snap_${versionStore.projectId}_${currentPage}_desktop`;
+  const genericKey = `sb_snap_${versionStore.projectId}_${currentPage}`;
+  let snapshot = localStorage.getItem(deviceKey) || localStorage.getItem(desktopKey) || localStorage.getItem(genericKey);
 
   // If not in cache, load from API (disk)
   if (!snapshot) {
@@ -1043,10 +1239,18 @@ async function applySavedChanges() {
       const r = await fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`);
       if (r.ok) {
         const snapshots = await r.json();
-        if (snapshots[currentPage] && snapshots[currentPage].html) {
+        // Priority: device-specific > desktop > generic page key
+        const devicePageKey = `${currentPage}_${deviceMode}`;
+        const desktopPageKey = `${currentPage}_desktop`;
+        if (snapshots[devicePageKey] && snapshots[devicePageKey].html) {
+          snapshot = snapshots[devicePageKey].html;
+        } else if (deviceMode === 'mobile' && snapshots[currentPage] && snapshots[currentPage].html) {
+          // Mobile inherits from desktop if no mobile-specific snapshot exists
           snapshot = snapshots[currentPage].html;
-          try { localStorage.setItem(snapshotKey, snapshot); } catch {}
+        } else if (snapshots[currentPage] && snapshots[currentPage].html) {
+          snapshot = snapshots[currentPage].html;
         }
+        if (snapshot) { try { localStorage.setItem(deviceKey, snapshot); } catch {} }
       }
     } catch {}
   }
@@ -1074,22 +1278,25 @@ function saveCurrentPageToAPI() {
       if (event.data.projectId !== versionStore.projectId || event.data.page !== currentPage) return;
       window.removeEventListener('message', handler);
 
+      // Save with device suffix for device-specific snapshots
+      const pageKey = deviceMode === 'mobile' ? `${event.data.page}_mobile` : event.data.page;
+
       // Save to API (disk)
       fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ page: event.data.page, html: event.data.html })
+        body: JSON.stringify({ page: pageKey, html: event.data.html })
       }).then(() => resolve()).catch(() => resolve());
 
       // Also cache in localStorage
-      try { localStorage.setItem(`sb_snap_${event.data.projectId}_${event.data.page}`, event.data.html); } catch {}
+      try { localStorage.setItem(`sb_snap_${event.data.projectId}_${currentPage}_${deviceMode}`, event.data.html); } catch {}
     };
     window.addEventListener('message', handler);
 
     // Ask iframe to send its HTML
     iframe.contentWindow.postMessage({ type: 'SAVE_SNAPSHOT', page: currentPage, projectId: versionStore.projectId }, '*');
 
-    // Timeout fallback (if iframe doesn't respond in 3s, proceed anyway)
+    // Timeout fallback
     setTimeout(() => { window.removeEventListener('message', handler); resolve(); }, 3000);
   });
 }
@@ -1127,19 +1334,39 @@ function openPreview() {
   loadPreviewPage(currentPage);
   modal.style.display = 'flex';
 
+  // Render page tabs in preview
+  const previewNav = document.getElementById('preview-page-nav');
+  if (previewNav) {
+    previewNav.innerHTML = PAGES.map(p => `<button class="preview-page-nav__btn ${p.id === currentPage ? 'active' : ''}" data-page="${p.id}">${p.label}</button>`).join('');
+    previewNav.querySelectorAll('.preview-page-nav__btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        previewNav.querySelectorAll('.preview-page-nav__btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        loadPreviewPage(btn.dataset.page);
+      });
+    });
+  }
+
   // Handle iframe load
   const onIframeLoad = () => {
-    // Restore snapshot for the page we're previewing
-    const snapshotKey = `sb_snap_${versionStore.projectId}_${previewingPage}`;
-    const snapshot = localStorage.getItem(snapshotKey);
+    // Disable edit mode in preview
+    iframe.contentWindow.postMessage({ type: 'DISABLE_EDIT_MODE' }, '*');
+    // Restore snapshot for the page we're previewing (check device-specific first)
+    const previewDevice = iframe.style.maxWidth === '375px' ? 'mobile' : 'desktop';
+    const deviceKey = `sb_snap_${versionStore.projectId}_${previewingPage}_${previewDevice}`;
+    const genericKey = `sb_snap_${versionStore.projectId}_${previewingPage}_desktop`;
+    const fallbackKey = `sb_snap_${versionStore.projectId}_${previewingPage}`;
+    const snapshot = localStorage.getItem(deviceKey) || localStorage.getItem(genericKey) || localStorage.getItem(fallbackKey);
 
     setTimeout(() => {
       if (snapshot) {
         iframe.contentWindow.postMessage({ type: 'RESTORE_SNAPSHOT', html: snapshot }, '*');
       }
-      // Send flow config so buttons navigate correctly
-      iframe.contentWindow.postMessage({ type: 'SET_FLOW_CONFIG', config: flowConfig }, '*');
-      setTimeout(hidePreviewLoading, 800);
+      // Send flow config AFTER snapshot is restored (needs delay for DOM update)
+      setTimeout(() => {
+        iframe.contentWindow.postMessage({ type: 'SET_FLOW_CONFIG', config: flowConfig }, '*');
+        setTimeout(hidePreviewLoading, 500);
+      }, 500);
     }, 1500);
   };
 
@@ -1167,6 +1394,52 @@ function openPreview() {
   homeBtn.parentNode.replaceChild(homeBtnClone, homeBtn);
   homeBtnClone.id = 'btn-preview-home';
   homeBtnClone.addEventListener('click', () => loadPreviewPage('home'));
+
+  // Split view (compare) button
+  let splitMode = false;
+  const splitBtn = document.getElementById('btn-preview-split');
+  const splitBtnClone = splitBtn.cloneNode(true);
+  splitBtn.parentNode.replaceChild(splitBtnClone, splitBtn);
+  splitBtnClone.id = 'btn-preview-split';
+  splitBtnClone.addEventListener('click', () => {
+    splitMode = !splitMode;
+    const splitContainer = document.getElementById('preview-split');
+    const singleIframe = document.getElementById('preview-iframe');
+    splitBtnClone.classList.toggle('active', splitMode);
+
+    if (splitMode) {
+      singleIframe.style.display = 'none';
+      splitContainer.style.display = 'flex';
+      // Load edited version (with snapshot)
+      const editedIframe = document.getElementById('preview-iframe-edited');
+      const originalIframe = document.getElementById('preview-iframe-original');
+      const pageToStep = { home: 0, step1: 1, step2: 2, step3: 3, step4: 4, step5: 5, step6: 6 };
+      const step = pageToStep[previewingPage] || 0;
+      let url = versionStore.getLiveUrl();
+      if (step > 0) url += (url.includes('?') ? '&' : '?') + `step=${step}`;
+      editedIframe.src = url;
+      originalIframe.src = url;
+      // Restore snapshot on edited iframe only (device-aware)
+      editedIframe.addEventListener('load', function onLoad() {
+        editedIframe.removeEventListener('load', onLoad);
+        editedIframe.contentWindow.postMessage({ type: 'DISABLE_EDIT_MODE' }, '*');
+        const previewDevice = singleIframe.style.maxWidth === '375px' ? 'mobile' : 'desktop';
+        const deviceKey = `sb_snap_${versionStore.projectId}_${previewingPage}_${previewDevice}`;
+        const genericKey = `sb_snap_${versionStore.projectId}_${previewingPage}_desktop`;
+        const fallbackKey = `sb_snap_${versionStore.projectId}_${previewingPage}`;
+        const snapshot = localStorage.getItem(deviceKey) || localStorage.getItem(genericKey) || localStorage.getItem(fallbackKey);
+        if (snapshot) { setTimeout(() => { editedIframe.contentWindow.postMessage({ type: 'RESTORE_SNAPSHOT', html: snapshot }, '*'); }, 1500); }
+      });
+      // Original stays as-is (no snapshot)
+      originalIframe.addEventListener('load', function onLoad() {
+        originalIframe.removeEventListener('load', onLoad);
+        originalIframe.contentWindow.postMessage({ type: 'DISABLE_EDIT_MODE' }, '*');
+      });
+    } else {
+      splitContainer.style.display = 'none';
+      singleIframe.style.display = 'block';
+    }
+  });
 
   // Close button
   const closeBtn = document.getElementById('btn-close-preview');
@@ -1296,14 +1569,21 @@ function addBasePageToProject(pageId, label) {
 }
 
 // ===== FLOW CONFIGURATION =====
-function renderFlowConfig() {
+async function renderFlowConfig() {
   const container = document.getElementById('flow-config-list');
   if (!container) return;
 
-  // Load saved flow config
+  // Load saved flow config (localStorage first, then API)
   const flowKey = `sb_flow_${versionStore.projectId}`;
   let flowConfig = {};
   try { flowConfig = JSON.parse(localStorage.getItem(flowKey) || '{}'); } catch {}
+  // If empty, try API
+  if (Object.keys(flowConfig).length === 0) {
+    try {
+      const r = await fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`);
+      if (r.ok) { const snaps = await r.json(); if (snaps.__flow_config) { flowConfig = JSON.parse(snaps.__flow_config.html || '{}'); localStorage.setItem(flowKey, JSON.stringify(flowConfig)); } }
+    } catch {}
+  }
 
   let html = '';
   PAGES.forEach((page, idx) => {
@@ -1337,6 +1617,13 @@ function renderFlowConfig() {
     });
     localStorage.setItem(flowKey, JSON.stringify(config));
 
+    // Save to API (disk persistence)
+    fetch(`http://localhost:4001/api/projects/${versionStore.projectId}/snapshots`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ page: '__flow_config', html: JSON.stringify(config) })
+    }).catch(() => {});
+
     // Send flow config to iframe so buttons navigate correctly
     const iframe = document.getElementById('live-iframe');
     iframe.contentWindow.postMessage({ type: 'SET_FLOW_CONFIG', config }, '*');
@@ -1347,14 +1634,8 @@ function renderFlowConfig() {
 
 // ===== IFRAME SCALING =====
 function scaleIframeToFit() {
-  const wrap = document.getElementById('iframe-wrap');
-  const iframe = document.getElementById('live-iframe');
-  if (!wrap || !iframe) return;
-  const availableWidth = wrap.clientWidth;
-  const iframeWidth = 1440;
-  const scale = Math.min(1, availableWidth / iframeWidth);
-  iframe.style.transform = `scale(${scale})`;
-  iframe.style.height = `${100 / scale}%`;
+  // Iframe is now 100% width/height — no scaling needed
+  // This function is kept for the resize event listener compatibility
 }
 
 // ===== EXPORT PROJECT =====

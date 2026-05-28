@@ -1,0 +1,10 @@
+{
+  "name": "Prueba",
+  "description": "Soy propietario y vivo en ella [plantilla: hogar]",
+  "template": "hogar",
+  "baseVersion": "2026-05-20T19:09:35.520Z",
+  "createdAt": "2026-05-20T19:09:35.520Z",
+  "updatedAt": "2026-05-20T19:09:35.520Z",
+  "createdBy": "alejandro.llamas@segurosbolivar.com",
+  "createdByName": "Alejandro Llamas"
+}

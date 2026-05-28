@@ -1,0 +1,212 @@
+[
+  {
+    "action": "move",
+    "selector": ".hogar-hero__form",
+    "property": "__multiStyle",
+    "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"922.848px\",\"top\":\"58.9258px\"}",
+    "description": "Elemento movido",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:09.829Z",
+    "id": "mpefsazg3smq"
+  },
+  {
+    "action": "delete",
+    "selector": ".sb-navbar__logo-img",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:12.952Z",
+    "id": "mpefsdeg0e30"
+  },
+  {
+    "action": "delete",
+    "selector": "#app-content > div > nav > div > div:nth-of-type(1) > a:nth-of-type(1)",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:15.306Z",
+    "id": "mpefsf7uyfud"
+  },
+  {
+    "action": "delete",
+    "selector": "#app-content > div > nav > div > div:nth-of-type(1) > a:nth-of-type(3)",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:15.326Z",
+    "id": "mpefsf8evozs"
+  },
+  {
+    "action": "delete",
+    "selector": "#app-content > div > nav > div > div:nth-of-type(1) > a:nth-of-type(4)",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:15.340Z",
+    "id": "mpefsf8s810j"
+  },
+  {
+    "action": "delete",
+    "selector": "#app-content > div > nav > div > div:nth-of-type(1) > a:nth-of-type(5)",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:15.575Z",
+    "id": "mpefsffbu5yz"
+  },
+  {
+    "action": "delete",
+    "selector": "#app-content > div > nav > div > div:nth-of-type(1) > a:nth-of-type(6)",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:16.379Z",
+    "id": "mpefsg1nwm3d"
+  },
+  {
+    "action": "delete",
+    "selector": ".sb-navbar__action.sb-navbar__action--access",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:17.228Z",
+    "id": "mpefsgp8tvbc"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-hero__badge",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:21.125Z",
+    "id": "mpefsjph9kzm"
+  },
+  {
+    "action": "move",
+    "selector": ".hogar-stepper",
+    "property": "__multiStyle",
+    "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"0px\",\"top\":\"4px\"}",
+    "description": "Elemento movido",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:21.783Z",
+    "id": "mpefsk7rolnc"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-stepper",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:21.930Z",
+    "id": "mpefskbu9uhw"
+  },
+  {
+    "action": "delete",
+    "selector": "#app-content > div > section:nth-of-type(2) > div > div:nth-of-type(1) > img",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:23.210Z",
+    "id": "mpefslbep6kx"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-value__desc",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:23.746Z",
+    "id": "mpefslqa6dhn"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-value__title",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:24.231Z",
+    "id": "mpefsm3r9v69"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-value__badge-hogares",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:24.601Z",
+    "id": "mpefsme1rwt4"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-value__badge-group",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:25.132Z",
+    "id": "mpefsmss0gfw"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-value__badge",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:25.612Z",
+    "id": "mpefsn64a6ov"
+  },
+  {
+    "action": "move",
+    "selector": ".hogar-value__text-block",
+    "property": "__multiStyle",
+    "value": "{\"outline-color\":\"rgb(10, 103, 65)\",\"outline-style\":\"solid\",\"outline-width\":\"2px\",\"outline-offset\":\"2px\",\"position\":\"absolute\",\"z-index\":\"99999\",\"left\":\"611.473px\",\"top\":\"110.984px\"}",
+    "description": "Elemento movido",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:26.824Z",
+    "id": "mpefso3so2sf"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-value__text-block",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:27.425Z",
+    "id": "mpefsokhx0f7"
+  },
+  {
+    "action": "delete",
+    "selector": ".hogar-value__inner",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "home",
+    "timestamp": "2026-05-20T19:10:29.393Z",
+    "id": "mpefsq35jwfo"
+  },
+  {
+    "action": "delete",
+    "selector": ".step1-card__col-right",
+    "property": "display",
+    "value": "none",
+    "description": "Eliminado",
+    "page": "step1",
+    "timestamp": "2026-05-20T19:10:58.146Z",
+    "id": "mpeftc9uivls"
+  }
+]

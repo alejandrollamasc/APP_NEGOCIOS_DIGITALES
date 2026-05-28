@@ -3809,3 +3809,105 @@ img { max-width: 100%; height: auto; }
   text-align: center;
   color: #999999;
 }
+
+/* ===== FULL RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hogar-hero__inner { padding: 0 24px; }
+  .hogar-value__grid { grid-template-columns: repeat(2, 1fr); }
+  .hogar-coverages__grid { grid-template-columns: repeat(2, 1fr); }
+  .hogar-assistances__grid { grid-template-columns: repeat(2, 1fr); }
+  .step4-frequency-options { flex-direction: column; }
+  .step5-howto__cards { flex-direction: column; }
+  .step5-howto { padding: 24px 24px 60px; }
+}
+
+@media (max-width: 768px) {
+  .sb-top-bar { height: 48px; }
+  .sb-top-bar__inner { padding: 0 16px; }
+  .hogar-hero { min-height: 300px; }
+  .hogar-hero__title { font-size: 28px; line-height: 34px; }
+  .hogar-hero__subtitle { font-size: 14px; }
+  .hogar-hero__btn { padding: 12px 28px; font-size: 14px; }
+  .hogar-value__grid { grid-template-columns: 1fr; }
+  .hogar-coverages__grid { grid-template-columns: 1fr; }
+  .hogar-assistances__grid { grid-template-columns: 1fr; }
+  .hogar-cta__inner { flex-direction: column; text-align: center; padding: 32px 16px; }
+  .hogar-howto__steps { flex-direction: column; }
+  .hogar-footer__top-inner { padding: 0 16px; flex-direction: column; gap: 24px; }
+  .hogar-footer__mid-inner { flex-wrap: wrap; padding: 0 16px; }
+  .hogar-footer__bottom-inner { padding: 0 16px; flex-direction: column; gap: 8px; }
+  .step1-title { font-size: 24px; }
+  .step1-stepper { gap: 4px; }
+  .step1-stepper__line { width: 40px; }
+  .step1-stepper__label { font-size: 10px; }
+  .step3-layout { padding: 0 16px; }
+  .step3-sidebar { position: static; width: 100%; }
+  .step3-sidebar__card { border-radius: 0; }
+  .step4-container { padding: 0 8px 48px; }
+  .step4-card__title { font-size: 24px; }
+  .step4-section { padding: 12px 16px; }
+  .step5-main { padding: 0 16px 40px; }
+  .step5-protection__title { font-size: 20px; }
+  .step5-info-card__grid { grid-template-columns: 1fr; }
+  .step5-howto__cards { gap: 16px; }
+  .step5-howto-card--video { min-height: 200px; }
+  .step5id-modal { width: 95vw; }
+}
+
+@media (max-width: 480px) {
+  .hogar-hero__title { font-size: 22px; line-height: 28px; }
+  .hogar-stepper { padding: 16px 8px; }
+  .step1-bottom__btn { width: 100%; min-width: unset; }
+  .step3-plan-tabs { gap: 4px; }
+  .step3-plan-tab { padding: 8px 12px; font-size: 12px; }
+  .step4-bottom-bar__btn { min-width: unset; width: 100%; }
+  .step4-frequency-card__total-label { font-size: 14px; }
+  .step4-frequency-card__total-price { font-size: 18px; }
+  .step5id-otp-input-row { flex-direction: column; gap: 12px; }
+
+  /* Force all content to fit mobile viewport */
+  body, html { overflow-x: hidden; max-width: 100vw; }
+  .app-main--home { overflow-x: hidden; }
+  .step1-page, .step3-layout, .step4-container, .step5-page { max-width: 100vw; overflow-x: hidden; }
+  .step-header__inner { padding: 0 12px; }
+  .step1-title { font-size: 20px; padding: 0 12px; }
+  .step1-stepper { padding: 12px 8px; overflow-x: auto; }
+  .step1-stepper__line { width: 24px; min-width: 24px; }
+  .step1-stepper__label { font-size: 9px; max-width: 60px; }
+  .step1-stepper__bull { width: 36px; height: 36px; min-width: 36px; }
+  .step1-form { padding: 0 12px; }
+  .step1-form__row { flex-direction: column; }
+  .step1-form__field { width: 100%; }
+  .step1-options { flex-direction: column; }
+  .step1-option { width: 100%; }
+  img { max-width: 100%; height: auto; }
+  .hogar-hero__inner { padding: 0 16px; }
+  .hogar-hero__title { font-size: 20px; line-height: 26px; }
+  .hogar-cta__inner { padding: 24px 16px; }
+  .hogar-howto__inner { padding: 0 16px; }
+  .hogar-exclusions__inner { padding: 0 16px; }
+  .sb-top-bar__inner { padding: 0 8px; }
+  .sb-navbar__inner { padding: 0 8px; }
+  .step3-card { margin: 0 8px; }
+  .step3-card__header { padding: 16px 12px 0; }
+  .step3-plan-details { padding: 0 12px; }
+  .step3-optional-list { padding: 0 8px; }
+  .step3-sidebar { margin: 0 8px; }
+  .step4-card { border-radius: 12px; }
+  .step4-card__header { padding: 16px 12px 0; }
+  .step4-card__title { font-size: 22px; }
+}
+
+@media (max-width: 375px) {
+  .step1-stepper { flex-wrap: nowrap; justify-content: center; }
+  .step1-stepper__step { min-width: 0; }
+  .step1-stepper__bull { width: 32px; height: 32px; min-width: 32px; font-size: 12px; }
+  .step1-stepper__bull--active { width: 40px; height: 40px; min-width: 40px; }
+  .step1-stepper__line { width: 20px; min-width: 20px; }
+  .step1-title { font-size: 18px; }
+  .step3-card__title, .step4-card__title { font-size: 20px; }
+  .hogar-hero__title { font-size: 18px; }
+  .hogar-hero__btn { width: 100%; text-align: center; }
+  * { max-width: 100%; }
+  .step1-form__input, .step1-form__select, .step4-form-field__input, .step4-form-field__select { max-width: 100%; width: 100%; }
+}

@@ -22,9 +22,9 @@ function getProjectDir(id) { return join(PROJECTS_DIR, id); }
 function ensureProject(id) {
   const dir = getProjectDir(id);
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
-  ['versions.json','logs.json','pending.json','images.json','meta.json'].forEach(f => {
+  ['versions.json','logs.json','pending.json','images.json','meta.json','snapshots.json'].forEach(f => {
     const fp = join(dir, f);
-    if (!existsSync(fp)) writeJSON(fp, f === 'meta.json' ? {} : []);
+    if (!existsSync(fp)) writeJSON(fp, (f === 'meta.json' || f === 'snapshots.json') ? {} : []);
   });
   // Create images subfolder
   const imgDir = join(dir, 'images');
@@ -132,6 +132,30 @@ const server = createServer(async (req, res) => {
       const { rmSync } = await import('fs');
       try { rmSync(dir, { recursive: true, force: true }); } catch (e) { console.error('Delete error:', e); }
       return json(res, { ok: true, deleted: projectId });
+    }
+
+    // POST /api/projects/:id/duplicate — create a full copy of the project
+    if (resource === 'duplicate' && req.method === 'POST') {
+      const body = await parseBody(req);
+      const newName = body.name || `${projectId} (copia)`;
+      const newId = newName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '') + '-' + Date.now().toString(36);
+      const newDir = ensureProject(newId);
+
+      // Copy all files from source to new project
+      const { cpSync } = await import('fs');
+      try { cpSync(dir, newDir, { recursive: true, force: true }); } catch (e) { console.error('Copy error:', e); }
+
+      // Update meta with new name
+      const meta = readJSON(join(newDir, 'meta.json'));
+      meta.name = newName;
+      meta.createdAt = new Date().toISOString();
+      meta.updatedAt = new Date().toISOString();
+      meta.createdBy = body.user || meta.createdBy;
+      meta.createdByName = body.userName || meta.createdByName;
+      meta.duplicatedFrom = projectId;
+      writeJSON(join(newDir, 'meta.json'), meta);
+
+      return json(res, { ok: true, id: newId, name: newName }, 201);
     }
 
     // PUT /api/projects/:id (update meta)
@@ -282,7 +306,8 @@ const server = createServer(async (req, res) => {
       const html = body.html;
       if (!page || !html) return json(res, { error: 'page and html required' }, 400);
       const snapshotsFile = join(dir, 'snapshots.json');
-      const snapshots = readJSON(snapshotsFile) || {};
+      let snapshots = readJSON(snapshotsFile);
+      if (Array.isArray(snapshots) || !snapshots) snapshots = {};
       snapshots[page] = { html, updatedAt: new Date().toISOString() };
       writeJSON(snapshotsFile, snapshots);
       return json(res, { ok: true, page });
@@ -317,6 +342,8 @@ const server = createServer(async (req, res) => {
     if (resource === 'export' && req.method === 'POST') {
       const meta = readJSON(join(dir, 'meta.json'));
       const versions = readJSON(join(dir, 'versions.json'));
+      const snapshotsFile = join(dir, 'snapshots.json');
+      const snapshots = existsSync(snapshotsFile) ? readJSON(snapshotsFile) : {};
       const template = meta.template || ((meta.description || '').includes('[plantilla: hogar]') ? 'hogar' : 'salud');
 
       // Collect all changes
@@ -337,6 +364,39 @@ const server = createServer(async (req, res) => {
       const exportDir = join(dir, 'export');
       if (!existsSync(exportDir)) mkdirSync(exportDir, { recursive: true });
 
+      // Export snapshots as HTML files (both desktop and mobile)
+      const pagesDir = join(exportDir, 'pages');
+      if (!existsSync(pagesDir)) mkdirSync(pagesDir, { recursive: true });
+
+      const exportedPages = [];
+      for (const [pageKey, snapData] of Object.entries(snapshots)) {
+        if (pageKey.startsWith('__')) continue; // Skip internal keys like __flow_config
+        if (!snapData || !snapData.html) continue;
+        const isMobile = pageKey.endsWith('_mobile');
+        const basePage = isMobile ? pageKey.replace('_mobile', '') : pageKey;
+        const suffix = isMobile ? '_mobile' : '_desktop';
+        const filename = `${basePage}${suffix}.html`;
+
+        const pageHtml = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${meta.name} - ${basePage}${isMobile ? ' (Mobile)' : ''}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <main id="app-content" class="app-main">
+    ${snapData.html}
+  </main>
+</body>
+</html>`;
+        writeFileSync(join(pagesDir, filename), pageHtml, 'utf-8');
+        exportedPages.push({ page: basePage, device: isMobile ? 'mobile' : 'desktop', file: filename });
+      }
+
       const manifest = {
         projectId,
         projectName: meta.name,
@@ -344,6 +404,7 @@ const server = createServer(async (req, res) => {
         baseVersion: meta.baseVersion || meta.createdAt,
         exportedAt: new Date().toISOString(),
         totalChanges: allChanges.length,
+        exportedPages,
         pages: Object.keys(changesByPage).map(page => ({
           id: page,
           changes: changesByPage[page].length,
@@ -358,19 +419,25 @@ const server = createServer(async (req, res) => {
       const summaryHtml = `<!DOCTYPE html>
 <html lang="es">
 <head><meta charset="UTF-8"><title>Export - ${meta.name}</title>
-<style>body{font-family:system-ui;max-width:800px;margin:40px auto;padding:0 20px;color:#333}h1{color:#016D38}code{background:#f5f5f5;padding:2px 6px;border-radius:4px;font-size:13px}.change{border:1px solid #eee;padding:12px;margin:8px 0;border-radius:8px}.page-title{color:#016D38;font-weight:700;margin-top:24px}</style>
+<style>body{font-family:system-ui;max-width:800px;margin:40px auto;padding:0 20px;color:#333}h1{color:#016D38}code{background:#f5f5f5;padding:2px 6px;border-radius:4px;font-size:13px}.change{border:1px solid #eee;padding:12px;margin:8px 0;border-radius:8px}.page-title{color:#016D38;font-weight:700;margin-top:24px}.device-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;margin-left:8px}.device-badge--desktop{background:#e3f2fd;color:#1565c0}.device-badge--mobile{background:#fce4ec;color:#c62828}</style>
 </head>
 <body>
 <h1>📦 ${meta.name}</h1>
 <p>Template: <strong>${template}</strong> | Exportado: ${new Date().toLocaleString('es-CO')}</p>
-<p>Total de cambios: <strong>${allChanges.length}</strong></p>
+<p>Total de cambios: <strong>${allChanges.length}</strong> | Páginas exportadas: <strong>${exportedPages.length}</strong></p>
 <hr>
+<h2>📄 Páginas exportadas (HTML)</h2>
+<ul>
+${exportedPages.map(p => `<li><code>pages/${p.file}</code> <span class="device-badge device-badge--${p.device}">${p.device}</span></li>`).join('\n')}
+</ul>
+<hr>
+<h2>📝 Cambios por página</h2>
 ${Object.entries(changesByPage).map(([page, changes]) => `
-<h2 class="page-title">📄 ${page}</h2>
+<h3 class="page-title">📄 ${page}</h3>
 ${changes.map(c => `<div class="change"><code>${c.property}</code> → <code>${c.selector}</code><br><small>${c.description || ''}</small></div>`).join('')}
 `).join('')}
 <hr>
-<p><em>Archivo generado automáticamente. Los cambios deben aplicarse sobre la experiencia base "${template}" versión ${meta.baseVersion || 'original'}.</em></p>
+<p><em>Archivo generado automáticamente. Los archivos HTML en /pages/ contienen el snapshot final de cada pantalla (desktop y mobile por separado).</em></p>
 </body></html>`;
 
       writeFileSync(join(exportDir, 'index.html'), summaryHtml, 'utf-8');

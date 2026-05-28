@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatgpt - EXP 1  Hogar - step2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <main id="app-content" class="app-main">
+    
+    <div class="step1-page" style="outline-offset: 2px;">
+      <!-- ========== HEADER ========== -->
+      <header class="step-header" style="">
+        <div class="step-header__inner" style="">
+          <a href="?step=1" class="step-header__back" style="">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10l6 6" stroke="#016D38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            VOLVER
+          </a>
+          <div class="step-header__logo">
+            <img src="/images/logo-seguros-bolivar.png" alt="Seguros Bolívar" class="step-header__logo-img">
+          </div>
+        </div>
+      </header>
+
+      <!-- ========== CONTENT ========== -->
+      <div class="step1-content" style="">
+        <h1 class="step1-title" style="display: none;">¡Configure las coberturas a su medida!</h1>
+
+        <!-- Stepper -->
+        <div class="step1-stepper" style="">
+          <div class="step1-stepper__step step1-stepper__step--active">
+            <div class="step1-stepper__bull-wrap" style=""><div class="step1-stepper__bull step1-stepper__bull--active"><span style="">1</span></div></div>
+            <p class="step1-stepper__label step1-stepper__label--active" style="">Ingrese sus datos</p>
+          </div>
+          <div class="step1-stepper__line"></div>
+          <div class="step1-stepper__step" style=""><div class="step1-stepper__bull" style=""><span>2</span></div><p class="step1-stepper__label">Arme su plan</p></div>
+          <div class="step1-stepper__line"></div>
+          <div class="step1-stepper__step" style=""><div class="step1-stepper__bull"><span>3</span></div><p class="step1-stepper__label" style="">Confirme su compra</p></div>
+          <div class="step1-stepper__line"></div>
+          <div class="step1-stepper__step"><div class="step1-stepper__bull" style=""><span>4</span></div><p class="step1-stepper__label" style="">Pague su seguro</p></div>
+        </div>
+
+        <!-- Banner: Asegure su hogar y pertenencias -->
+        <div class="step2-banner" style="display: none;">
+          <img src="/Iconos/Protection.png" alt="" class="step2-banner__icon">
+          <h2 class="step2-banner__title">Asegure su hogar y pertenencias</h2>
+          <p class="step2-banner__desc">Complete la siguiente información para <strong>cotizar su seguro como propietario.</strong></p>
+        </div>
+
+        <!-- Card 1: Información del hogar -->
+        <div class="step2-card" style="height: 615px; position: relative; width: 1076px;">
+          <div class="step2-card__header" style="">
+            <img src="/Iconos/Group 2432.png" alt="" class="step2-card__icon" style="">
+            <h2 class="step2-card__title" style="font-family: &quot;Roboto Condensed&quot;, sans-serif !important;">Información de tu hogar y tus pertenencias</h2>
+            <p class="step2-card__desc" style="font-family: &quot;Roboto Condensed&quot;, sans-serif !important;">Cada detalle es importante.</p>
+          </div>
+          <div class="step2-card__form" style="position: absolute; height: 424px; width: 961px; z-index: 99999; left: 54.9414px; top: 162.301px;">
+            <div class="step2-form-row" style="">
+              <div class="step1-form-group" style="display: none;">
+                <label class="step1-form-label" style="">Ciudad o municipio</label>
+                <select class="step1-input step1-select" style=""><option>Ej: Bogotá</option></select>
+              </div>
+              <div class="step1-form-group" style="display: none;">
+                <label class="step1-form-label" style="">Dirección de la vivienda</label>
+                <div class="step1-input-icon">
+                  <input type="text" class="step1-input" placeholder="Ej: Calle 1 # 1 - 15" style="">
+                  <svg class="step1-input-icon__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="#016D38" stroke-width="1.5"></circle><path d="M14 14l4 4" stroke="#016D38" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                </div>
+              </div>
+            </div>
+            <div class="step2-form-row" style="position: relative;">
+              <div class="step1-form-group" style="display: none;">
+                <label class="step1-form-label" style="">Tipo de vivienda</label>
+                <div class="step1-radio-group" style="">
+                  <label class="step1-radio"><input type="radio" name="housing-type" value="casa" checked=""><span class="step1-radio__custom"></span><span class="step1-radio__text" style="">Casa</span></label>
+                  <label class="step1-radio"><input type="radio" name="housing-type" value="apartamento"><span class="step1-radio__custom"></span><span class="step1-radio__text">Apartamento</span></label>
+                </div>
+              </div>
+              <div class="step1-form-group" style="display: none;">
+                <label class="step1-form-label" style="">Estrato de la vivienda</label>
+                <input type="text" class="step1-input" placeholder="Ej: entre / piso / torre / casa" style="">
+              </div>
+            </div>
+            <div class="step2-form-row" style="">
+              
+              <div class="step1-form-group" style="">
+                
+                <select class="step1-input step1-select" style="display: none;"><option>Seleccione...</option></select>
+              </div>
+            </div>
+          <div class="step1-form-group" style="position: absolute; z-index: 99999; left: 354.977px; top: 33.6172px; width: 300px;">
+                <label class="step1-form-label" style="">Valor comercial del inmueble</label>
+                <input type="text" class="step1-input" placeholder="Ej: $224.000.000" style="width: 291px;">
+              </div><div class="step1-form-group" style="position: absolute; z-index: 99999; left: 347.008px; top: 299.969px; display: none;">
+                <label class="step1-form-label" style="">Años de antigüedad de la vivienda</label>
+                <select class="step1-input step1-select" style=""><option>Seleccione el rango de años...</option></select>
+              </div><label class="step1-form-label" style="position: absolute; z-index: 99999; left: 344.496px; top: 62.9688px; display: none;">¿La vivienda está construida con materiales no quemables?</label><img src="/Iconos/Group 2443.png" alt="" class="step2-card__icon" style="position: absolute; z-index: 99999; left: 289.965px; top: 157.594px; width: 54px; height: 50px;"><div class="step1-form-group" style="max-width: 327px; position: absolute; z-index: 99999; left: 360.496px; top: 142.148px; width: 291px;">
+              <label class="step1-form-label" style="">Escriba el valor total de sus equipos electrónicos</label>
+              <input type="text" class="step1-input" placeholder="$ 0.000.000" style="">
+              <span class="step2-caption" style="">Aseguramos hasta $40.000.000, pero solo cubrimos hasta $10.000.000 por evento.</span>
+            </div><img src="/Iconos/Group 2430.png" alt="" class="step2-card__icon" style="position: absolute; z-index: 99999; left: 297.98px; top: 282.109px; width: 50px; height: 53px;"><div class="step1-form-group" style="max-width: 327px; position: absolute; z-index: 99999; left: 365.488px; top: 276.387px; width: 283px;">
+              <label class="step1-form-label" style="">Escriba el valor total de sus muebles y enseres</label>
+              <input type="text" class="step1-input" placeholder="$ 0.000.000" style="">
+              <span class="step2-caption" style="">Aseguramos hasta $40.000.000, pero solo cubrimos hasta $10.000.000 por evento.</span>
+            </div><img src="http://localhost:3002/Iconos/Frame%20180.png" alt="Frame 180.png" class="admin-inserted" style="position: absolute; margin: 12px auto; max-width: 200px; height: 58px; cursor: move; z-index: 99999; left: 285.941px; top: 38.8281px; width: 56px;"></div>
+        </div>
+
+        <!-- Card 2: Información de la vivienda -->
+        <div class="step2-card" style="display: none;">
+          <div class="step2-card__header" style="">
+            <img src="/Iconos/Group 2432.png" alt="" class="step2-card__icon" style="">
+            <h2 class="step2-card__title" style="">Información de la vivienda</h2>
+            <p class="step2-card__desc" style="">Ingrese el <strong style="">valor comercial del inmueble</strong>. Este será el valor por el que quedará asegurado.</p>
+          </div>
+          <div class="step2-card__form" style="">
+            <div class="step2-form-row" style="">
+              
+              <div class="step1-form-group" style="">
+                <label class="step1-form-label" style="">Material predominante en que está construida la vivienda</label>
+                <select class="step1-input step1-select" style=""><option>Seleccione el material predominante...</option></select>
+              </div>
+            </div>
+            <div class="step2-form-row" style="">
+              <div class="step1-form-group">
+                <label class="step1-form-label">Años de antigüedad de la vivienda</label>
+                <input type="text" class="step1-input" placeholder="" style="">
+              </div>
+              <div class="step1-form-group"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner: Asegure sus objetos personales -->
+        <div class="step2-banner" style="display: none;">
+          <h2 class="step2-banner__title">Asegure sus objetos personales</h2>
+          <p class="step2-banner__desc">Registre sus objetos más importantes, tenga en cuenta que <strong>debe registrar mínimo uno.</strong></p>
+        </div>
+
+        <!-- Card 3: Equipos electrónicos -->
+        <div class="step2-card" style="display: none;">
+          <div class="step2-card__header" style="">
+            
+            <h2 class="step2-card__title" style="">Equipos electrónicos</h2>
+            <p class="step2-card__desc" style="">Incluir los <strong style="">electrodomésticos, computadores</strong>, entre otros.<br><strong style="">No cubrimos</strong> celulares, tablets ni Smartwatch.</p>
+          </div>
+          <div class="step2-card__form step2-card__form--centered" style="">
+            
+          </div>
+        </div>
+
+        <!-- Card 4: Muebles y enseres -->
+        <div class="step2-card" style="display: none;">
+          <div class="step2-card__header" style="">
+            
+            <h2 class="step2-card__title" style="">Muebles y enseres</h2>
+            <p class="step2-card__desc" style="">Incluir <strong style="">muebles del hogar</strong> como: armarios, sillas, mesas, entre otros.<br><strong style="">No cubrimos:</strong> joyas, obras de arte, relojes.</p>
+          </div>
+          <div class="step2-card__form step2-card__form--centered" style="">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== BOTTOM BAR ========== -->
+      <div class="step1-bottom" style="">
+        <button class="step1-bottom__btn" id="btn-continue-step2">Continuar</button>
+      </div>
+    </div>
+  
+  </main>
+</body>
+</html>

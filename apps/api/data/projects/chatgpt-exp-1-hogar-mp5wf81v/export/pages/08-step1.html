@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatgpt - EXP 1  Hogar - step1</title>
+  <link rel="stylesheet" href="../css/hogar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main id="app-content" class="app-main app-main--home">
+    
+    <div class="step1-page" style="position: relative; z-index: 99999; outline: rgb(10, 103, 65) solid 2px; outline-offset: 2px;">
+      <!-- ========== HEADER SIMPLE ========== -->
+      <header class="step-header" style="">
+        <div class="step-header__inner" style="">
+          <a href="#" class="step-header__back" id="btn-back" style="display: none;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10l6 6" stroke="#016D38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            VOLVER
+          </a>
+          <div class="step-header__logo">
+            <img src="/images/logo-seguros-bolivar.png" alt="Seguros Bolívar" class="step-header__logo-img" style="">
+          </div>
+        </div>
+      </header>
+
+      <!-- ========== CONTENT ========== -->
+      <div class="step1-content" style="">
+        <!-- Title -->
+        <h1 class="step1-title" style="display: none;">¡Configure las coberturas a su medida!</h1>
+
+        <!-- Stepper -->
+        <div class="step1-stepper" style="">
+          <div class="step1-stepper__step step1-stepper__step--active" style="">
+            <div class="step1-stepper__bull-wrap">
+              <div class="step1-stepper__bull step1-stepper__bull--active" style="">
+                <span>1</span>
+              </div>
+            </div>
+            <p class="step1-stepper__label step1-stepper__label--active" style="">Ingrese sus datos</p>
+          </div>
+          <div class="step1-stepper__line"></div>
+          <div class="step1-stepper__step" style="">
+            <div class="step1-stepper__bull">
+              <span>2</span>
+            </div>
+            <p class="step1-stepper__label" style="">Arme su plan</p>
+          </div>
+          <div class="step1-stepper__line"></div>
+          <div class="step1-stepper__step" style="">
+            <div class="step1-stepper__bull">
+              <span>3</span>
+            </div>
+            <p class="step1-stepper__label" style="">Confirme su compra</p>
+          </div>
+          <div class="step1-stepper__line"></div>
+          <div class="step1-stepper__step">
+            <div class="step1-stepper__bull" style="">
+              <span>4</span>
+            </div>
+            <p class="step1-stepper__label">Pague su seguro</p>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="step1-card" style="height: 677px; position: relative;">
+          <!-- Header with icon -->
+          <div class="step1-card__header" style="width: 693px;">
+            <img src="/Iconos/Group 4579.png" alt="" class="step1-card__icon" style="">
+            <h2 class="step1-card__title" style="font-family: &quot;Roboto Condensed&quot;, sans-serif !important;">Asegure su hogar en minutos y 100% en línea</h2>
+            <p class="step1-card__desc" style="font-family: &quot;Roboto Condensed&quot;, sans-serif !important;">Conocer sus datos personales nos permite ajustar el seguro ideal para tu hogar. </p>
+          </div>
+
+          <!-- Form columns -->
+          <div class="step1-card__body" style="width: 418px;">
+            <!-- Left column: personal data -->
+            <div class="step1-card__col-left" style="height: 271px; position: relative;">
+              <div class="step1-form-row" style="">
+                <div class="step1-form-group step1-form-group--small" style="">
+                  <label class="step1-form-label" style="">Tipo de documento</label>
+                  <select class="step1-input step1-select" id="doc-type" style="">
+                    <option value="cc">C.C.</option>
+                    <option value="ce">C.E.</option>
+                    <option value="nit">NIT</option>
+                  </select>
+                </div>
+                <div class="step1-form-group step1-form-group--large" style="">
+                  <label class="step1-form-label" style="">Número de documento</label>
+                  <input type="text" class="step1-input" id="doc-number" placeholder="Ej: 1111.123.123" style="">
+                </div>
+              </div>
+              <div class="step1-form-group" style="">
+                <label class="step1-form-label" style="">Fecha de nacimiento</label>
+                <div class="step1-input-icon">
+                  <input type="text" class="step1-input" id="birthdate" placeholder="DD / MM / AAAA" style="">
+                  <img src="/Iconos/Icon calendar.png" alt="" class="step1-input-icon__img">
+                </div>
+              </div>
+              <div class="step1-form-group" style="">
+                <label class="step1-form-label" style="display: none;">Género:</label>
+                <div class="step1-radio-group" style="display: none;">
+                  <label class="step1-radio">
+                    <input type="radio" name="gender" value="mujer" checked="">
+                    <span class="step1-radio__custom"></span>
+                    <span class="step1-radio__text">Mujer</span>
+                  </label>
+                  <label class="step1-radio" style="">
+                    <input type="radio" name="gender" value="hombre">
+                    <span class="step1-radio__custom"></span>
+                    <span class="step1-radio__text" style="">Hombre</span>
+                  </label>
+                </div>
+              </div>
+            <div class="admin-inserted" style="position: relative; margin: 12px auto; cursor: move; z-index: 99999; width: 311px; max-width: 90%;"></div><div style="flex-direction: column; gap: 8px; position: absolute; z-index: 99999; left: 23.3542px; top: 180.562px; width: 335px;"><label style="font-size: 14px; color: rgb(27, 27, 27); font-family: &quot;Roboto Condensed&quot;, sans-serif !important;">¿Cuál es su nombre?</label><input type="text" style="width: 328px; height: 40px; padding: 8px 16px; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 14px; color: rgb(51, 51, 51); background: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); border-radius: 5px;" placeholder="Ej. Alejandro Llamas"></div></div>
+
+            <!-- Right column: service type -->
+            <div class="step1-card__col-right" style="display: none;">
+              <h3 class="step1-card__question">¿Cuál de estos casos se ajusta a sus necesidades?</h3>
+              <div class="step1-options" style="">
+                <div class="step1-option step1-option--selected" data-option="casa-pertenencias">
+                  <div class="step1-option__radio">
+                    <span class="step1-option__radio-dot"></span>
+                  </div>
+                  <img src="/Iconos/Icon 1.png" alt="" class="step1-option__icon">
+                  <p class="step1-option__label">Quiero asegurar mi casa y pertenencias</p>
+                </div>
+                <div class="step1-option" data-option="casa">
+                  <div class="step1-option__radio"></div>
+                  <img src="/Iconos/Icon 2.png" alt="" class="step1-option__icon">
+                  <p class="step1-option__label" style="">Quiero asegurar mi casa</p>
+                </div>
+                <div class="step1-option" data-option="pertenencias" style="">
+                  <div class="step1-option__radio"></div>
+                  <img src="/Iconos/Icon 3.png" alt="" class="step1-option__icon">
+                  <p class="step1-option__label">Quiero asegurar mis pertenencias</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <label class="step4-checkbox-row admin-inserted" style="position: absolute; z-index: 99999; cursor: move; margin: 12px auto; left: 352px; top: 448.271px; width: 354px;">
+              <input type="checkbox" id="chk-terms">
+              <span class="step4-checkbox-box" style=""></span>
+              <span class="step4-checkbox-label" style="">Acepto la <a href="#" class="step4-link" style="">Política de Privacidad</a>, los <a href="#" class="step4-link" style="">Términos y Condiciones</a> del Seguro Hogar y la Cobertura Seguridad Digital, el <a href="#" class="step4-link" style="">tratamiento de mis datos personales</a> en <a href="#" class="step4-link" style="">Términos y Condiciones del canal digital</a>.</span>
+            </label><label class="step4-checkbox-row admin-inserted" style="position: absolute; z-index: 99999; cursor: move; margin: 12px auto; left: 351.312px; top: 542.271px; width: 348px;">
+              <input type="checkbox" id="chk-offers">
+              <span class="step4-checkbox-box" style=""></span>
+              <span class="step4-checkbox-label" style="">Autorizo el envío de <a href="#" class="step4-link" style="">información y ofertas comerciales</a>.</span>
+            </label><img src="http://localhost:3002/Iconos/Group%204581.png" alt="Group 4581.png" class="admin-inserted" style="position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 914px; top: 7px; width: 138px;"><img src="http://localhost:3002/Iconos/Group%204581.png" alt="Group 4581.png" class="admin-inserted" style="position: absolute; margin: 12px auto; max-width: 200px; height: auto; cursor: move; z-index: 99999; left: 6px; top: 5px; width: 147px;"></div>
+      </div>
+
+      <!-- ========== BOTTOM BAR ========== -->
+      <div class="step1-bottom" style="">
+        <button class="step1-bottom__btn" id="btn-continue" style="">Continuar</button>
+      </div>
+    </div>
+  
+  </main>
+</body>
+</html>

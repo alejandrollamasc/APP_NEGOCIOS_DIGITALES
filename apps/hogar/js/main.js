@@ -64,6 +64,8 @@ window.addEventListener('message', (event) => {
       content.innerHTML = event.data.html;
       // Re-enable draggable on admin-inserted elements
       content.querySelectorAll('.admin-inserted').forEach(el => { el.style.cursor = 'move'; });
+      // Re-apply flow config if it was set
+      if (window._flowConfig) { setTimeout(applyFlowConfig, 100); }
     }
   }
 
@@ -171,6 +173,31 @@ window.addEventListener('message', (event) => {
   if (event.data.type === 'UPDATE_SELECT_OPTIONS') { try { const w=document.querySelector(event.data.selector); if(w){const s=w.querySelector('select')||w; if(s.tagName==='SELECT') s.innerHTML=event.data.options.map(o=>`<option>${o}</option>`).join('');} } catch{} }
   if (event.data.type === 'UNDO') { if (undoHistory.length>0){const a=undoHistory.pop(); redoHistory.push(a); if(a.el&&a.prev) a.el.style.cssText=a.prev;} }
   if (event.data.type === 'REDO') { if (redoHistory.length>0){const a=redoHistory.pop(); undoHistory.push(a); if(a.el&&a.next) a.el.style.cssText=a.next;} }
+
+  if (event.data.type === 'COPY_SELECTED') {
+    if (selectedElement) {
+      const html = selectedElement.outerHTML;
+      window.parent.postMessage({ type: 'COPIED_ELEMENT', html }, '*');
+    }
+  }
+
+  if (event.data.type === 'PASTE_ELEMENT') {
+    const temp = document.createElement('div');
+    temp.innerHTML = event.data.html;
+    const el = temp.firstElementChild;
+    if (el) {
+      el.classList.add('admin-inserted');
+      el.style.position = 'relative';
+      el.style.zIndex = '99999';
+      el.style.cursor = 'move';
+      el.style.margin = '12px auto';
+      const content = document.getElementById('app-content') || document.body;
+      content.appendChild(el);
+      makeDraggable(el);
+      selectElement(el);
+      notifyChange('insertText', el, 'Elemento pegado');
+    }
+  }
 });
 
 // ===== EDIT MODE =====
@@ -369,34 +396,26 @@ function applyFlowConfig() {
   if (targetPageId && targetPageId !== 'none') {
     const targetStep = pageStepMap[targetPageId] || '0';
 
-    // Find ALL clickable elements that look like primary action buttons
-    const allBtns = document.querySelectorAll('button, a');
-    const mainBtns = [];
-    allBtns.forEach(btn => {
-      // Match by: id contains btn/continue/next/pay/cotizar, or class contains btn/cta/bottom, or has prominent styling
+    // Use document-level capture to intercept ALL clicks on action buttons
+    document.addEventListener('click', function flowHandler(e) {
+      const btn = e.target.closest('button, a');
+      if (!btn) return;
+
       const id = (btn.id || '').toLowerCase();
       const cls = (btn.className || '').toLowerCase();
       const text = (btn.textContent || '').toLowerCase().trim();
-      const isMainAction = id.includes('btn-continue') || id.includes('btn-pay') || id.includes('btn-next') || id.includes('btn-cotizar') ||
+      const isMainAction = id.includes('btn-continue') || id.includes('btn-pay') || id.includes('btn-next') || id.includes('btn-cotizar') || id.includes('personalizar') ||
         cls.includes('cta') || cls.includes('bottom__btn') || cls.includes('btn-primary') ||
-        text.includes('continuar') || text.includes('cotizar') || text.includes('siguiente') || text.includes('comprar') || text.includes('pagar');
-      if (isMainAction) mainBtns.push(btn);
-    });
+        text === 'continuar' || text === 'cotizar mi seguro' || text === 'siguiente' || text === 'comprar' || text === 'pagar' || text === 'personalizar' || text === 'validar' ||
+        text.includes('continuar') || text.includes('personalizar') || text.includes('cotizar');
 
-    // If no buttons found by heuristic, grab the last prominent button on the page
-    if (mainBtns.length === 0) {
-      const fallback = document.querySelector('.step1-bottom__btn, .hogar-cta__btn, [class*="btn"]');
-      if (fallback) mainBtns.push(fallback);
-    }
-
-    mainBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      if (isMainAction) {
         e.preventDefault();
         e.stopPropagation();
-        // Notify parent (admin) to load the target page with snapshot
+        e.stopImmediatePropagation();
         window.parent.postMessage({ type: 'FLOW_NAVIGATE', targetPage: targetPageId, targetStep: parseInt(targetStep) + 1 }, '*');
-      }, true);
-    });
+      }
+    }, true);
   }
 }
 
