@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <rect fill="#e8f5e9" width="1200" height="500"/>
+  <rect fill="#c8e6c9" x="600" y="100" width="300" height="250" rx="8"/>
+  <circle fill="#a5d6a7" cx="300" cy="250" r="120"/>
+  <path d="M750 100 L900 200 L600 200 Z" fill="#81c784"/>
+  <text x="200" y="420" font-family="sans-serif" font-size="24" fill="#2e7d32" opacity="0.5">Imagen Hero - Familia en su hogar</text>
+</svg>
