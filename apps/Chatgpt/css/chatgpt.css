@@ -1,0 +1,311 @@
+/* ===== BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Bolivar', 'Segoe UI', system-ui, sans-serif; background: #FFFFFF; color: #1B1B1B; min-height: 100vh; }
+a { color: #016D38; text-decoration: underline; }
+
+/* ===== APP MAIN ===== */
+.app-main { min-height: 100vh; display: flex; flex-direction: column; position: relative; }
+
+/* ===== HEADER ===== */
+.plan-header { display: flex; align-items: center; justify-content: center; height: 60px; background: #FFFFFF; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); position: relative; z-index: 10; }
+.plan-header__logo { height: 42px; }
+
+/* ===== HERO PLAN ===== */
+.plan-hero { position: relative; background: #E5F4EE; border-radius: 16px; margin: 24px auto 0; width: 100%; max-width: 763px; height: 233px; padding: 90px 16px 16px; display: flex; flex-direction: column; align-items: center; gap: 24px; isolation: isolate; overflow: visible; opacity: 0.95; box-shadow: 0px 2px 4px rgba(115, 115, 115, 0.16), 0px 0px 6px rgba(115, 115, 115, 0.16); }
+.plan-hero__content { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; width: 100%; max-width: 731px; z-index: 0; }
+.plan-hero__price-row { display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; gap: 24px; }
+.plan-hero__price { font-family: 'Bolivar'; font-weight: 700; font-size: 36px; line-height: 140%; color: #038450; text-align: center; margin: 0 auto; }
+.plan-hero__suggested { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 8px; gap: 10px; width: 100%; background: #F2F9F6; border-radius: 8px; }
+.plan-hero__suggested-text { font-family: 'Bolivar'; font-weight: 700; font-size: 32px; line-height: 140%; color: #038450; text-align: center; }
+
+/* Hero decorations */
+.plan-hero__decor-right { position: absolute; width: 120px; height: 120px; right: -10px; top: -40px; z-index: 5; pointer-events: none; }
+.plan-hero__decor-left { position: absolute; width: 130px; height: 130px; left: -20px; top: -50px; z-index: 5; pointer-events: none; }
+.plan-hero__decor-img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* Hero top ellipse with label and tag */
+.plan-hero__top-ellipse { position: absolute; width: 467px; height: 204px; left: calc(50% - 467px/2 + 9px); top: -123px; background: #FFFFFF; border-radius: 50%; z-index: 3; }
+.plan-hero__top-content { position: absolute; width: 362px; left: calc(50% - 362px/2 + 9px); top: 22px; display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 4; }
+.plan-hero__label { font-family: 'Bolivar'; font-weight: 700; font-size: 20px; line-height: 140%; text-align: center; color: #404040; }
+.plan-hero__tag { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; background: #69C17D; border-radius: 6px; }
+.plan-hero__tag-icon { font-size: 14px; }
+.plan-hero__tag-text { font-family: 'Bolivar'; font-weight: 700; font-size: 16px; line-height: 140%; color: #1B1B1B; }
+
+/* ===== PLAN DETAILS ===== */
+.plan-details { max-width: 763px; margin: 40px auto 0; padding: 0 16px; width: 100%; }
+.plan-details__title { font-family: 'Bolivar'; font-weight: 700; font-size: 36px; line-height: 140%; color: #1B1B1B; text-align: center; margin-bottom: 24px; }
+
+/* ===== PLAN CARD ===== */
+.plan-card { background: #FFFFFF; box-shadow: 2px 8px 8px rgba(115, 115, 115, 0.04), 2px 2px 16px rgba(115, 115, 115, 0.16); border-radius: 24px; padding: 24px 32px; }
+.plan-card__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.plan-card__item { display: flex; align-items: flex-start; gap: 8px; padding-bottom: 16px; border-bottom: 2px solid #D9D9D9; }
+.plan-card__item:nth-last-child(-n+1) { border-bottom: none; }
+.plan-card__check { display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; min-width: 20px; color: #038450; font-weight: 900; font-size: 14px; margin-top: 3px; }
+.plan-card__info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.plan-card__desc { font-family: 'Bolivar'; font-weight: 400; font-size: 16px; line-height: 24px; color: #303030; }
+.plan-card__amount { font-family: 'Bolivar'; font-weight: 400; font-size: 16px; line-height: 140%; color: #414141; }
+.plan-card__arrow { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; min-width: 24px; background: #FFF0B7; border-radius: 40px; color: #038450; font-size: 14px; margin-top: 3px; }
+.plan-card__footer { display: flex; align-items: center; justify-content: space-between; padding: 16px; background: #FFF6D4; border-radius: 16px; margin-top: 24px; cursor: pointer; transition: background 0.15s; text-decoration: none; }
+.plan-card__footer:hover { background: #FFEFB0; }
+.plan-card__footer-text { font-family: 'Bolivar'; font-weight: 400; font-size: 16px; color: #303030; }
+.plan-card__footer-arrow { font-size: 24px; color: #1B1B1B; }
+
+/* ===== TERMS ===== */
+.plan-terms { max-width: 763px; margin: 32px auto 0; padding: 0 16px 60px; width: 100%; display: flex; flex-direction: column; gap: 12px; }
+.plan-terms__item { display: flex; align-items: flex-start; gap: 8px; cursor: pointer; }
+.plan-terms__checkbox { width: 18px; height: 18px; min-width: 18px; accent-color: #016D38; margin-top: 2px; border-radius: 2px; }
+.plan-terms__text { font-family: 'Bolivar'; font-weight: 400; font-size: 16px; line-height: 140%; color: #757575; }
+.plan-terms__text a { color: #016D38; text-decoration: underline; }
+
+/* ===== FOOTER ===== */
+.plan-footer { position: sticky; bottom: 0; display: flex; justify-content: center; align-items: center; padding: 16px; background: #282828; margin-top: auto; }
+.plan-footer__btn { display: flex; align-items: center; justify-content: center; padding: 8px 16px; min-width: 295px; height: 40px; background: #FFE16F; border: none; border-radius: 50px; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 16px; color: #038450; cursor: pointer; transition: background 0.15s; }
+.plan-footer__btn:hover { background: #FFDC5D; }
+.plan-footer__btn[disabled] { background: #F5F5F5; color: #9B9B9B; cursor: not-allowed; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .plan-hero { margin: 16px; max-width: calc(100% - 32px); padding: 70px 16px 20px; }
+  .plan-hero__price { font-size: 28px; }
+  .plan-hero__suggested-text { font-size: 24px; }
+  .plan-details { padding: 0 16px; }
+  .plan-details__title { font-size: 24px; }
+  .plan-card { padding: 16px; }
+  .plan-card__grid { grid-template-columns: 1fr; }
+  .plan-card__desc { font-size: 14px; }
+  .plan-terms { padding: 0 16px; }
+}
+
+/* ===== COBERTURAS PAGE ===== */
+.cob-back { position: absolute; left: 40px; top: 50%; transform: translateY(-50%); font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 14px; color: #016D38; text-decoration: none; display: flex; align-items: center; gap: 4px; }
+.cob-page { background: #FAFAFA; padding: 40px 16px; display: flex; justify-content: center; }
+.cob-container { width: 100%; max-width: 746px; display: flex; flex-direction: column; gap: 32px; }
+.cob-title-row { display: flex; align-items: center; gap: 8px; }
+.cob-title-icon { width: 36px; height: 36px; object-fit: contain; }
+.cob-title { font-family: 'Bolivar'; font-weight: 700; font-size: 36px; line-height: 140%; color: #1B1B1B; }
+.cob-card { background: #FFFFFF; border: 1px solid #F5F5F5; box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 24px 40px 40px; display: flex; flex-direction: column; gap: 24px; }
+.cob-card__header { display: flex; flex-direction: column; gap: 4px; }
+.cob-card__subtitle { font-family: 'Bolivar'; font-weight: 700; font-size: 20px; line-height: 140%; color: #282828; }
+.cob-card__plan-name { font-family: 'Bolivar'; font-weight: 700; font-size: 28px; line-height: 140%; color: #05794A; }
+
+/* Category blocks */
+.cob-category { background: #FAFAFA; border: 1px solid #E1E1E1; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.cob-category__header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.cob-category__icon { width: 56px; height: 56px; object-fit: contain; }
+.cob-category__title { font-family: 'Bolivar'; font-weight: 700; font-size: 16px; line-height: 24px; color: #282828; }
+.cob-category__item { display: flex; align-items: flex-start; gap: 8px; }
+.cob-category__check { width: 28px; min-width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #038450; font-size: 18px; font-weight: 700; }
+.cob-category__text { font-family: 'Bolivar'; font-weight: 400; font-size: 14px; line-height: 140%; color: #282828; }
+.cob-category__text strong { font-weight: 700; }
+
+/* Download link */
+.cob-download { display: flex; align-items: center; gap: 8px; padding: 8px 0; text-decoration: none; }
+.cob-download__icon { font-size: 18px; color: #038450; }
+.cob-download__text { font-family: 'Bolivar'; font-weight: 700; font-size: 16px; color: #038450; text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .cob-title { font-size: 24px; }
+  .cob-card { padding: 16px; }
+  .cob-back { left: 16px; }
+}
+
+/* ===== DATOS TITULAR PAGE ===== */
+.datos-layout { display: flex; min-height: calc(100vh - 60px - 72px); }
+
+/* Stepper sidebar */
+.datos-stepper { width: 268px; min-width: 268px; background: #FFFFFF; padding: 40px; display: flex; align-items: flex-start; }
+.stepper-vertical { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 158px; }
+.stepper-vertical__step { display: flex; align-items: center; gap: 8px; width: 158px; height: 54px; }
+.stepper-vertical__bull { width: 62px; min-width: 62px; height: 62px; display: flex; align-items: center; justify-content: center; position: relative; }
+.stepper-vertical__bull-inner { width: 54px; height: 54px; border-radius: 50%; border: 2px solid #B9B9B9; background: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Bolivar'; font-size: 20px; line-height: 140%; color: #9B9B9B; }
+.stepper-vertical__bull--active .stepper-vertical__bull-inner { width: 48px; height: 48px; background: #FFE16F; border: none; color: #009056; }
+.stepper-vertical__bull--active::before { content: ''; position: absolute; width: 62px; height: 62px; border: 2px solid #FFE16F; border-radius: 50%; }
+.stepper-vertical__label { width: 88px; font-family: 'Bolivar'; font-size: 14px; line-height: 140%; color: #757575; }
+.stepper-vertical__label--active { font-weight: 700; }
+.stepper-vertical__line { display: flex; justify-content: center; width: 62px; height: 35px; }
+.stepper-vertical__line::after { content: ''; width: 0; height: 100%; border-left: 2px dashed #B9B9B9; }
+
+/* Content area */
+.datos-content { flex: 1; background: #FAFAFA; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 32px; overflow-y: auto; }
+.datos-title-row { display: flex; align-items: center; gap: 8px; width: 100%; max-width: 666px; }
+.datos-title-icon { width: 36px; height: 36px; object-fit: contain; }
+.datos-title { font-family: 'Bolivar'; font-weight: 700; font-size: 36px; line-height: 140%; color: #1B1B1B; }
+.datos-tooltip-icon { width: 24px; height: 24px; object-fit: contain; cursor: pointer; }
+
+/* Form card */
+.datos-card { background: #FFFFFF; border: 1px solid #F5F5F5; box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 40px; width: 100%; max-width: 666px; }
+.datos-form { display: flex; flex-direction: column; gap: 20px; }
+.datos-form__row { display: flex; gap: 16px; }
+.datos-form__field { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.datos-form__field--full { width: 100%; }
+.datos-form__label { font-family: 'Bolivar'; font-weight: 400; font-size: 14px; line-height: 140%; color: #1B1B1B; }
+.datos-form__input { width: 100%; height: 40px; padding: 8px 16px; font-family: 'Bolivar'; font-size: 16px; color: #1B1B1B; background: #FFFFFF; border: 1px solid #B9B9B9; border-radius: 4px; outline: none; transition: border-color 0.15s; }
+.datos-form__input::placeholder { color: #9B9B9B; }
+.datos-form__input:focus { border-color: #009056; }
+.datos-form__input-wrap { position: relative; }
+.datos-form__input-wrap .datos-form__input { padding-right: 40px; }
+.datos-form__input-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-size: 16px; color: #9B9B9B; pointer-events: none; }
+.datos-form__select-wrap { position: relative; }
+.datos-form__select { width: 100%; height: 40px; padding: 8px 40px 8px 16px; font-family: 'Bolivar'; font-size: 16px; color: #9B9B9B; background: #FFFFFF; border: 1px solid #B9B9B9; border-radius: 4px; appearance: none; outline: none; cursor: pointer; }
+.datos-form__select-arrow { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #5B5B5B; font-size: 18px; pointer-events: none; }
+
+/* Alert box */
+.datos-alert { display: flex; align-items: stretch; background: #FFFFFF; box-shadow: 1px 4px 4px rgba(115,115,115,0.04), 1px 1px 8px rgba(115,115,115,0.16); border-radius: 8px; overflow: hidden; margin-top: 8px; }
+.datos-alert__line { width: 6px; min-width: 6px; background: #007EFF; border-radius: 8px 0 0 8px; margin: 16px 0 16px 8px; }
+.datos-alert__content { padding: 16px 16px 16px 8px; display: flex; flex-direction: column; gap: 4px; }
+.datos-alert__header { display: flex; align-items: center; gap: 8px; }
+.datos-alert__icon { width: 24px; height: 24px; object-fit: contain; }
+.datos-alert__title { font-family: 'Bolivar'; font-weight: 700; font-size: 14px; color: #1B1B1B; }
+.datos-alert__text { font-family: 'Bolivar'; font-weight: 400; font-size: 14px; color: #1B1B1B; padding-left: 32px; }
+
+/* Form button */
+.datos-form__actions { display: flex; justify-content: flex-end; margin-top: 16px; }
+.datos-form__btn { padding: 8px 16px; min-width: 230px; height: 40px; background: #F5F5F5; border: none; border-radius: 50px; font-family: 'Bolivar'; font-weight: 700; font-size: 16px; color: #9B9B9B; cursor: not-allowed; }
+.datos-form__btn:not([disabled]) { background: #FFE16F; color: #038450; cursor: pointer; }
+
+@media (max-width: 768px) {
+  .datos-layout { flex-direction: column; }
+  .datos-stepper { width: 100%; min-width: auto; padding: 20px; }
+  .stepper-vertical { flex-direction: row; gap: 8px; overflow-x: auto; }
+  .stepper-vertical__line { width: 35px; height: 2px; border-left: none; border-top: 2px dashed #B9B9B9; margin-left: 0; }
+  .datos-content { padding: 20px 16px; }
+  .datos-card { padding: 20px; }
+  .datos-form__row { flex-direction: column; }
+  .datos-title { font-size: 24px; }
+}
+
+/* ===== STEPPER COMPLETED STATE ===== */
+.stepper-vertical__bull--completed .stepper-vertical__bull-inner--completed { width: 54px; height: 54px; background: #009056; border: none; color: #F2F9F6; font-size: 18px; }
+.stepper-vertical__line--completed::after { border-left-color: #009056; border-left-style: solid; }
+
+/* ===== FORM SECTION HEADER ===== */
+.datos-form__section-header { margin-bottom: 8px; }
+.datos-form__section-title { font-family: 'Bolivar'; font-weight: 700; font-size: 16px; color: #282828; }
+.datos-form__section-desc { font-family: 'Bolivar'; font-weight: 400; font-size: 16px; line-height: 140%; color: #282828; margin-top: 4px; }
+
+/* ===== FORM HELP TEXT ===== */
+.datos-form__help { display: flex; align-items: center; gap: 4px; font-family: 'Bolivar'; font-size: 12px; color: #414141; margin-top: 4px; }
+.datos-form__help-icon { color: #009056; font-size: 12px; }
+
+/* ===== OTP MODALS ===== */
+.otp-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 9999; align-items: center; justify-content: center; }
+.otp-modal { display: none; flex-direction: column; align-items: center; padding: 24px; gap: 24px; width: 484px; max-width: 90vw; background: #FFFFFF; border-radius: 16px; box-shadow: 0px 0px 6px rgba(115,115,115,0.16), 0px 2px 4px rgba(115,115,115,0.16); }
+.otp-modal--loader { justify-content: center; min-height: 261px; }
+.otp-modal__title { font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 20px; line-height: 140%; color: #414141; text-align: center; width: 100%; }
+.otp-modal__subtitle { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 16px; line-height: 140%; color: #5B5B5B; text-align: center; width: 100%; }
+.otp-modal__phone { display: flex; align-items: center; justify-content: center; gap: 4px; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 20px; color: #5B5B5B; }
+.otp-modal__field { width: 100%; display: flex; flex-direction: column; gap: 4px; }
+.otp-modal__label { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 14px; color: #1B1B1B; }
+.otp-modal__input-wrap { position: relative; }
+.otp-modal__input { width: 100%; height: 40px; padding: 8px 40px 8px 16px; font-family: 'Roboto', sans-serif; font-size: 16px; color: #1B1B1B; background: #FFFFFF; border: 1px solid #B9B9B9; border-radius: 4px; outline: none; }
+.otp-modal__input::placeholder { color: #9B9B9B; }
+.otp-modal__input-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #9B9B9B; font-size: 16px; }
+.otp-modal__help { font-family: 'Roboto', sans-serif; font-size: 12px; color: #414141; }
+.otp-modal__resend { font-family: 'Roboto', sans-serif; font-size: 14px; color: #5B5B5B; text-align: center; padding: 16px 0; }
+.otp-modal__resend a { color: #038450; font-weight: 700; text-decoration: underline; }
+.otp-modal__actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; }
+.otp-modal__btn-link { background: none; border: none; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 16px; color: #038450; text-decoration: underline; cursor: pointer; padding: 8px 16px; }
+.otp-modal__btn-secondary { padding: 8px 16px; min-width: 128px; height: 40px; background: #F5F5F5; border: none; border-radius: 50px; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 16px; color: #9B9B9B; cursor: not-allowed; transition: all 0.2s; }
+.otp-modal__btn-secondary--active { background: #FFE16F; color: #038450; cursor: pointer; }
+.otp-modal__btn-secondary:disabled { background: #F5F5F5; color: #9B9B9B; cursor: not-allowed; }
+
+/* Radio buttons */
+.otp-modal__radios { display: flex; flex-direction: column; gap: 0; width: 100%; padding: 8px 0; }
+.otp-modal__radio { display: flex; align-items: center; gap: 8px; padding: 8px; cursor: pointer; font-family: 'Roboto', sans-serif; font-size: 16px; color: #757575; border-radius: 5px; }
+.otp-modal__radio input[type="radio"] { width: 18px; height: 18px; accent-color: #009056; }
+
+/* Loader */
+.otp-modal__icon-protection { width: 56px; height: 56px; object-fit: contain; margin-top: 16px; }
+.otp-modal__spinner { width: 40px; height: 40px; border: 3px solid transparent; border-top: 3px solid #009056; border-radius: 50%; animation: otp-spin 0.8s linear infinite; }
+@keyframes otp-spin { to { transform: rotate(360deg); } }
+
+/* ===== CONFIRM PAGE ===== */
+.confirm-cards { display: flex; flex-direction: column; gap: 16px; width: 100%; max-width: 746px; }
+.confirm-header { display: flex; align-items: center; gap: 16px; padding: 16px 0; }
+.confirm-header__icon { width: 64px; height: 64px; object-fit: contain; }
+.confirm-header__title { font-family: 'Bolivar'; font-weight: 700; font-size: 28px; line-height: 140%; color: #1B1B1B; }
+.confirm-header__desc { font-family: 'Bolivar'; font-weight: 400; font-size: 16px; line-height: 140%; color: #282828; margin-top: 4px; }
+
+.confirm-card { background: #FFFFFF; border: 1px solid #F5F5F5; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.confirm-card__title-row { display: flex; align-items: center; gap: 8px; }
+.confirm-card__icon { width: 28px; height: 28px; object-fit: contain; }
+.confirm-card__title { font-family: 'Bolivar'; font-weight: 700; font-size: 20px; line-height: 140%; color: #0B613E; }
+
+.confirm-card__grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.confirm-card__grid--4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.confirm-card__item { display: flex; flex-direction: column; padding: 8px 0; }
+.confirm-card__label { font-family: 'Bolivar'; font-size: 14px; color: #5B5B5B; }
+.confirm-card__label-italic { font-family: 'Bolivar'; font-size: 14px; font-style: italic; color: #414141; }
+.confirm-card__value { font-family: 'Bolivar'; font-size: 16px; font-weight: 700; color: #414141; }
+.confirm-card__email { font-family: 'Bolivar'; font-size: 14px; color: #5B5B5B; }
+.confirm-card__email a { text-decoration: none; color: #009056; }
+
+.confirm-card__checklist { display: flex; flex-direction: column; gap: 8px; }
+.confirm-card__check-item { display: flex; align-items: center; gap: 4px; font-family: 'Bolivar'; font-size: 12px; color: #414141; }
+.confirm-card__check { color: #038450; font-size: 18px; width: 24px; min-width: 24px; text-align: center; }
+
+.confirm-card__dates { display: flex; align-items: center; gap: 8px; font-family: 'Bolivar'; font-size: 16px; color: #1B1B1B; }
+.confirm-card__arrow { color: #009056; font-size: 20px; }
+.confirm-card__note { font-family: 'Bolivar'; font-size: 12px; font-style: italic; color: #5B5B5B; }
+
+@media (max-width: 768px) {
+  .confirm-card__grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== FRECUENCIA DE PAGO ===== */
+.freq-options { display: flex; gap: 16px; }
+.freq-option { flex: 1; position: relative; border: 1px solid #B9B9B9; border-radius: 8px; padding: 16px; background: #FFFFFF; cursor: pointer; transition: border-color 0.2s; }
+.freq-option:has(input:checked) { border-color: #009056; border-width: 2px; }
+.freq-option__tag { position: absolute; top: -12px; left: 16px; background: #FFC100; padding: 4px 8px; border-radius: 6px; font-family: 'Bolivar'; font-weight: 700; font-size: 14px; color: #1B1B1B; display: flex; align-items: center; gap: 4px; }
+.freq-option__content { display: flex; justify-content: space-between; align-items: center; height: 85px; }
+.freq-option__label { font-family: 'Bolivar'; font-weight: 700; font-size: 24px; line-height: 140%; color: #282828; }
+.freq-option__price-wrap { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.freq-option__radio { width: 18px; height: 18px; accent-color: #009056; align-self: flex-end; }
+.freq-option__price { display: flex; flex-direction: column; align-items: flex-end; }
+.freq-option__amount { font-family: 'Bolivar'; font-weight: 700; font-size: 24px; line-height: 140%; color: #0B613E; }
+.freq-option__iva { font-family: 'Bolivar'; font-size: 12px; color: #0B613E; }
+
+/* Checkboxes */
+.freq-checks { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 746px; }
+.freq-check { display: flex; align-items: flex-start; gap: 8px; cursor: pointer; }
+.freq-check__input { width: 18px; min-width: 18px; height: 18px; accent-color: #009056; margin-top: 2px; }
+.freq-check__text { font-family: 'Bolivar'; font-size: 16px; line-height: 140%; color: #757575; }
+
+@media (max-width: 768px) {
+  .freq-options { flex-direction: column; }
+}
+
+/* ===== BIENVENIDA PAGE ===== */
+.bienvenida-banner { position: relative; width: 100%; height: 200px; background: linear-gradient(180deg, rgba(206,236,227,0.15) 9%, rgba(151,226,202,0.15) 39%, rgba(147,219,196,0.15) 58%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.bienvenida-banner__decor-left { position: absolute; left: 200px; top: -6px; width: 185px; height: 158px; pointer-events: none; }
+.bienvenida-banner__decor-right { position: absolute; right: 200px; top: -6px; width: 165px; height: 164px; pointer-events: none; }
+.bienvenida-banner__decor-img { width: 100%; height: 100%; object-fit: contain; }
+.bienvenida-banner__content { text-align: center; z-index: 1; }
+.bienvenida-banner__subtitle { font-family: 'Bolivar'; font-weight: 700; font-size: 28px; line-height: 140%; color: #016D38; }
+.bienvenida-banner__title { font-family: 'Bolivar'; font-weight: 700; font-size: 36px; line-height: 140%; color: #016D38; }
+
+.bienvenida-content { display: flex; justify-content: center; padding: 0 0 40px; }
+.bienvenida-main { display: flex; flex-direction: column; align-items: center; gap: 16px; max-width: 791px; width: 100%; padding: 0 16px; }
+
+.bienvenida-title-row { display: flex; align-items: center; gap: 24px; width: 100%; padding: 0; }
+.bienvenida-title-icon { width: 64px; height: 64px; object-fit: contain; }
+.bienvenida-title { font-family: 'Bolivar'; font-weight: 700; font-size: 28px; line-height: 140%; color: #333; }
+
+.bienvenida-vigencia { font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 16px; line-height: 140%; color: #414141; width: 100%; }
+
+.bienvenida-info-card { background: #FFF6D4; border-radius: 8px; padding: 24px 16px; display: flex; flex-direction: column; gap: 16px; width: 100%; }
+.bienvenida-info-card__text { font-family: 'Bolivar'; font-size: 16px; line-height: 140%; color: #282828; }
+.bienvenida-info-card__grid { display: flex; gap: 12px; }
+.bienvenida-info-card__col { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.bienvenida-info-card__item { display: flex; align-items: center; gap: 8px; font-family: 'Bolivar'; font-size: 16px; color: #282828; }
+
+.bienvenida-approval { display: flex; align-items: center; gap: 8px; background: #E9F6EC; border-radius: 8px; padding: 24px; width: 100%; }
+.bienvenida-approval__icon { width: 32px; height: 32px; object-fit: contain; }
+.bienvenida-approval__text { display: flex; align-items: center; gap: 8px; font-family: 'Bolivar'; font-size: 14px; color: #1B1B1B; }
+.bienvenida-approval__text strong { font-size: 18px; font-weight: 700; }
+
+@media (max-width: 768px) {
+  .bienvenida-banner__title { font-size: 24px; }
+  .bienvenida-banner__decor-left, .bienvenida-banner__decor-right { display: none; }
+  .bienvenida-info-card__grid { flex-direction: column; }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "molrzyc07gqe",
+    "versionId": "v2",
+    "timestamp": "2026-04-30T17:46:42.960Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": ".sb-hero__form",
+    "property": "top",
+    "value": "147.062px",
+    "description": "changeStyle: DIV"
+  },
+  {
+    "id": "molrzsvmo4l6",
+    "versionId": "v2",
+    "timestamp": "2026-04-30T17:46:35.890Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": "#home-form > div:nth-of-type(1) > label",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: LABEL"
+  },
+  {
+    "id": "molrzroroax1",
+    "versionId": "v2",
+    "timestamp": "2026-04-30T17:46:34.347Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": "#home-name",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: INPUT"
+  },
+  {
+    "id": "molrz84459vh",
+    "versionId": "v2",
+    "timestamp": "2026-04-30T17:46:08.980Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": ".sb-hero__form",
+    "property": "top",
+    "value": "141.316px",
+    "description": "changeStyle: DIV"
+  },
+  {
+    "id": "moagr77jr2i8",
+    "versionId": "v1",
+    "timestamp": "2026-04-22T19:46:30.847Z",
+    "user": "alejandro.llamas@segurosbolivar.com",
+    "userName": "Alejandro Llamas",
+    "action": "changeStyle",
+    "selector": "#app-content > div > nav > div > div:nth-of-type(2) > a:nth-of-type(2)",
+    "property": "top",
+    "value": "-4px",
+    "description": "changeStyle: A"
+  }
+]

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatgpt - EXP 1  Hogar - Validación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <main id="app-content" class="app-main">
+    
+    <div class="step5id-page">
+      <div class="step5id-overlay" style=""></div>
+      <div class="step5id-modal" id="identity-modal">
+        <!-- Screen 1: Datos de validación -->
+        <div class="step5id-screen active" id="screen-1">
+          <div class="step5id-modal__close-row">
+            <button class="step5id-modal__close" id="btn-close-identity">✕</button>
+          </div>
+          <div class="step5id-modal__header">
+            <h2 class="step5id-modal__title">Antes de pagar y por su seguridad vamos a validar su identidad</h2>
+            <p class="step5id-modal__subtitle">Ingrese sus datos para continuar con la validación.</p>
+          </div>
+          <div class="step5id-modal__body" style="">
+            <div class="step5id-form">
+              <div class="step5id-field">
+                <label class="step5id-field__label">Celular</label>
+                <input type="text" class="step5id-field__input" id="id-phone" placeholder="300 000 0000" value="318 555 8278">
+              </div>
+              <div class="step5id-field">
+                <label class="step5id-field__label">Correo</label>
+                <input type="email" class="step5id-field__input" id="id-email" placeholder="correo@ejemplo.com" value="juanmanuel@correo.com">
+              </div>
+              <div class="step5id-field">
+                <label class="step5id-field__label">Fecha de expedición</label>
+                <input type="text" class="step5id-field__input" id="id-expedition" placeholder="DD/MM/AAAA">
+              </div>
+            </div>
+          </div>
+          <div class="step5id-modal__footer" style="">
+            <button class="step5id-btn" id="btn-screen1-next" disabled="" style="">Validar</button>
+          </div>
+        </div>
+
+        <!-- Screen 2: Código OTP -->
+        <div class="step5id-screen" id="screen-2">
+          <div class="step5id-modal__close-row">
+            <button class="step5id-modal__close" id="btn-close-identity-2">✕</button>
+          </div>
+          <div class="step5id-modal__header">
+            <h2 class="step5id-modal__title">Antes de pagar y por su seguridad vamos a validar su identidad</h2>
+            <p class="step5id-modal__subtitle">Ingrese sus datos para continuar con la validación.</p>
+          </div>
+          <div class="step5id-modal__body step5id-modal__body--otp">
+            <div class="step5id-otp-section">
+              <img src="/Iconos/Group 2432.png" alt="" class="step5id-otp-icon">
+              <h3 class="step5id-otp-title">Ingrese el código de verificación</h3>
+              <p class="step5id-otp-phone">Enviado al número <strong>31* *** 8278</strong></p>
+            </div>
+            <div class="step5id-otp-input-row">
+              <input type="text" class="step5id-otp-field" id="otp-code" placeholder="- - - - - -" maxlength="6">
+              <button class="step5id-otp-send" id="btn-otp-send">Enviar</button>
+            </div>
+            <p class="step5id-otp-timer" id="otp-timer">Reenviar en <strong>27</strong> segundos</p>
+            <div class="step5id-otp-alt">
+              <p class="step5id-otp-alt__title">¿Celular no disponible?</p>
+              <a href="#" class="step5id-otp-alt__link">Intente con otro método</a>
+            </div>
+          </div>
+          <div class="step5id-modal__footer">
+            <button class="step5id-btn" id="btn-screen2-next" disabled="">Validar</button>
+          </div>
+        </div>
+
+        <!-- Screen 3: Preguntas de seguridad (Experian) -->
+        <div class="step5id-screen" id="screen-3">
+          <div class="step5id-modal__close-row">
+            <button class="step5id-modal__close" id="btn-close-identity-3">✕</button>
+          </div>
+          <div class="step5id-modal__header">
+            <h2 class="step5id-modal__title">Antes de pagar y por su seguridad vamos a validar su identidad</h2>
+            <p class="step5id-modal__subtitle">Ingrese sus datos para continuar con la validación.</p>
+          </div>
+          <div class="step5id-modal__body step5id-modal__body--questions">
+            <p class="step5id-question-label">¿Con cuál de las siguientes entidades ha tenido algún vínculo?</p>
+            <div class="step5id-options" id="question-options">
+              <label class="step5id-radio-option"><input type="radio" name="q1" value="bancolombia"><span class="step5id-radio-circle"></span><span>Bancolombia</span></label>
+              <label class="step5id-radio-option"><input type="radio" name="q1" value="bbva"><span class="step5id-radio-circle"></span><span>BBVA</span></label>
+              <label class="step5id-radio-option"><input type="radio" name="q1" value="none"><span class="step5id-radio-circle"></span><span>Ninguna</span></label>
+              <label class="step5id-radio-option"><input type="radio" name="q1" value="davivienda"><span class="step5id-radio-circle"></span><span>Davivienda Corredores de Seguros</span></label>
+            </div>
+          </div>
+          <div class="step5id-modal__footer">
+            <button class="step5id-btn" id="btn-screen3-next" disabled="">Validar</button>
+          </div>
+        </div>
+
+        <!-- Screen 4: Validando (loading) -->
+        <div class="step5id-screen" id="screen-4">
+          <div class="step5id-modal__body step5id-modal__body--loading">
+            <img src="/Iconos/Protection.png" alt="" class="step5id-loading-icon">
+            <h3 class="step5id-loading-title">Estamos validando su información...</h3>
+            <div class="step5id-spinner"></div>
+            <p class="step5id-loading-hint">Espere un momento...</p>
+          </div>
+        </div>
+
+        <!-- Screen 5: Redirigiendo -->
+        <div class="step5id-screen" id="screen-5">
+          <div class="step5id-modal__body step5id-modal__body--loading">
+            <img src="/Iconos/Protection.png" alt="" class="step5id-loading-icon">
+            <h3 class="step5id-loading-title">Lo vamos a redirigir para que realice el pago de su seguro.</h3>
+            <div class="step5id-spinner"></div>
+            <p class="step5id-loading-hint">Lo vamos a redirigir en un momento...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </main>
+</body>
+</html>

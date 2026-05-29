@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "name": "Clear Cache on Base Change",
+  "description": "When base experience or admin source files are edited, clears build cache to ensure fresh content is served",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "apps/hogar/js/**/*.js",
+      "apps/hogar/css/**/*.css",
+      "apps/admin/js/**/*.js",
+      "apps/admin/css/**/*.css"
+    ]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "powershell -Command \"if (Test-Path node_modules/.vite) { Remove-Item -Recurse -Force node_modules/.vite }; if (Test-Path dist) { Remove-Item -Recurse -Force dist }\""
+  }
+}

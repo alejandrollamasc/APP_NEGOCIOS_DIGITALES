@@ -1,0 +1,110 @@
+[
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__submit",
+    "property": "width",
+    "value": "261px",
+    "description": "changeStyle: BUTTON",
+    "timestamp": "2026-04-22T19:12:15.235Z",
+    "id": "moafj537e7li"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__form",
+    "property": "width",
+    "value": "",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:13:50.942Z",
+    "id": "moafl6xqnh1t"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__form",
+    "property": "height",
+    "value": "519px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:13:50.952Z",
+    "id": "moafl6y0e7v0"
+  },
+  {
+    "action": "changeStyle",
+    "selector": ".sb-hero__form",
+    "property": "top",
+    "value": "97.5081px",
+    "description": "changeStyle: DIV",
+    "timestamp": "2026-04-22T19:13:54.353Z",
+    "id": "moafl9khec2h"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "#home-form > div:nth-of-type(2) > label:nth-of-type(2)",
+    "property": "top",
+    "value": "50.625px",
+    "description": "changeStyle: LABEL",
+    "timestamp": "2026-04-22T19:14:11.086Z",
+    "id": "moaflmhabnjc"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "#home-email",
+    "property": "top",
+    "value": "-19.875px",
+    "description": "changeStyle: INPUT",
+    "timestamp": "2026-04-22T19:14:14.767Z",
+    "id": "moaflpbjoxij"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "#home-email",
+    "property": "top",
+    "value": "-13.875px",
+    "description": "changeStyle: INPUT",
+    "timestamp": "2026-04-22T19:14:19.317Z",
+    "id": "moaflstx4bu0"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "#home-form > div:nth-of-type(2) > label:nth-of-type(1)",
+    "property": "top",
+    "value": "8.625px",
+    "description": "changeStyle: LABEL",
+    "timestamp": "2026-04-22T19:14:26.237Z",
+    "id": "moafly65escm"
+  },
+  {
+    "action": "changeText",
+    "selector": "#home-form > div:nth-of-type(2) > label:nth-of-type(1)",
+    "property": "textContent",
+    "value": "Nombre completo",
+    "description": "changeText: LABEL",
+    "timestamp": "2026-04-22T19:14:40.342Z",
+    "id": "moafm91yoasa"
+  },
+  {
+    "action": "changeText",
+    "selector": "#home-form > div:nth-of-type(2) > label:nth-of-type(1)",
+    "property": "textContent",
+    "value": "Nombre completo",
+    "description": "changeText: LABEL",
+    "timestamp": "2026-04-22T19:14:40.350Z",
+    "id": "moafm926h3ok"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "#home-email",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: INPUT",
+    "timestamp": "2026-04-22T19:15:10.269Z",
+    "id": "moafmw599li6"
+  },
+  {
+    "action": "changeStyle",
+    "selector": "#home-phone",
+    "property": "display",
+    "value": "none",
+    "description": "changeStyle: INPUT",
+    "timestamp": "2026-04-22T20:33:59.250Z",
+    "id": "moaig91tlv08"
+  }
+]
